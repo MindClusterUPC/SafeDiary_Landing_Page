@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E0F2FE"/>
+      <stop offset="100%" stop-color="#BAE6FD"/>
+    </linearGradient>
+    <linearGradient id="avatarGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#0369A1"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" rx="32" fill="url(#bgGrad3)"/>
+  <circle cx="200" cy="155" r="55" fill="url(#avatarGrad3)" opacity="0.85"/>
+  <path d="M120 310 C 120 230, 280 230, 280 310 Z" fill="url(#avatarGrad3)" opacity="0.85"/>
+  <circle cx="200" cy="155" r="48" fill="#F0F9FF" opacity="0.2"/>
+  <text x="200" y="360" text-anchor="middle" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="16" font-weight="600" fill="#0369A1">Integrante 03</text>
+</svg>

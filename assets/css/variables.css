@@ -1,0 +1,76 @@
+/* ==========================================================================
+   SAFE DIARY WARMTH - DESIGN SYSTEM DESIGN TOKENS
+   MindCluster - SafeDiary Landing Page
+   ========================================================================== */
+
+:root {
+  /* Colors - Safe Diary Warmth Palette */
+  --color-primary: #00685f;
+  --color-primary-container: #008378;
+  --color-primary-hover: #004e47;
+  --color-primary-light: #e6f7f4;
+  --color-primary-fixed: #89f5e7;
+  --color-secondary: #006b5f;
+  --color-secondary-container: #e6f7f4;
+  --color-secondary-mint: #2dd4bf;
+  --color-secondary-light: #62fae3;
+  --color-tertiary: #00685c;
+
+  /* Neutrals & Surfaces */
+  --color-bg: #fcfbf9;
+  --color-bg-alt: #f7f5f0;
+  --color-surface: #ffffff;
+  --color-surface-subtle: #f8fafc;
+  --color-surface-container: #f1f5f9;
+  --color-surface-container-high: #e2e8f0;
+
+  /* Typography Colors */
+  --color-text-main: #0f172a;
+  --color-text-muted: #475569;
+  --color-text-light: #64748b;
+  --color-text-inverse: #ffffff;
+
+  /* Emotional Accents */
+  --color-mint-soft: #ecfdf5;
+  --color-mint-border: #a7f3d0;
+  --color-mint-text: #065f46;
+  --color-sky-soft: #f0f9ff;
+  --color-sky-border: #bae6fd;
+  --color-sky-text: #0369a1;
+  --color-amber-soft: #fffbeb;
+  --color-amber-border: #fde68a;
+  --color-amber-text: #92400e;
+  --color-rose-soft: #fff1f2;
+  --color-rose-border: #fecdd3;
+  --color-rose-text: #9f1239;
+
+  /* Borders & Dividers */
+  --color-border: #e2e8f0;
+  --color-border-subtle: rgba(226, 232, 240, 0.7);
+  --color-border-focus: rgba(0, 104, 95, 0.4);
+
+  /* Typography */
+  --font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Radii */
+  --radius-sm: 0.5rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.5rem;
+  --radius-xl: 2rem;
+  --radius-2xl: 2.5rem;
+  --radius-full: 9999px;
+
+  /* Shadows - Warm morning diffusion */
+  --shadow-sm: 0 2px 8px -2px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 10px 30px -6px rgba(15, 23, 42, 0.06), 0 2px 6px -1px rgba(15, 23, 42, 0.04);
+  --shadow-lg: 0 18px 50px -12px rgba(28, 25, 23, 0.08), 0 4px 12px -2px rgba(0, 0, 0, 0.03);
+  --shadow-glow: 0 0 28px rgba(0, 131, 120, 0.2);
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Max widths */
+  --container-max-width: 1240px;
+}
