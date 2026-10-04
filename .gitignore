@@ -1,0 +1,11 @@
+# Stitch design source (do not commit)
+stitch_mindcluster_safediary_landing_page/
+stitch_mindcluster/
+*stitch*
+
+# OS and Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
