@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SafeDiary • Tu refugio personal y cálido de reflexión</title>
+  <meta name="description" content="SafeDiary es tu diario personal íntimo, privado y seguro desarrollado por MindCluster. Reflexiona, respira con calma y cuida tu bienestar emocional sin juicios.">
+  <meta name="theme-color" content="#00685f">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Material Symbols -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+  <!-- ======================================================================
+       HEADER / NAVBAR
+       ====================================================================== -->
+  <header class="header" id="mainHeader">
+    <div class="container header__content">
+      <!-- Brand Logo & Identity -->
+      <a href="#" class="brand" aria-label="SafeDiary Inicio">
+        <div class="brand__logo">
+          <span class="material-symbols-outlined">spa</span>
+        </div>
+        <div class="brand__text">
+          <span class="brand__name" data-i18n="brandName">SafeDiary</span>
+          <span class="brand__tagline" data-i18n="brandTagline">por MindCluster • Tu rincón de paz</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" aria-label="Navegación principal">
+        <a href="#espacio" class="nav-link active" data-i18n="navSpace">Tu Espacio</a>
+        <a href="#respirar" class="nav-link" data-i18n="navBreathing">Paz Interior</a>
+        <a href="#bienestar" class="nav-link" data-i18n="navWellness">Momentos de Calma</a>
+        <a href="#privacidad" class="nav-link" data-i18n="navPrivacy">Privacidad Sagrada</a>
+        <a href="#equipo" class="nav-link" data-i18n="navTeam">Equipo</a>
+        <a href="#faq" class="nav-link" data-i18n="navFaq">Preguntas</a>
+      </nav>
+
+      <!-- Header Actions: i18n Language Toggle & Primary CTA -->
+      <div class="header__actions">
+        <!-- Language Switcher Toggle -->
+        <div class="lang-toggle" role="group" aria-label="Selector de idioma">
+          <button type="button" class="lang-btn active" data-lang="es" aria-label="Cambiar a Español">ES</button>
+          <button type="button" class="lang-btn" data-lang="en" aria-label="Switch to English">EN</button>
+        </div>
+
+        <!-- Primary CTA Button -->
+        <a href="#espacio" class="btn btn--primary" id="headerCtaBtn">
+          <span data-i18n="btnStartJournal">Comenzar mi diario</span>
+          <span class="material-symbols-outlined" style="font-size: 1.125rem;">favorite</span>
+        </a>
+
+        <!-- Mobile Hamburger Button -->
+        <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menú" aria-expanded="false">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#espacio" class="nav-link" data-i18n="navSpace">Tu Espacio</a>
+    <a href="#respirar" class="nav-link" data-i18n="navBreathing">Paz Interior</a>
+    <a href="#bienestar" class="nav-link" data-i18n="navWellness">Momentos de Calma</a>
+    <a href="#privacidad" class="nav-link" data-i18n="navPrivacy">Privacidad Sagrada</a>
+    <a href="#equipo" class="nav-link" data-i18n="navTeam">Equipo</a>
+    <a href="#faq" class="nav-link" data-i18n="navFaq">Preguntas</a>
+  </div>
+
+  <main>
+    <!-- ====================================================================
+         HERO SECTION: INTIMATE JOURNAL HAVEN
+         ==================================================================== -->
+    <section class="hero" id="espacio">
+      <div class="hero__aura"></div>
+      <div class="container hero__content">
+        <!-- Reassurance Badge -->
+        <div class="badge-tag badge-tag--pulse-dot">
+          <span data-i18n="heroBadge">Tu rincón seguro • Libre de juicios • 100% privado</span>
+        </div>
+
+        <h1 class="hero__title">
+          <span data-i18n="heroTitlePrefix">¿Cómo te sientes hoy?</span>
+          <span class="hero__title-accent" data-i18n="heroTitleAccent">Tómate un momento para ti.</span>
+        </h1>
+
+        <p class="hero__desc" data-i18n="heroSubtitle">
+          Un espacio íntimo donde ser tú mismo, ordenar tus pensamientos al final del día y encontrar paz con una taza de té.
+        </p>
+
+        <!-- The Journal Notebook Card -->
+        <div class="journal-card" id="journalCard">
+          <!-- Journal Card Header -->
+          <div class="journal-card__header">
+            <div class="journal-card__meta">
+              <span class="material-symbols-outlined">light_mode</span>
+              <span data-i18n="journalHeaderMeta">Reflexión de hoy • Solo para tus ojos</span>
+            </div>
+            <div class="journal-card__security-pill">
+              <span class="material-symbols-outlined" style="font-size: 0.95rem;">lock</span>
+              <span data-i18n="journalEncryptionPill">Cifrado en tu dispositivo</span>
+            </div>
+          </div>
+
+          <!-- Textarea for reflections -->
+          <textarea
+            class="journal-card__textarea"
+            id="journalPromptArea"
+            rows="3"
+            data-i18n-placeholder="journalPlaceholder"
+            placeholder="Hoy he sentido que el día se me escapaba de las manos, pero quiero agradecer este momento de calma..."></textarea>
+
+          <!-- Micro-actions Toolbar -->
+          <div class="journal-card__footer">
+            <div class="journal-card__actions">
+              <!-- Audio Note Button -->
+              <button type="button" class="action-pill-btn" id="recordVoiceBtn">
+                <span class="material-symbols-outlined" id="recordIcon" style="color: var(--color-primary); font-size: 1.125rem;">mic</span>
+                <span id="recordLabel" data-i18n="btnRecordVoice">Grabar nota de voz</span>
+                <span class="recording-indicator" id="recordingBadge" data-i18n="btnVoiceRecording">GRABANDO</span>
+              </button>
+
+              <!-- Inspiration Prompt Button -->
+              <button type="button" class="action-pill-btn action-pill-btn--amber" id="inspirationBtn">
+                <span class="material-symbols-outlined" style="font-size: 1.125rem;">auto_stories</span>
+                <span data-i18n="btnInspiration">Inspiración para escribir</span>
+              </button>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="button" class="btn btn--primary" id="saveReflectionBtn">
+              <span data-i18n="btnSaveReflection">Guardar reflexión</span>
+              <span class="material-symbols-outlined" style="font-size: 1.125rem;">check_circle</span>
+            </button>
+          </div>
+
+          <!-- Dynamic Feedback Drawer -->
+          <div class="journal-card__feedback" id="journalFeedback">
+            <span class="feedback-text" data-i18n="reflectionSavedFeedback">✨ Tu reflexión ha sido resguardada y cifrada en tu dispositivo con éxito.</span>
+            <span class="material-symbols-outlined" style="font-size: 1.25rem;">lock_open_right</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         BREATHING SECTION (PAZ INTERIOR)
+         ==================================================================== -->
+    <section class="section section--alt" id="respirar">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge-tag">
+            <span class="material-symbols-outlined" style="font-size: 1rem;">air</span>
+            <span data-i18n="breathBadge">Ejercicio de Respiración Consciente</span>
+          </div>
+          <h2 class="section-title" data-i18n="breathTitle">Inhala paz, exhala tensión</h2>
+          <p class="section-subtitle" data-i18n="breathSubtitle">
+            Regálate un minuto para reconectar con tu calma natural a través del ritmo restaurativo 4-7-8.
+          </p>
+        </div>
+
+        <div class="breathing-box">
+          <!-- Guided Breathing Visualizer -->
+          <div class="breathing-visual">
+            <div class="breathing-circle-outer"></div>
+            <div class="breathing-circle-inner" id="breathingCircleInner">
+              <span class="breathing-state-text" id="breathingStateText" data-i18n="breathStateReady">Listo para comenzar</span>
+              <span class="breathing-counter" id="breathingCounter">4</span>
+            </div>
+          </div>
+
+          <!-- Breathing Controls -->
+          <div class="breathing-controls">
+            <button type="button" class="btn btn--primary" id="breathingToggleBtn">
+              <span class="material-symbols-outlined">play_circle</span>
+              <span data-i18n="btnStartExercise">Iniciar ejercicio</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         WELLNESS / CALMA SECTION
+         ==================================================================== -->
+    <section class="section" id="bienestar">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge-tag">
+            <span class="material-symbols-outlined" style="font-size: 1rem;">sentiment_satisfied</span>
+            <span data-i18n="wellnessBadge">Tu Bienestar Emocional</span>
+          </div>
+          <h2 class="section-title" data-i18n="wellnessTitle">Comprende tus ciclos sin presiones</h2>
+          <p class="section-subtitle" data-i18n="wellnessSubtitle">
+            Identifica qué nutre tu tranquilidad y qué momentos de tu día merecen una pausa reflexiva.
+          </p>
+        </div>
+
+        <div class="wellness-grid">
+          <!-- Serenity Trends Card -->
+          <div class="card">
+            <h3 class="card__title">
+              <span class="material-symbols-outlined" style="color: var(--color-primary);">trending_up</span>
+              <span data-i18n="wellnessCardTitle">Registro de serenidad semanal</span>
+            </h3>
+            <p class="card__subtitle" data-i18n="wellnessCardSubtitle">
+              Evolución de calma registrada en tus reflexiones recientes
+            </p>
+
+            <!-- Mood Filter Chips -->
+            <div class="mood-chips-container">
+              <button type="button" class="mood-chip active">
+                <span>🍃</span>
+                <span data-i18n="moodSerene">Sereno</span>
+              </button>
+              <button type="button" class="mood-chip">
+                <span>✨</span>
+                <span data-i18n="moodGrateful">Agradecido</span>
+              </button>
+              <button type="button" class="mood-chip">
+                <span>🌙</span>
+                <span data-i18n="moodReflective">Reflexivo</span>
+              </button>
+              <button type="button" class="mood-chip">
+                <span>☕</span>
+                <span data-i18n="moodCalm">Cansado pero en calma</span>
+              </button>
+              <button type="button" class="mood-chip">
+                <span>☀️</span>
+                <span data-i18n="moodHopeful">Esperanzado</span>
+              </button>
+            </div>
+
+            <!-- Serenity Bar Visualization -->
+            <div class="chart-container">
+              <div class="chart-bars">
+                <div class="chart-col">
+                  <div class="chart-bar" style="height: 55%;"></div>
+                  <span class="chart-day">Lun</span>
+                </div>
+                <div class="chart-col">
+                  <div class="chart-bar" style="height: 70%;"></div>
+                  <span class="chart-day">Mar</span>
+                </div>
+                <div class="chart-col">
+                  <div class="chart-bar" style="height: 45%;"></div>
+                  <span class="chart-day">Mié</span>
+                </div>
+                <div class="chart-col">
+                  <div class="chart-bar" style="height: 85%;"></div>
+                  <span class="chart-day">Jue</span>
+                </div>
+                <div class="chart-col">
+                  <div class="chart-bar highlight" style="height: 95%;"></div>
+                  <span class="chart-day">Vie</span>
+                </div>
+                <div class="chart-col">
+                  <div class="chart-bar highlight" style="height: 90%;"></div>
+                  <span class="chart-day">Sáb</span>
+                </div>
+                <div class="chart-col">
+                  <div class="chart-bar highlight" style="height: 80%;"></div>
+                  <span class="chart-day">Dom</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mindful Insights Card -->
+          <div class="card" style="background: linear-gradient(135deg, #f0fdfa 0%, #ffffff 100%);">
+            <h3 class="card__title">
+              <span class="material-symbols-outlined" style="color: var(--color-primary);">psychology_alt</span>
+              <span data-i18n="statsCardTitle">Espacio de autorreflexión</span>
+            </h3>
+            <p class="card__subtitle" data-i18n="statsCardDesc">
+              Escribir con regularidad reduce los niveles de cortisol, despeja la mente y fortalece tu equilibrio emocional.
+            </p>
+
+            <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem;">
+              <span class="badge-tag" style="width: fit-content; background: white;" data-i18n="streakPill1">🌿 3 días consecutivos</span>
+              <span class="badge-tag" style="width: fit-content; background: white;" data-i18n="streakPill2">📖 12 reflexiones este mes</span>
+            </div>
+
+            <blockquote style="margin-top: auto; padding: 1.25rem; border-radius: var(--radius-lg); background: white; border: 1px solid var(--color-border); font-style: italic; color: var(--color-text-main); font-size: 0.9375rem; line-height: 1.6;" data-i18n="wellnessQuote">
+              “No se trata de estar siempre bien, sino de darte permiso de sentir y respirar.”
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         PRIVACY SECTION (PRIVACIDAD SAGRADA)
+         ==================================================================== -->
+    <section class="section section--alt" id="privacidad">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge-tag">
+            <span class="material-symbols-outlined" style="font-size: 1rem;">verified_user</span>
+            <span data-i18n="privacyBadge">Seguridad y Ética</span>
+          </div>
+          <h2 class="section-title" data-i18n="privacyTitle">Tus pensamientos pertenecen únicamente a ti</h2>
+          <p class="section-subtitle" data-i18n="privacySubtitle">
+            SafeDiary fue diseñado desde el primer trazo bajo el principio de reverencia absoluta por tu privacidad íntima.
+          </p>
+        </div>
+
+        <div class="privacy-grid">
+          <!-- Privacy Pillar 1 -->
+          <div class="privacy-card">
+            <div class="privacy-card__icon">
+              <span class="material-symbols-outlined" style="font-size: 1.75rem;">vpn_key</span>
+            </div>
+            <h3 class="privacy-card__title" data-i18n="privacyCard1Title">Cifrado en tu Dispositivo</h3>
+            <p class="privacy-card__text" data-i18n="privacyCard1Text">
+              Tus textos y notas de voz se resguardan de forma segura en tu teléfono o navegador. Nosotros nunca poseemos la llave de acceso.
+            </p>
+          </div>
+
+          <!-- Privacy Pillar 2 -->
+          <div class="privacy-card">
+            <div class="privacy-card__icon">
+              <span class="material-symbols-outlined" style="font-size: 1.75rem;">visibility_off</span>
+            </div>
+            <h3 class="privacy-card__title" data-i18n="privacyCard2Title">Cero Publicidad ni Rastreo</h3>
+            <p class="privacy-card__text" data-i18n="privacyCard2Text">
+              No vendemos tus emociones a terceros ni procesamos tus vivencias personales para mostrarte anuncios comerciales invasivos.
+            </p>
+          </div>
+
+          <!-- Privacy Pillar 3 -->
+          <div class="privacy-card">
+            <div class="privacy-card__icon">
+              <span class="material-symbols-outlined" style="font-size: 1.75rem;">download_for_offline</span>
+            </div>
+            <h3 class="privacy-card__title" data-i18n="privacyCard3Title">Exportación Libre y Total</h3>
+            <p class="privacy-card__text" data-i18n="privacyCard3Text">
+              Descarga todas tus memorias cuando desees en formatos universales o elimina todo rastro permanentemente con un solo clic.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         TEAM SECTION (PLACEHOLDERS REQUERIDOS POR EL USUARIO)
+         ==================================================================== -->
+    <section class="section" id="equipo">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge-tag">
+            <span class="material-symbols-outlined" style="font-size: 1rem;">group</span>
+            <span data-i18n="teamBadge">Equipo MindCluster</span>
+          </div>
+          <h2 class="section-title" data-i18n="teamTitle">Las personas detrás de SafeDiary</h2>
+          <p class="section-subtitle" data-i18n="teamSubtitle">
+            Un equipo multidisciplinario comprometido con construir herramientas tecnológicas empáticas, accesibles y cálidas.
+          </p>
+        </div>
+
+        <div class="team-carousel-wrapper">
+          <div class="team-card" id="teamCard">
+            <!-- Member Photo Placeholder Container -->
+            <div class="team-card__image-container">
+              <img
+                src="assets/images/placeholders/member-1.svg"
+                alt="Integrante 01"
+                class="team-card__image"
+                id="teamMemberImg">
+            </div>
+
+            <!-- Member Information Content -->
+            <div class="team-card__content">
+              <div class="team-card__badge" data-i18n="teamBadgeRole">
+                <span class="material-symbols-outlined" style="font-size: 0.875rem;">workspace_premium</span>
+                <span>MindCluster • Integrante</span>
+              </div>
+              <div class="team-card__counter" id="teamMemberCounter">01 / 05</div>
+              <h3 class="team-card__name" id="teamMemberName">Integrante 01</h3>
+              <p class="team-card__role" id="teamMemberRole">Líder de Proyecto & Arquitectura Frontend</p>
+              <p class="team-card__quote" id="teamMemberQuote">
+                “Construir tecnología debe ser un acto de empatía y cuidado hacia quien la utiliza cada día.”
+              </p>
+              <p class="team-card__bio" id="teamMemberBio">
+                Responsable de la dirección conceptual del proyecto, asegurando la cohesión visual del sistema Safe Diary Warmth y la integración fluida de cada componente.
+              </p>
+
+              <!-- Carousel Navigation Buttons -->
+              <div class="team-card__controls">
+                <span style="font-size: 0.8125rem; color: var(--color-text-light); font-weight: 500;">SafeDiary Core Team</span>
+                <div class="team-nav-buttons">
+                  <button type="button" class="team-nav-btn" id="teamPrevBtn" aria-label="Integrante anterior">
+                    <span class="material-symbols-outlined">arrow_back</span>
+                  </button>
+                  <button type="button" class="team-nav-btn team-nav-btn--primary" id="teamNextBtn" aria-label="Siguiente integrante">
+                    <span class="material-symbols-outlined">arrow_forward</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Direct Tab Indicators for Team Members -->
+          <div class="team-tabs" id="teamTabsContainer" role="tablist" aria-label="Seleccionar integrante del equipo">
+            <!-- Inyectado dinámicamente por team.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         FAQ SECTION
+         ==================================================================== -->
+    <section class="section section--alt" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge-tag">
+            <span class="material-symbols-outlined" style="font-size: 1rem;">help_outline</span>
+            <span data-i18n="faqBadge">Dudas Frecuentes</span>
+          </div>
+          <h2 class="section-title" data-i18n="faqTitle">Todo lo que necesitas saber</h2>
+          <p class="section-subtitle" data-i18n="faqSubtitle">
+            Respuestas claras para que disfrutes de tu refugio con total tranquilidad.
+          </p>
+        </div>
+
+        <div class="faq-container" id="faqContainer">
+          <!-- Inyectado dinámicamente por faq.js con soporte i18n reactivo -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================================================================
+       FOOTER
+       ====================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <!-- Brand & Description -->
+        <div>
+          <a href="#" class="brand" aria-label="SafeDiary Inicio">
+            <div class="brand__logo">
+              <span class="material-symbols-outlined">spa</span>
+            </div>
+            <div class="brand__text">
+              <span class="brand__name" data-i18n="brandName">SafeDiary</span>
+              <span class="brand__tagline" data-i18n="brandTagline">por MindCluster • Tu rincón de paz</span>
+            </div>
+          </a>
+          <p class="footer__brand-p" data-i18n="footerDesc">
+            Un refugio digital cálido para registrar tus vivencias, reflexiones y emociones con absoluta privacidad y serenidad.
+          </p>
+        </div>
+
+        <!-- Navigation Links Column -->
+        <div>
+          <h4 class="footer__col-title" data-i18n="footerNavTitle">Explorar</h4>
+          <ul class="footer__links">
+            <li><a href="#espacio" data-i18n="navSpace">Tu Espacio</a></li>
+            <li><a href="#respirar" data-i18n="navBreathing">Paz Interior</a></li>
+            <li><a href="#bienestar" data-i18n="navWellness">Momentos de Calma</a></li>
+            <li><a href="#privacidad" data-i18n="navPrivacy">Privacidad Sagrada</a></li>
+            <li><a href="#equipo" data-i18n="navTeam">Equipo</a></li>
+            <li><a href="#faq" data-i18n="navFaq">Preguntas</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal Column -->
+        <div>
+          <h4 class="footer__col-title" data-i18n="footerLegalTitle">Legal y Ética</h4>
+          <ul class="footer__links">
+            <li><a href="terms.html" data-i18n="footerTermsLink">Términos y Condiciones</a></li>
+            <li><a href="terms.html#privacidad-datos" data-i18n="footerPrivacyLink">Política de Privacidad</a></li>
+            <li><a href="#privacidad" data-i18n="footerSecurityLink">Seguridad y Cifrado</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer__bottom">
+        <p data-i18n="footerCopyright">© 2026 MindCluster. Todos los derechos reservados. SafeDiary es una marca orientada al bienestar personal.</p>
+        <div style="display: flex; gap: 1rem; align-items: center;">
+          <a href="#" style="color: var(--color-primary); font-weight: 600;">MindCluster UPC</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript App Entry (ES Module) -->
+  <script type="module" src="assets/js/app.js"></script>
+</body>
+</html>
