@@ -1,8 +1,7 @@
-/**
- * SafeDiary - Textos en Español (ES)
- * MindCluster - Safe Diary Warmth
- */
+import { esTerms } from './terms-es.js';
+
 export const es = {
+  ...esTerms,
   // Brand & Header
   brandName: "SafeDiary",
   brandTagline: "por MindCluster • Tu rincón de paz",
@@ -26,45 +25,86 @@ export const es = {
   btnVoiceRecording: "GRABANDO...",
   btnInspiration: "Inspiración para escribir",
   btnSaveReflection: "Guardar reflexión",
-  reflectionSavedFeedback: "✨ Tu reflexión ha sido resguardada y cifrada en tu dispositivo con éxito.",
-  inspirationPrompts: [
-    "¿Qué pequeño detalle de hoy te hizo sonreír o sentir alivio?",
-    "Si pudieras hablarle a tu yo de esta mañana, ¿qué palabra de calma le dirías?",
-    "¿Qué carga innecesaria estás listo/a para soltar esta noche?",
-    "Nombra una cosa por la que sientas profunda gratitud hoy.",
-    "¿Cómo te gustaría sentirte al despertar el día de mañana?"
-  ],
+  reflectionSavedFeedback: "Guardado con cariño en la memoria de tu dispositivo. Nadie más tiene acceso.",
+  reflectionSavedSub: "Tu refugio intacto",
 
-  // Breathing Section
-  breathBadge: "Ejercicio de Respiración Consciente",
-  breathTitle: "Inhala paz, exhala tensión",
-  breathSubtitle: "Regálate un minuto para reconectar con tu calma natural a través del ritmo restaurativo 4-7-8.",
+  // Supportive Pills (Bajo el diario)
+  pillPrompt1: "Hablar con calma",
+  pillPrompt2: "Reflexión matutina",
+  pillPrompt3: "Soltar la sobrecarga",
+  trustPillar1: "Sin servidores leyendo tus cartas",
+  trustPillar2: "Claves en tu móvil",
+  trustPillar3: "Diseñado para sanar",
+
+  // Reassurance Bar (4 horizontal cards)
+  reassurance1Title: "Tu candado personal",
+  reassurance1Desc: "Cifrado de grado bancario que vive única y exclusivamente en tu móvil.",
+  reassurance2Title: "Ejercicios amables",
+  reassurance2Desc: "Preguntas guiadas para desenredar el nudo en el pecho paso a paso.",
+  reassurance3Title: "Cero publicidad",
+  reassurance3Desc: "Tus vivencias no se venden ni se usan para entrenar algoritmos comerciales.",
+  reassurance4Title: "Huella y FaceID",
+  reassurance4Desc: "Se bloquea al instante cuando sales de la app. Máxima tranquilidad.",
+
+  // Cozy Bento Grid
+  bentoTag: "Un espacio pensado para ti",
+  bentoTitle: "Tu refugio personal para ordenar tus pensamientos.",
+  bentoSubtitle: "Cada rincón de SafeDiary está creado para brindarte serenidad, un ritmo sin prisas y la sensación hogareña de estar a salvo.",
+  
+  // Voice Card
+  voiceTag: "Voz acogedora",
+  voiceSession: "Sesión de 4 minutos",
+  voiceTitle: "Un diario que te escucha con ternura",
+  voiceDesc: "Habla en voz alta cuando las manos estén cansadas. Tu voz se transcribe en tu propio teléfono y el audio se desvanece de inmediato, como un suspiro en una tarde de lluvia.",
+  voiceTone: "Tono: Desahogo suave y reconfortante",
+  voiceLocalBadge: "100% en tu teléfono",
+  voiceQuote: "“Al cerrar el portátil hoy, noté cómo caía el peso en los hombros... pero respiré hondo y puse música suave...”",
+  voiceFooter: "Sin telemetría en la nube • Conversación pura",
+
+  // Mood Patterns Card
+  moodTag: "Bienestar diario",
+  moodTitle: "Descubre tus momentos de calma",
+  moodDesc: "Descubre qué días te sientes más sereno y qué hábitos te devuelven la sonrisa, con gráficos amables y sencillos.",
+  moodLevelLabel: "Nivel de serenidad",
+  moodLevelValue: "+22% de tranquilidad",
+  chartDayMon: "Lunes",
+  chartDayWed: "Miércoles",
+  chartDayFri: "Viernes",
+  chartDaySun: "Domingo",
+  moodPill1: "Tardes de lectura: +Grounded",
+  moodPill2: "Menos sobrepensar",
+
+  // 4-7-8 Breathing Pacer
+  breathTag: "Ritmo y paz interior",
+  breathTitle: "Respira hondo y suelta la carga",
+  breathDesc: "Tómate un descanso consciente con el método 4-7-8. Un ciclo amable para calmar el ritmo cardíaco cuando el día aprieta.",
+  breathStateInhale: "Inhala suavemente (4s)",
+  breathStateHold: "Sostén el aire con calma (7s)",
+  breathStateExhale: "Exhala despacio y suelta (8s)",
   breathStateReady: "Listo para comenzar",
-  breathStateInhale: "Inhala suavemente...",
-  breathStateHold: "Sostén el aire...",
-  breathStateExhale: "Exhala despacio...",
-  btnStartExercise: "Iniciar ejercicio",
+  breathSubInhale: "Siente cómo el pecho se ensancha",
+  breathSubHold: "Disfruta de este momento de silencio",
+  breathSubExhale: "Libera toda tensión acumulada",
+  btnStartExercise: "Iniciar ejercicio de respiración",
   btnPauseExercise: "Pausar ejercicio",
 
-  // Wellness / Moments of Calm
-  wellnessBadge: "Tu Bienestar Emocional",
-  wellnessTitle: "Comprende tus ciclos sin presiones",
-  wellnessSubtitle: "Identifica qué nutre tu tranquilidad y qué momentos de tu día merecen una pausa reflexiva.",
-  wellnessCardTitle: "Registro de serenidad semanal",
-  wellnessCardSubtitle: "Evolución de calma registrada en tus reflexiones recientes",
-  moodSerene: "Sereno",
-  moodGrateful: "Agradecido",
-  moodReflective: "Reflexivo",
-  moodCalm: "Cansado pero en calma",
-  moodHopeful: "Esperanzado",
-  daysShort: ["Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom"],
-  statsCardTitle: "Espacio de autorreflexión",
-  statsCardDesc: "Escribir con regularidad reduce los niveles de cortisol, despeja la mente y fortalece tu equilibrio emocional.",
-  streakPill1: "🌿 3 días consecutivos",
-  streakPill2: "📖 12 reflexiones este mes",
-  wellnessQuote: "“No se trata de estar siempre bien, sino de darte permiso de sentir y respirar.”",
+  // Empathetic Note Sharing
+  shareTag: "Apoyo y compañía",
+  shareSession: "Exportación segura",
+  shareTitle: "Comparte tus avances con quien te cuida",
+  shareDesc: "Si visitas a un terapeuta o compartes tus reflexiones con un ser querido, genera un resumen ordenado y limpio, protegiendo siempre tus secretos más íntimos.",
+  shareFileName: "Resumen_Para_Mi_Sesion.pdf",
+  shareStatus: "Listo",
+  shareBox1Title: "Tema central",
+  shareBox1Value: "Autoexigencia",
+  shareBox2Title: "Progreso",
+  shareBox2Value: "Más compasión",
+  shareBox3Title: "Días de paz",
+  shareBox3Value: "5 de 7 días",
+  shareFootnote: "Tú decides qué párrafos incluir y qué omitir.",
+  btnCreateConsultation: "Crear cuaderno de consulta",
 
-  // Sacred Privacy (Fiel al diseño Stitch)
+  // Seccion de privacidad
   privacyTag: "Privacidad que te abraza",
   privacyTitle: "Tu privacidad es sagrada y 100% tuya.",
   privacySubtitle: "Las aplicaciones convencionales guardan tus notas en servidores donde empleados o algoritmos pueden leerlas. En SafeDiary, tu intimidad está protegida bajo siete llaves que solo tú tienes.",
@@ -80,55 +120,84 @@ export const es = {
   privacySafePoint3Title: "Libertad absoluta:",
   privacySafePoint3Text: "Puedes borrar, exportar o guardar una copia física en cualquier instante.",
 
-  // Team Section (Placeholders solicitados)
-  teamBadge: "Equipo MindCluster",
-  teamTitle: "Las personas detrás de SafeDiary",
-  teamSubtitle: "Un equipo multidisciplinario comprometido con construir herramientas tecnológicas empáticas, accesibles y cálidas.",
-  teamBadgeRole: "MindCluster • Integrante",
+  // Immersive Journaling Story
+  storyTag: "Tu tiempo vale oro",
+  storyTitle: "Tus pensamientos más sinceros, sin algoritmos que te juzguen.",
+  storySubtitle: "SafeDiary no fue creado para mantenerte enganchado a una pantalla ni para coleccionar ‘likes’. Nació para brindarte un rincón acogedor donde soltar la armadura y reconectar con lo que verdaderamente importa.",
+  storyNoteTitle: "Momento de descompresión",
+  storyNoteMeta: "Ayer a las 22:45 • Una taza de manzanilla",
+  storyNoteSerene: "Sereno",
+  storyNoteBody: "“El día fue ajetreado y sentía que no llegaba a todo. Pero sentarme estos cinco minutos en el sofá con la luz tenue me recordó que no tengo que solucionar el mundo en un solo día. Mañana será otro día y merezco descansar.”",
+  storyCompassionTag: "Nota de compasión",
+  storyCompassionText: "Recuerda cómo cambia tu perspectiva cuando te concedes el permiso de soltar las riendas.",
+  stat1Num: "100%",
+  stat1Label: "Privado y tuyo",
+  stat2Num: "0",
+  stat2Label: "Anuncios o distracciones",
+  stat3Num: "Paz",
+  stat3Label: "A cualquier hora",
+
+  // Team Section (Placeholders)
+  teamBadge: "Las personas detrás del refugio",
+  teamTitle: "Un equipo comprometido con tu calma y privacidad.",
+  teamSubtitle: "Psicólogas, ingenieros de privacidad y diseñadores que creemos firmemente en la tecnología que abraza y no juzga.",
+  teamBadgeRole: "SafeDiary Co-fundadora",
+  teamFooterPledge: "Compromiso de trato humano, sereno y ético",
+  teamTabsHelper: "Pulsa en cada perfil para conocer su rol en tu santuario digital",
   teamMembers: [
     {
       id: 1,
-      name: "Integrante 01",
-      role: "Líder de Proyecto & Arquitectura Frontend",
+      name: "Dra. Elena Valenzuela",
+      role: "Co-fundadora & Directora de Psicología y Bienestar",
+      specialty: "Terapia Humanista & Bienestar",
       image: "assets/images/placeholders/member-1.svg",
-      quote: "“Construir tecnología debe ser un acto de empatía y cuidado hacia quien la utiliza cada día.”",
-      bio: "Responsable de la dirección conceptual del proyecto, asegurando la cohesión visual del sistema Safe Diary Warmth y la integración fluida de cada componente."
+      shortName: "Dra. Elena V.",
+      quote: "“SafeDiary nació para devolvernos un rincón sin prisas donde desahogarnos sin sentirnos observados.”",
+      bio: "Especialista en terapia cognitivo-conductual y psicología humanista con más de 10 años acompañando procesos de introspección y autocuidado."
     },
     {
       id: 2,
-      name: "Integrante 02",
-      role: "Diseño UI/UX & Experiencia de Usuario",
+      name: "Mateo Rinaldi",
+      role: "Líder de Arquitectura Criptográfica & Local Storage",
+      specialty: "Criptografía & Cero Conocimiento",
       image: "assets/images/placeholders/member-2.svg",
-      quote: "“Cada curva, color y margen está pensado para transmitir paz y eliminar cualquier sensación de estrés.”",
-      bio: "Especialista en interfaces accesibles y sistemas de diseño emocional, enfocado en traducir la serenidad en microinteracciones táctiles y amigables."
+      shortName: "Mateo Rinaldi",
+      quote: "“La privacidad absoluta no es una función adicional; es el cimiento de la confianza humana.”",
+      bio: "Ingeniero de seguridad de sistemas con trayectoria en protocolos descentralizados, cifrado on-device AES-256 y privacidad matemática."
     },
     {
       id: 3,
-      name: "Integrante 03",
-      role: "Desarrollo Frontend & Internacionalización",
+      name: "Sofía Benítez",
+      role: "Diseñadora Principal de Experiencia Emocional & UI",
+      specialty: "Diseño Emocional & Accesibilidad",
       image: "assets/images/placeholders/member-3.svg",
-      quote: "“La accesibilidad lingüística permite que el bienestar no tenga barreras culturales ni de idioma.”",
-      bio: "A cargo de la lógica modular de la landing, el sistema de internacionalización (i18n) y el comportamiento responsivo en múltiples dispositivos."
+      shortName: "Sofía Benítez",
+      quote: "“Cada curva, tono y espacio en blanco está concebido para inspirar paz y desvanecer la ansiedad.”",
+      bio: "Diseñadora de interacción enfocada en sistemas visuales restaurativos, paletas cromáticas calmantes y microinteracciones gentiles."
     },
     {
       id: 4,
-      name: "Integrante 04",
-      role: "Arquitectura de Privacidad & Almacenamiento Local",
+      name: "Lucas Morales",
+      role: "Ingeniero de Inteligencia Local & Procesamiento en Chip",
+      specialty: "Machine Learning On-Device",
       image: "assets/images/placeholders/member-4.svg",
-      quote: "“La privacidad no es una opción de configuración; es el cimiento de la confianza humana.”",
-      bio: "Encargado de la investigación e implementación de los mecanismos de cifrado local en el dispositivo y las garantías de confidencialidad del usuario."
+      shortName: "Lucas Morales",
+      quote: "“La verdadera inteligencia tecnológica es la que respeta tu intimidad ejecutándose 100% en tu teléfono.”",
+      bio: "Especialista en redes neuronales compactas para transcripción de audio local y análisis de bienestar sin necesidad de internet."
     },
     {
       id: 5,
-      name: "Integrante 05",
-      role: "Control de Calidad, Documentación & Accesibilidad",
+      name: "Nuria Santillana",
+      role: "Coordinadora de Ética Digital & Bienestar Comunitario",
+      specialty: "Ética Digital & Inclusión",
       image: "assets/images/placeholders/member-5.svg",
-      quote: "“Una experiencia verdaderamente cálida es aquella en la que nadie queda excluido.”",
-      bio: "Dedicado a validar la consistencia en navegadores, semántica web, cumplimiento de estándares y documentación técnica para el equipo."
+      shortName: "Nuria Santillana",
+      quote: "“Un santuario digital debe cuidar a sus usuarios y tratarlos siempre como personas, nunca como datos.”",
+      bio: "Investigadora en sociología del bienestar y mediación tecnológica, dedicada a garantizar que SafeDiary sea un refugio inclusivo y humano."
     }
   ],
 
-  // FAQ Section (Las 6 preguntas con iconos Stitch)
+  // Preguntas frecuentes
   faqBadge: "Dudas frecuentes resueltas con claridad",
   faqTitle: "Preguntas Frecuentes",
   faqSubtitle: "Queremos que te sientas con total tranquilidad y transparencia. Si no encuentras tu respuesta, siempre puedes escribirnos con confianza.",
@@ -167,18 +236,32 @@ export const es = {
       icon: "verified",
       theme: "teal",
       question: "¿SafeDiary tiene anuncios o vende mis datos a terceros?",
-      answer: "Jamás. No existen rastreadores de publicidad, píxeles de terceros ni venta de información estadística. SafeDiary se sostiene gracias a donaciones conscientes y apoyo institucional de MindCluster."
+      answer: "Cero publicidad, cero rastreadores y cero venta de datos. Nuestro modelo se sostiene únicamente a través de suscripciones de mecenazgo consciente de quienes desean apoyar el proyecto."
     }
   ],
 
-  // Footer
-  footerDesc: "Un refugio digital cálido para registrar tus vivencias, reflexiones y emociones con absoluta privacidad y serenidad.",
-  footerNavTitle: "Explorar",
-  footerLegalTitle: "Legal y Ética",
+  // Call to Action (Descarga Móvil & QR)
+  ctaTag: "Tu momento de calma empieza hoy",
+  ctaTitle: "Lleva tu refugio contigo, allá donde vayas.",
+  ctaSubtitle: "Descarga SafeDiary para iPhone y Android. Tu santuario personal listo para acompañarte al despertar o antes de dormir.",
+  ctaBtnAvailableOn: "Disponible en",
+  ctaBtnApple: "Apple App Store",
+  ctaBtnDownloadOn: "Descárgalo en",
+  ctaBtnGoogle: "Google Play",
+  ctaQrTitle: "Escanea con tu móvil",
+  ctaQrSubtitle: "Acceso directo e instantáneo",
+
+  // Pie de pagina
+  footerDesc: "Un santuario íntimo y sereno, concebido para escribir con honestidad, cuidar de tu bienestar mental y abrazar tus emociones en absoluta privacidad.",
+  footerEncryptionActive: "Cifrado de extremo a extremo activo",
+  footerPromiseTitle: "Nuestra promesa contigo",
+  footerPromiseText: "Creemos que tus pensamientos son sagrados. Ningún empleado, servidor remoto o sistema automatizado tiene acceso a tus escritos. Tú eres el único dueño de tu historia.",
+  footerBadgeGdpr: "Cumplimiento RGPD",
+  footerBadgePrivacy: "Privacidad Total",
+  footerCopyright: "© 2026 MindCluster Technologies Inc.",
+  footerMadeWithLove: "Hecho con cariño para mentes conscientes.",
   footerTermsLink: "Términos y Condiciones",
   footerPrivacyLink: "Política de Privacidad",
-  footerSecurityLink: "Seguridad y Cifrado",
-  footerCopyright: "© 2026 MindCluster. Todos los derechos reservados. SafeDiary es una marca orientada al bienestar personal.",
 
   // Terms and Conditions Page
   termsBadge: "Marco Legal y Compromiso Ético",

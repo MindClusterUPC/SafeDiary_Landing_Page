@@ -1,59 +1,38 @@
-/**
- * SafeDiary - Mindful Breathing Exercise (4-7-8 Rhythm)
- * MindCluster
- */
+// Control del ritmo de respiracion guiada 4-7-8
 
 import { getCurrentDict } from '../i18n/i18n.js';
 
 let isRunning = false;
 let currentPhaseIndex = 0;
 let phaseTimer = null;
-let countdownTimer = null;
-let currentSeconds = 4;
 
 const PHASES = [
-  { key: 'breathStateInhale', duration: 4, scale: 1.35 },
-  { key: 'breathStateHold', duration: 7, scale: 1.35 },
-  { key: 'breathStateExhale', duration: 8, scale: 1.0 }
+  { textKey: 'breathStateInhale', subKey: 'breathSubInhale', duration: 4, scale: 1.25 },
+  { textKey: 'breathStateHold', subKey: 'breathSubHold', duration: 7, scale: 1.25 },
+  { textKey: 'breathStateExhale', subKey: 'breathSubExhale', duration: 8, scale: 1.0 }
 ];
 
 export function initBreathing() {
   const toggleBtn = document.getElementById('breathingToggleBtn');
-  const innerCircle = document.getElementById('breathingCircleInner');
+  const orb = document.getElementById('breathingOrb');
   const stateText = document.getElementById('breathingStateText');
-  const counterEl = document.getElementById('breathingCounter');
+  const subText = document.getElementById('breathingSubText');
 
-  if (!toggleBtn || !innerCircle || !stateText || !counterEl) return;
+  if (!toggleBtn || !stateText) return;
 
-  function updatePhaseDisplay() {
+  function runPhase() {
+    if (!isRunning) return;
     const dict = getCurrentDict();
     const phase = PHASES[currentPhaseIndex];
-    stateText.textContent = dict[phase.key] || '';
-    counterEl.textContent = currentSeconds;
-    innerCircle.style.transform = `scale(${phase.scale})`;
-  }
 
-  function tickCountdown() {
-    if (!isRunning) return;
-    currentSeconds--;
-    if (currentSeconds > 0) {
-      counterEl.textContent = currentSeconds;
-    }
-  }
-
-  function runNextPhase() {
-    if (!isRunning) return;
-    const phase = PHASES[currentPhaseIndex];
-    currentSeconds = phase.duration;
-    updatePhaseDisplay();
-
-    countdownTimer = setInterval(tickCountdown, 1000);
+    stateText.textContent = dict[phase.textKey] || '';
+    if (subText) subText.textContent = dict[phase.subKey] || '';
+    if (orb) orb.style.transform = `scale(${phase.scale})`;
 
     phaseTimer = setTimeout(() => {
-      clearInterval(countdownTimer);
       if (!isRunning) return;
       currentPhaseIndex = (currentPhaseIndex + 1) % PHASES.length;
-      runNextPhase();
+      runPhase();
     }, phase.duration * 1000);
   }
 
@@ -61,30 +40,23 @@ export function initBreathing() {
     isRunning = true;
     currentPhaseIndex = 0;
     const dict = getCurrentDict();
-    toggleBtn.innerHTML = `
-      <span class="material-symbols-outlined">pause_circle</span>
-      <span data-i18n="btnPauseExercise">${dict.btnPauseExercise || 'Pausar ejercicio'}</span>
-    `;
+    const btnSpan = toggleBtn.querySelector('.btn-label');
+    if (btnSpan) btnSpan.textContent = dict.btnPauseExercise || 'Pausar ejercicio';
     toggleBtn.classList.add('btn--secondary');
-    toggleBtn.classList.remove('btn--primary');
-    runNextPhase();
+    runPhase();
   }
 
   function pause() {
     isRunning = false;
     clearTimeout(phaseTimer);
-    clearInterval(countdownTimer);
     const dict = getCurrentDict();
-    toggleBtn.innerHTML = `
-      <span class="material-symbols-outlined">play_circle</span>
-      <span data-i18n="btnStartExercise">${dict.btnStartExercise || 'Iniciar ejercicio'}</span>
-    `;
-    toggleBtn.classList.add('btn--primary');
+    const btnSpan = toggleBtn.querySelector('.btn-label');
+    if (btnSpan) btnSpan.textContent = dict.btnStartExercise || 'Iniciar ejercicio de respiración';
     toggleBtn.classList.remove('btn--secondary');
 
-    innerCircle.style.transform = 'scale(1.0)';
+    if (orb) orb.style.transform = 'scale(1)';
     stateText.textContent = dict.breathStateReady || 'Listo para comenzar';
-    counterEl.textContent = '4';
+    if (subText) subText.textContent = dict.breathSubInhale || '';
   }
 
   toggleBtn.addEventListener('click', () => {
@@ -95,18 +67,18 @@ export function initBreathing() {
     }
   });
 
-  // Reaccionar al cambio de idioma
   document.addEventListener('languageChange', ({ detail }) => {
     const dict = detail.dict;
+    const btnSpan = toggleBtn.querySelector('.btn-label');
     if (isRunning) {
       const phase = PHASES[currentPhaseIndex];
-      stateText.textContent = dict[phase.key] || '';
-      const span = toggleBtn.querySelector('[data-i18n]');
-      if (span) span.textContent = dict.btnPauseExercise;
+      stateText.textContent = dict[phase.textKey] || '';
+      if (subText) subText.textContent = dict[phase.subKey] || '';
+      if (btnSpan) btnSpan.textContent = dict.btnPauseExercise;
     } else {
       stateText.textContent = dict.breathStateReady || 'Listo para comenzar';
-      const span = toggleBtn.querySelector('[data-i18n]');
-      if (span) span.textContent = dict.btnStartExercise;
+      if (subText) subText.textContent = dict.breathSubInhale || '';
+      if (btnSpan) btnSpan.textContent = dict.btnStartExercise;
     }
   });
 }

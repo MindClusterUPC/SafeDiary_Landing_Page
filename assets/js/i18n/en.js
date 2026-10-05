@@ -1,8 +1,7 @@
-/**
- * SafeDiary - English Texts (EN)
- * MindCluster - Safe Diary Warmth
- */
+import { enTerms } from './terms-en.js';
+
 export const en = {
+  ...enTerms,
   // Brand & Header
   brandName: "SafeDiary",
   brandTagline: "by MindCluster • Your peaceful haven",
@@ -26,45 +25,86 @@ export const en = {
   btnVoiceRecording: "RECORDING...",
   btnInspiration: "Writing inspiration",
   btnSaveReflection: "Save reflection",
-  reflectionSavedFeedback: "✨ Your reflection has been safely stored and encrypted on your device.",
-  inspirationPrompts: [
-    "What small detail brought a smile or relief to your day?",
-    "If you could talk to yourself from this morning, what gentle words would you say?",
-    "What unnecessary worry are you ready to let go of tonight?",
-    "Name one thing you feel deeply grateful for today.",
-    "How would you like to feel when you wake up tomorrow morning?"
-  ],
+  reflectionSavedFeedback: "Safely stored with care in your device's private memory. Nobody else has access.",
+  reflectionSavedSub: "Your haven remains intact",
 
-  // Breathing Section
-  breathBadge: "Mindful Breathing Exercise",
-  breathTitle: "Inhale peace, exhale tension",
-  breathSubtitle: "Give yourself a quiet minute to reconnect with your natural calm using the restorative 4-7-8 breathing rhythm.",
+  // Supportive Pills
+  pillPrompt1: "Speak gently",
+  pillPrompt2: "Morning reflection",
+  pillPrompt3: "Release the overload",
+  trustPillar1: "No servers reading your letters",
+  trustPillar2: "Keys stay on your phone",
+  trustPillar3: "Designed to heal",
+
+  // Reassurance Bar (4 horizontal cards)
+  reassurance1Title: "Your Personal Padlock",
+  reassurance1Desc: "Bank-grade encryption residing purely and exclusively on your smartphone.",
+  reassurance2Title: "Gentle Exercises",
+  reassurance2Desc: "Guided prompts to untangle feelings in your chest step by step.",
+  reassurance3Title: "Zero Advertising",
+  reassurance3Desc: "Your stories are never sold or used to train commercial algorithms.",
+  reassurance4Title: "Biometric Lock",
+  reassurance4Desc: "Instantly locks the moment you leave the app for complete tranquility.",
+
+  // Cozy Bento Grid
+  bentoTag: "A space tailored for you",
+  bentoTitle: "Your personal haven to untangle your thoughts.",
+  bentoSubtitle: "Every corner of SafeDiary is crafted to bring you tranquility, an unhurried cadence, and the cozy feeling of being safe.",
+
+  // Voice Card
+  voiceTag: "Cozy Voice",
+  voiceSession: "4-minute session",
+  voiceTitle: "A journal that listens with tenderness",
+  voiceDesc: "Speak out loud when your hands are tired. Your voice is transcribed locally on your device and the audio vanishes immediately, like a breath on a rainy afternoon.",
+  voiceTone: "Tone: Soft and comforting release",
+  voiceLocalBadge: "100% on your device",
+  voiceQuote: "“Closing my laptop today, I felt all the tension dropping from my shoulders... but I took a deep breath and put on soft ambient music...”",
+  voiceFooter: "Zero cloud telemetry • Pure conversation",
+
+  // Mood Patterns Card
+  moodTag: "Daily Wellness",
+  moodTitle: "Discover your moments of calm",
+  moodDesc: "Notice which days bring serenity and which comforting habits bring back your smile, through gentle and intuitive visuals.",
+  moodLevelLabel: "Serenity level",
+  moodLevelValue: "+22% tranquility",
+  chartDayMon: "Monday",
+  chartDayWed: "Wednesday",
+  chartDayFri: "Friday",
+  chartDaySun: "Sunday",
+  moodPill1: "Reading evenings: +Grounded",
+  moodPill2: "Less overthinking",
+
+  // 4-7-8 Breathing Pacer
+  breathTag: "Rhythm & Inner Peace",
+  breathTitle: "Breathe deeply and let go of the burden",
+  breathDesc: "Take a mindful break with the restorative 4-7-8 method. A gentle cycle to calm your heart rate whenever the day feels heavy.",
+  breathStateInhale: "Inhale gently (4s)",
+  breathStateHold: "Hold your breath calmly (7s)",
+  breathStateExhale: "Exhale slowly and release (8s)",
   breathStateReady: "Ready to begin",
-  breathStateInhale: "Inhale gently...",
-  breathStateHold: "Hold your breath...",
-  breathStateExhale: "Exhale slowly...",
-  btnStartExercise: "Start exercise",
+  breathSubInhale: "Feel your chest softly expand",
+  breathSubHold: "Enjoy this quiet moment of stillness",
+  breathSubExhale: "Release all stored tension",
+  btnStartExercise: "Start breathing exercise",
   btnPauseExercise: "Pause exercise",
 
-  // Wellness / Moments of Calm
-  wellnessBadge: "Your Emotional Wellness",
-  wellnessTitle: "Understand your cycles without pressure",
-  wellnessSubtitle: "Discover what nourishes your tranquility and which moments of your day deserve a thoughtful pause.",
-  wellnessCardTitle: "Weekly serenity log",
-  wellnessCardSubtitle: "Calm progression registered across your recent journal entries",
-  moodSerene: "Serene",
-  moodGrateful: "Grateful",
-  moodReflective: "Reflective",
-  moodCalm: "Tired yet peaceful",
-  moodHopeful: "Hopeful",
-  daysShort: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
-  statsCardTitle: "Self-reflection space",
-  statsCardDesc: "Regular journaling gently lowers cortisol levels, declutters the mind, and reinforces emotional resilience.",
-  streakPill1: "🌿 3 consecutive days",
-  streakPill2: "📖 12 entries this month",
-  wellnessQuote: "“It's not about feeling okay every single second, but giving yourself permission to feel and breathe.”",
+  // Empathetic Note Sharing
+  shareTag: "Care & Company",
+  shareSession: "Secure Export",
+  shareTitle: "Share your progress with who cares for you",
+  shareDesc: "If you see a therapist or share reflections with a loved one, produce a clean, structured summary, always protecting your most intimate secrets.",
+  shareFileName: "Session_Summary_Notes.pdf",
+  shareStatus: "Ready",
+  shareBox1Title: "Key theme",
+  shareBox1Value: "Self-demand",
+  shareBox2Title: "Progress",
+  shareBox2Value: "More compassion",
+  shareBox3Title: "Peaceful days",
+  shareBox3Value: "5 out of 7 days",
+  shareFootnote: "You decide which passages to include and which to keep private.",
+  btnCreateConsultation: "Create consultation notebook",
 
-  // Sacred Privacy (Stitch design matching)
+  // Privacy Section
   privacyTag: "Privacy that embraces you",
   privacyTitle: "Your privacy is sacred and 100% yours.",
   privacySubtitle: "Conventional applications store your notes on remote servers where staff or algorithms can inspect them. At SafeDiary, your intimacy is protected under seven locks that only you hold.",
@@ -80,55 +120,84 @@ export const en = {
   privacySafePoint3Title: "Absolute Freedom:",
   privacySafePoint3Text: "You can erase, export, or print a physical backup at any given second.",
 
+  // Immersive Journaling Story
+  storyTag: "Your time is precious",
+  storyTitle: "Your most honest thoughts, without algorithms judging you.",
+  storySubtitle: "SafeDiary wasn't built to hook you to a screen or collect ‘likes’. It was born to offer you a warm sanctuary to take off your armor and reconnect with what truly matters.",
+  storyNoteTitle: "Decompression moment",
+  storyNoteMeta: "Yesterday at 10:45 PM • A cup of chamomile tea",
+  storyNoteSerene: "Serene",
+  storyNoteBody: "“The day was hectic and I felt like I couldn't keep up. But sitting for these five quiet minutes on the sofa under dim light reminded me that I don't have to fix the world in a single day. Tomorrow is a new day and I deserve rest.”",
+  storyCompassionTag: "Compassion note",
+  storyCompassionText: "Notice how your perspective shifts when you grant yourself permission to let go.",
+  stat1Num: "100%",
+  stat1Label: "Private & yours",
+  stat2Num: "0",
+  stat2Label: "Ads or distractions",
+  stat3Num: "Peace",
+  stat3Label: "At any hour",
+
   // Team Section (Placeholders)
-  teamBadge: "MindCluster Team",
-  teamTitle: "The people behind SafeDiary",
-  teamSubtitle: "A multidisciplinary team dedicated to crafting empathetic, accessible, and deeply human digital experiences.",
-  teamBadgeRole: "MindCluster • Member",
+  teamBadge: "The people behind the haven",
+  teamTitle: "A team devoted to your calm and privacy.",
+  teamSubtitle: "Psychologists, privacy engineers, and designers who firmly believe in technology that embraces rather than judges.",
+  teamBadgeRole: "SafeDiary Co-founder",
+  teamFooterPledge: "Human, serene, and ethical care commitment",
+  teamTabsHelper: "Click on each profile to discover their role in your digital haven",
   teamMembers: [
     {
       id: 1,
-      name: "Team Member 01",
-      role: "Project Lead & Frontend Architect",
+      name: "Dr. Elena Valenzuela",
+      role: "Co-founder & Director of Psychology and Wellness",
+      specialty: "Humanistic Therapy & Wellbeing",
       image: "assets/images/placeholders/member-1.svg",
-      quote: "“Building technology should be an act of empathy and care toward the person using it every day.”",
-      bio: "Oversees conceptual direction, ensuring visual harmony under the Safe Diary Warmth design system and flawless component integration."
+      shortName: "Dr. Elena V.",
+      quote: "“SafeDiary was created to return an unhurried haven where we can vent without feeling watched.”",
+      bio: "Specialist in cognitive-behavioral and humanistic psychology with over 10 years guiding mindfulness and emotional self-care journeys."
     },
     {
       id: 2,
-      name: "Team Member 02",
-      role: "UI/UX & Emotional Product Designer",
+      name: "Mateo Rinaldi",
+      role: "Lead Cryptographic Architect & Local Storage",
+      specialty: "Cryptography & Zero-Knowledge",
       image: "assets/images/placeholders/member-2.svg",
-      quote: "“Every curve, color, and margin is carefully tailored to inspire peace and remove emotional friction.”",
-      bio: "Focuses on accessible design systems and emotional UX, translating tranquility into tactile, human-friendly interactions."
+      shortName: "Mateo Rinaldi",
+      quote: "“Absolute privacy is not a luxury toggle; it is the cornerstone of human vulnerability and trust.”",
+      bio: "Systems security engineer with extensive experience in decentralized protocols, on-device AES-256 encryption, and verifiable mathematics."
     },
     {
       id: 3,
-      name: "Team Member 03",
-      role: "Frontend Developer & Internationalization",
+      name: "Sofía Benítez",
+      role: "Principal Emotional Experience & UI Designer",
+      specialty: "Emotional UX & Accessibility",
       image: "assets/images/placeholders/member-3.svg",
-      quote: "“Linguistic accessibility ensures that personal wellness knows no language or cultural barriers.”",
-      bio: "Leads the modular landing logic, i18n architecture, and responsive adaptation across tablets, desktops, and mobile devices."
+      shortName: "Sofía Benítez",
+      quote: "“Every curve, hue, and white space is tuned to nurture calmness and dissolve persistent anxiety.”",
+      bio: "Interaction designer specializing in restorative visual systems, calming color palettes, and tactile micro-interactions."
     },
     {
       id: 4,
-      name: "Team Member 04",
-      role: "Privacy Engineer & Local Storage Architect",
+      name: "Lucas Morales",
+      role: "On-Device Intelligence & Chip Computing Engineer",
+      specialty: "On-Device Machine Learning",
       image: "assets/images/placeholders/member-4.svg",
-      quote: "“Privacy is not a toggle in the settings menu; it is the cornerstone of human trust.”",
-      bio: "Dedicated to researching and implementing secure on-device cryptographic storage to guarantee confidential journaling."
+      shortName: "Lucas Morales",
+      quote: "“True technological intelligence is that which honors your intimacy by running entirely on your phone.”",
+      bio: "Specialist in optimized neural models for local audio transcription and wellbeing summaries completely offline."
     },
     {
       id: 5,
-      name: "Team Member 05",
-      role: "QA, Web Accessibility & Documentation",
+      name: "Nuria Santillana",
+      role: "Digital Ethics & Community Wellness Coordinator",
+      specialty: "Digital Ethics & Inclusion",
       image: "assets/images/placeholders/member-5.svg",
-      quote: "“A truly warm, restorative experience is one where absolutely nobody is left behind.”",
-      bio: "Validates multi-browser rendering, semantic web compliance, WCAG standards, and comprehensive team technical documentation."
+      shortName: "Nuria Santillana",
+      quote: "“A digital haven must care for its users and always treat them as human beings, never as data.”",
+      bio: "Wellbeing researcher in technology mediation, devoted to ensuring that SafeDiary remains a gentle, inclusive space for everyone."
     }
   ],
 
-  // FAQ Section (Stitch 6 items with theme icons)
+  // Frequently asked questions
   faqBadge: "Frequent questions answered with clarity",
   faqTitle: "Frequently Asked Questions",
   faqSubtitle: "We want you to feel complete tranquility and transparency. If you have questions, reach out anytime.",
@@ -167,18 +236,32 @@ export const en = {
       icon: "verified",
       theme: "teal",
       question: "Does SafeDiary have ads or sell data to third parties?",
-      answer: "Never. There are no tracking pixels, behavioral monitors, or data broker sales. SafeDiary is sustained by MindCluster and mindful patronage."
+      answer: "Zero advertising, zero trackers, and zero data sales. Our model is supported purely through mindful patronage subscriptions from people who wish to sustain the project."
     }
   ],
 
+  // Call to Action (Mobile Download & QR)
+  ctaTag: "Your moment of calm begins today",
+  ctaTitle: "Carry your haven with you, wherever life takes you.",
+  ctaSubtitle: "Download SafeDiary for iPhone and Android. Your personal sanctuary ready to comfort you as you wake or before sleep.",
+  ctaBtnAvailableOn: "Available on",
+  ctaBtnApple: "Apple App Store",
+  ctaBtnDownloadOn: "Download on",
+  ctaBtnGoogle: "Google Play",
+  ctaQrTitle: "Scan with your phone",
+  ctaQrSubtitle: "Direct & instant access",
+
   // Footer
-  footerDesc: "A warm digital sanctuary to record your memories, reflections, and emotions with complete privacy and tranquility.",
-  footerNavTitle: "Explore",
-  footerLegalTitle: "Legal & Ethics",
+  footerDesc: "An intimate and serene haven, crafted for honest reflection, caring for mental wellbeing, and embracing emotions in complete privacy.",
+  footerEncryptionActive: "End-to-end local encryption active",
+  footerPromiseTitle: "Our pledge to you",
+  footerPromiseText: "We believe your thoughts are sacred. No employee, remote server, or automated algorithm has access to your words. You are the sole custodian of your story.",
+  footerBadgeGdpr: "GDPR Compliant",
+  footerBadgePrivacy: "Total Privacy",
+  footerCopyright: "© 2026 MindCluster Technologies Inc.",
+  footerMadeWithLove: "Crafted with warmth for mindful hearts.",
   footerTermsLink: "Terms & Conditions",
   footerPrivacyLink: "Privacy Policy",
-  footerSecurityLink: "Security & Encryption",
-  footerCopyright: "© 2026 MindCluster. All rights reserved. SafeDiary is a brand dedicated to human wellbeing.",
 
   // Terms and Conditions Page
   termsBadge: "Legal Framework & Ethical Pledge",

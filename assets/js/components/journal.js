@@ -1,9 +1,6 @@
-/**
- * SafeDiary - Interactive Journal Component
- * MindCluster
- */
+// Funcionalidad del diario interactivo y grabacion simulada
 
-import { getCurrentDict, t } from '../i18n/i18n.js';
+import { getCurrentDict } from '../i18n/i18n.js';
 
 export function initJournal() {
   const textarea = document.getElementById('journalPromptArea');
@@ -11,7 +8,7 @@ export function initJournal() {
   const recordVoiceBtn = document.getElementById('recordVoiceBtn');
   const recordingBadge = document.getElementById('recordingBadge');
   const saveBtn = document.getElementById('saveReflectionBtn');
-  const feedbackEl = document.getElementById('journalFeedback');
+  const drawer = document.getElementById('reflectionDrawer');
   const recordIcon = document.getElementById('recordIcon');
   const recordLabel = document.getElementById('recordLabel');
 
@@ -20,7 +17,7 @@ export function initJournal() {
   let promptIndex = 0;
   let isRecording = false;
 
-  // Rotar sugerencias de inspiración
+  // Botón inspiración
   if (inspirationBtn) {
     inspirationBtn.addEventListener('click', () => {
       const dict = getCurrentDict();
@@ -33,7 +30,18 @@ export function initJournal() {
     });
   }
 
-  // Simulación de grabación de nota de voz
+  // Píldoras de sugerencias debajo del diario
+  document.querySelectorAll('.supportive-pill-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const span = btn.querySelector('[data-i18n]');
+      if (span && span.textContent) {
+        textarea.value = span.textContent + ' — ';
+        textarea.focus();
+      }
+    });
+  });
+
+  // Simulación de grabación de voz
   if (recordVoiceBtn) {
     recordVoiceBtn.addEventListener('click', () => {
       isRecording = !isRecording;
@@ -49,8 +57,7 @@ export function initJournal() {
         if (recordIcon) recordIcon.textContent = 'mic';
         if (recordLabel) recordLabel.textContent = dict.btnRecordVoice || 'Grabar nota de voz';
         recordVoiceBtn.classList.remove('btn--secondary');
-        
-        // Simular que se capturó una nota de audio
+
         if (textarea.value.trim() === '') {
           textarea.value = dict.journalPlaceholder || '';
         }
@@ -58,31 +65,31 @@ export function initJournal() {
     });
   }
 
-  // Guardar reflexión con feedback
+  // Guardar reflexion y mostrar aviso
   saveBtn.addEventListener('click', () => {
-    const text = textarea.value.trim();
     const dict = getCurrentDict();
-
-    if (feedbackEl) {
-      feedbackEl.classList.add('visible');
-      const textSpan = feedbackEl.querySelector('.feedback-text');
+    if (drawer) {
+      drawer.classList.add('visible');
+      const textSpan = drawer.querySelector('.drawer-message');
       if (textSpan) {
-        textSpan.textContent = dict.reflectionSavedFeedback || '✨ Tu reflexión ha sido guardada con éxito.';
+        textSpan.textContent = dict.reflectionSavedFeedback || 'Guardado con cariño en la memoria de tu dispositivo.';
       }
 
-      // Cerrar si estaba grabando
       if (isRecording && recordVoiceBtn) {
         recordVoiceBtn.click();
       }
 
-      // Ocultar feedback tras 4 segundos
       setTimeout(() => {
-        feedbackEl.classList.remove('visible');
-      }, 4000);
+        textarea.value = '';
+        textarea.placeholder = dict.reflectionSavedFeedback;
+      }, 500);
+
+      setTimeout(() => {
+        drawer.classList.remove('visible');
+      }, 5000);
     }
   });
 
-  // Reaccionar a cambios de idioma
   document.addEventListener('languageChange', ({ detail }) => {
     const dict = detail.dict;
     if (recordLabel) {

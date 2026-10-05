@@ -22,68 +22,11 @@
 </head>
 <body>
 
-  <!-- ======================================================================
-       HEADER / NAVBAR (Safe Diary Warmth - Stitch Matching)
-       ====================================================================== -->
-  <header class="header" id="mainHeader">
-    <div class="container header__content">
-      <!-- Brand Logo & Identity -->
-      <a href="#" class="brand" aria-label="SafeDiary Inicio">
-        <div class="brand__logo">
-          <span class="material-symbols-outlined" style="font-size: 22px;">spa</span>
-        </div>
-        <div class="brand__text">
-          <span class="brand__name" data-i18n="brandName">SafeDiary</span>
-          <span class="brand__tagline" data-i18n="brandTagline">por MindCluster • Tu rincón de paz</span>
-        </div>
-      </a>
-
-      <!-- Desktop Warm Pill Navigation -->
-      <nav class="nav-menu" aria-label="Navegación principal">
-        <a href="#espacio" class="nav-link active" data-i18n="navSpace">Tu Espacio</a>
-        <a href="#respirar" class="nav-link" data-i18n="navBreathing">Paz Interior</a>
-        <a href="#bienestar" class="nav-link" data-i18n="navWellness">Momentos de Calma</a>
-        <a href="#privacidad" class="nav-link" data-i18n="navPrivacy">Privacidad Sagrada</a>
-        <a href="#equipo" class="nav-link" data-i18n="navTeam">Equipo</a>
-        <a href="#faq" class="nav-link" data-i18n="navFaq">Preguntas</a>
-      </nav>
-
-      <!-- Header Actions: i18n Language Toggle & Primary CTA -->
-      <div class="header__actions">
-        <!-- Language Switcher Toggle -->
-        <div class="lang-toggle" role="group" aria-label="Selector de idioma">
-          <button type="button" class="lang-btn active" data-lang="es" aria-label="Cambiar a Español">ES</button>
-          <button type="button" class="lang-btn" data-lang="en" aria-label="Switch to English">EN</button>
-        </div>
-
-        <!-- Primary CTA Button -->
-        <a href="#espacio" class="btn btn--primary" id="headerCtaBtn">
-          <span data-i18n="btnStartJournal">Comenzar mi diario</span>
-          <span class="material-symbols-outlined" style="font-size: 18px;">favorite</span>
-        </a>
-
-        <!-- Mobile Hamburger Button -->
-        <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menú" aria-expanded="false">
-          <span class="material-symbols-outlined">menu</span>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <!-- Mobile Navigation Drawer -->
-  <div class="mobile-nav" id="mobileNav">
-    <a href="#espacio" class="nav-link" data-i18n="navSpace">Tu Espacio</a>
-    <a href="#respirar" class="nav-link" data-i18n="navBreathing">Paz Interior</a>
-    <a href="#bienestar" class="nav-link" data-i18n="navWellness">Momentos de Calma</a>
-    <a href="#privacidad" class="nav-link" data-i18n="navPrivacy">Privacidad Sagrada</a>
-    <a href="#equipo" class="nav-link" data-i18n="navTeam">Equipo</a>
-    <a href="#faq" class="nav-link" data-i18n="navFaq">Preguntas</a>
-  </div>
+  <!-- Barra de navegacion compartida -->
+  <div id="header-placeholder"></div>
 
   <main>
-    <!-- ====================================================================
-         HERO SECTION: INTIMATE JOURNAL HAVEN
-         ==================================================================== -->
+    <!-- Seccion principal -->
     <section class="hero" id="espacio">
       <div class="hero__aura"></div>
       <div class="container hero__content">
@@ -141,159 +84,297 @@
             </button>
           </div>
 
-          <div class="journal-card__feedback" id="journalFeedback">
-            <span class="feedback-text" data-i18n="reflectionSavedFeedback">✨ Tu reflexión ha sido resguardada y cifrada en tu dispositivo con éxito.</span>
-            <span class="material-symbols-outlined" style="font-size: 1.25rem;">lock_open_right</span>
+          <!-- Modal de confirmacion -->
+          <div class="reflection-drawer" id="reflectionDrawer">
+            <span class="flex items-center gap-2 font-medium">
+              <span class="material-symbols-outlined" style="font-size: 1.125rem; color: #059669;">verified</span>
+              <span class="drawer-message" data-i18n="reflectionSavedFeedback">Guardado con cariño en la memoria de tu dispositivo. Nadie más tiene acceso.</span>
+            </span>
+            <span style="font-size: 0.6875rem; color: #78716c;" data-i18n="reflectionSavedSub">Tu refugio intacto</span>
+          </div>
+        </div>
+
+        <!-- Supportive Pill Suggestions -->
+        <div class="supportive-pills-wrap">
+          <button type="button" class="supportive-pill-btn">
+            <span class="material-symbols-outlined" style="color: var(--color-primary); font-size: 1.125rem;">sentiment_satisfied</span>
+            <span data-i18n="pillPrompt1">Hablar con calma</span>
+          </button>
+          <button type="button" class="supportive-pill-btn">
+            <span class="material-symbols-outlined" style="color: #d97706; font-size: 1.125rem;">coffee</span>
+            <span data-i18n="pillPrompt2">Reflexión matutina</span>
+          </button>
+          <button type="button" class="supportive-pill-btn">
+            <span class="material-symbols-outlined" style="color: #f43f5e; font-size: 1.125rem;">favorite</span>
+            <span data-i18n="pillPrompt3">Soltar la sobrecarga</span>
+          </button>
+        </div>
+
+        <!-- Trust assurances -->
+        <div class="trust-assurances-row">
+          <span class="trust-item">
+            <span class="material-symbols-outlined">lock_reset</span>
+            <span data-i18n="trustPillar1">Sin servidores leyendo tus cartas</span>
+          </span>
+          <span style="color: #d6d3d1;">•</span>
+          <span class="trust-item">
+            <span class="material-symbols-outlined">shield</span>
+            <span data-i18n="trustPillar2">Claves en tu móvil</span>
+          </span>
+          <span style="color: #d6d3d1;">•</span>
+          <span class="trust-item">
+            <span class="material-symbols-outlined">volunteer_activism</span>
+            <span data-i18n="trustPillar3">Diseñado para sanar</span>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tarjetas de tranquilidad -->
+    <section class="reassurance-section">
+      <div class="container">
+        <div class="reassurance-bar">
+          <div class="reassurance-grid">
+            <div class="reassurance-item">
+              <div class="reassurance-icon-box reassurance-icon-box--emerald">
+                <span class="material-symbols-outlined" style="font-size: 22px;">lock_clock</span>
+              </div>
+              <div>
+                <div class="reassurance-item__title" data-i18n="reassurance1Title">Tu candado personal</div>
+                <p class="reassurance-item__desc" data-i18n="reassurance1Desc">Cifrado de grado bancario que vive única y exclusivamente en tu móvil.</p>
+              </div>
+            </div>
+
+            <div class="reassurance-item">
+              <div class="reassurance-icon-box reassurance-icon-box--amber">
+                <span class="material-symbols-outlined" style="font-size: 22px;">spa</span>
+              </div>
+              <div>
+                <div class="reassurance-item__title" data-i18n="reassurance2Title">Ejercicios amables</div>
+                <p class="reassurance-item__desc" data-i18n="reassurance2Desc">Preguntas guiadas para desenredar el nudo en el pecho paso a paso.</p>
+              </div>
+            </div>
+
+            <div class="reassurance-item">
+              <div class="reassurance-icon-box reassurance-icon-box--sky">
+                <span class="material-symbols-outlined" style="font-size: 22px;">heart_broken</span>
+              </div>
+              <div>
+                <div class="reassurance-item__title" data-i18n="reassurance3Title">Cero publicidad</div>
+                <p class="reassurance-item__desc" data-i18n="reassurance3Desc">Tus vivencias no se venden ni se usan para entrenar algoritmos comerciales.</p>
+              </div>
+            </div>
+
+            <div class="reassurance-item">
+              <div class="reassurance-icon-box reassurance-icon-box--rose">
+                <span class="material-symbols-outlined" style="font-size: 22px;">fingerprint</span>
+              </div>
+              <div>
+                <div class="reassurance-item__title" data-i18n="reassurance4Title">Huella y FaceID</div>
+                <p class="reassurance-item__desc" data-i18n="reassurance4Desc">Se bloquea al instante cuando sales de la app. Máxima tranquilidad.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ====================================================================
-         BREATHING SECTION (PAZ INTERIOR)
-         ==================================================================== -->
-    <section class="section section--alt" id="respirar">
+    <!-- Caracteristicas de paz interior y bienestar -->
+    <section class="section" id="respirar">
       <div class="container">
-        <div class="section-header">
-          <div class="badge-tag">
-            <span class="material-symbols-outlined" style="font-size: 1rem;">air</span>
-            <span data-i18n="breathBadge">Ejercicio de Respiración Consciente</span>
+        <!-- Section Header -->
+        <div class="section-header--left">
+          <div style="max-width: 620px;">
+            <span class="section-category" data-i18n="bentoTag">Un espacio pensado para ti</span>
+            <h2 class="section-title" data-i18n="bentoTitle">Tu refugio personal para ordenar tus pensamientos.</h2>
           </div>
-          <h2 class="section-title" data-i18n="breathTitle">Inhala paz, exhala tensión</h2>
-          <p class="section-subtitle" data-i18n="breathSubtitle">
-            Regálate un minuto para reconectar con tu calma natural a través del ritmo restaurativo 4-7-8.
+          <p class="section-subtitle" style="max-width: 440px;" data-i18n="bentoSubtitle">
+            Cada rincón de SafeDiary está creado para brindarte serenidad, un ritmo sin prisas y la sensación hogareña de estar a salvo.
           </p>
         </div>
 
-        <div class="breathing-box">
-          <div class="breathing-visual">
-            <div class="breathing-circle-outer"></div>
-            <div class="breathing-circle-inner" id="breathingCircleInner">
-              <span class="breathing-state-text" id="breathingStateText" data-i18n="breathStateReady">Listo para comenzar</span>
-              <span class="breathing-counter" id="breathingCounter">4</span>
-            </div>
-          </div>
+        <div class="bento-grid-wrap">
+          <!-- Bento Row 1: Voice & Gentle Patterns -->
+          <div class="bento-row bento-row--7-5">
+            <!-- Voice Reflection Card (7 cols) -->
+            <div class="bento-card">
+              <div>
+                <div class="bento-card__badge-row">
+                  <span class="bento-card__badge bento-card__badge--emerald" data-i18n="voiceTag">Voz acogedora</span>
+                  <span style="font-size: 0.75rem; color: #78716c; font-weight: 500;" data-i18n="voiceSession">Sesión de 4 minutos</span>
+                </div>
+                <h3 class="bento-card__title" data-i18n="voiceTitle">Un diario que te escucha con ternura</h3>
+                <p class="bento-card__desc" data-i18n="voiceDesc">
+                  Habla en voz alta cuando las manos estén cansadas. Tu voz se transcribe en tu propio teléfono y el audio se desvanece de inmediato, como un suspiro en una tarde de lluvia.
+                </p>
+              </div>
 
-          <div class="breathing-controls">
-            <button type="button" class="btn btn--primary" id="breathingToggleBtn">
-              <span class="material-symbols-outlined">play_circle</span>
-              <span data-i18n="btnStartExercise">Iniciar ejercicio</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
+              <!-- Soft waveform preview -->
+              <div class="waveform-box">
+                <div class="waveform-meta">
+                  <span style="display: flex; align-items: center; gap: 0.35rem; font-weight: 600; color: #1c1917;">
+                    <span style="width: 8px; height: 8px; border-radius: 50%; background: #00685f;"></span>
+                    <span data-i18n="voiceTone">Tono: Desahogo suave y reconfortante</span>
+                  </span>
+                  <span style="color: #00685f; font-weight: 700;" data-i18n="voiceLocalBadge">100% en tu teléfono</span>
+                </div>
 
-    <!-- ====================================================================
-         WELLNESS / CALMA SECTION
-         ==================================================================== -->
-    <section class="section" id="bienestar">
-      <div class="container">
-        <div class="section-header">
-          <div class="badge-tag">
-            <span class="material-symbols-outlined" style="font-size: 1rem;">sentiment_satisfied</span>
-            <span data-i18n="wellnessBadge">Tu Bienestar Emocional</span>
-          </div>
-          <h2 class="section-title" data-i18n="wellnessTitle">Comprende tus ciclos sin presiones</h2>
-          <p class="section-subtitle" data-i18n="wellnessSubtitle">
-            Identifica qué nutre tu tranquilidad y qué momentos de tu día merecen una pausa reflexiva.
-          </p>
-        </div>
+                <!-- Soft cozy bars -->
+                <div class="waveform-bars">
+                  <span class="waveform-bar" style="height: 1.5rem; background: #99f6e4;"></span>
+                  <span class="waveform-bar" style="height: 2.5rem; background: #5eead4;"></span>
+                  <span class="waveform-bar" style="height: 3rem; background: #008378;"></span>
+                  <span class="waveform-bar" style="height: 2rem; background: #fde68a;"></span>
+                  <span class="waveform-bar" style="height: 3.5rem; background: #00685f;"></span>
+                  <span class="waveform-bar" style="height: 2.5rem; background: #2dd4bf;"></span>
+                  <span class="waveform-bar" style="height: 1.5rem; background: #5eead4;"></span>
+                  <span class="waveform-bar" style="height: 3rem; background: #008378;"></span>
+                  <span class="waveform-bar" style="height: 2rem; background: #fbbf24;"></span>
+                  <span class="waveform-bar" style="height: 2.75rem; background: #00685f;"></span>
+                  <span class="waveform-bar" style="height: 1.25rem; background: #99f6e4;"></span>
+                </div>
 
-        <div class="wellness-grid">
-          <!-- Serenity Trends Card -->
-          <div class="card">
-            <h3 class="card__title">
-              <span class="material-symbols-outlined" style="color: var(--color-primary);">trending_up</span>
-              <span data-i18n="wellnessCardTitle">Registro de serenidad semanal</span>
-            </h3>
-            <p class="card__subtitle" data-i18n="wellnessCardSubtitle">
-              Evolución de calma registrada en tus reflexiones recientes
-            </p>
+                <p class="waveform-quote" data-i18n="voiceQuote">
+                  “Al cerrar el portátil hoy, noté cómo caía el peso en los hombros... pero respiré hondo y puse música suave...”
+                </p>
+              </div>
 
-            <div class="mood-chips-container">
-              <button type="button" class="mood-chip active">
-                <span>🍃</span>
-                <span data-i18n="moodSerene">Sereno</span>
-              </button>
-              <button type="button" class="mood-chip">
-                <span>✨</span>
-                <span data-i18n="moodGrateful">Agradecido</span>
-              </button>
-              <button type="button" class="mood-chip">
-                <span>🌙</span>
-                <span data-i18n="moodReflective">Reflexivo</span>
-              </button>
-              <button type="button" class="mood-chip">
-                <span>☕</span>
-                <span data-i18n="moodCalm">Cansado pero en calma</span>
-              </button>
-              <button type="button" class="mood-chip">
-                <span>☀️</span>
-                <span data-i18n="moodHopeful">Esperanzado</span>
-              </button>
+              <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.8125rem; font-weight: 600; color: #00685f;">
+                <span data-i18n="voiceFooter">Sin telemetría en la nube • Conversación pura</span>
+                <span class="material-symbols-outlined" style="font-size: 16px;">arrow_forward</span>
+              </div>
             </div>
 
-            <div class="chart-container">
-              <div class="chart-bars">
-                <div class="chart-col">
-                  <div class="chart-bar" style="height: 55%;"></div>
-                  <span class="chart-day">Lun</span>
+            <!-- Gentle Mood Patterns Card (5 cols) -->
+            <div class="bento-card" id="bienestar">
+              <div>
+                <div class="bento-card__badge-row">
+                  <span class="bento-card__badge bento-card__badge--sky" data-i18n="moodTag">Bienestar diario</span>
                 </div>
-                <div class="chart-col">
-                  <div class="chart-bar" style="height: 70%;"></div>
-                  <span class="chart-day">Mar</span>
+                <h3 class="bento-card__title" data-i18n="moodTitle">Descubre tus momentos de calma</h3>
+                <p class="bento-card__desc" data-i18n="moodDesc">
+                  Descubre qué días te sientes más sereno y qué hábitos te devuelven la sonrisa, con gráficos amables y sencillos.
+                </p>
+              </div>
+
+              <!-- Soft Chart -->
+              <div class="mood-chart-box">
+                <div class="mood-chart-meta">
+                  <span style="color: #292524;" data-i18n="moodLevelLabel">Nivel de serenidad</span>
+                  <span style="color: #00685f;" data-i18n="moodLevelValue">+22% de tranquilidad</span>
                 </div>
-                <div class="chart-col">
-                  <div class="chart-bar" style="height: 45%;"></div>
-                  <span class="chart-day">Mié</span>
+
+                <svg class="w-full overflow-visible" style="height: 70px;" viewBox="0 0 280 70">
+                  <defs>
+                    <linearGradient id="warmGrad" x1="0" x2="0" y1="0" y2="1">
+                      <stop offset="0%" stop-color="#008378" stop-opacity="0.25"></stop>
+                      <stop offset="100%" stop-color="#008378" stop-opacity="0.0"></stop>
+                    </linearGradient>
+                  </defs>
+                  <path d="M0,52 Q40,48 70,36 T140,38 T210,22 T280,14 L280,70 L0,70 Z" fill="url(#warmGrad)"></path>
+                  <path d="M0,52 Q40,48 70,36 T140,38 T210,22 T280,14" fill="none" stroke="#008378" stroke-linecap="round" stroke-width="3"></path>
+                  <circle cx="210" cy="22" fill="#008378" r="4.5"></circle>
+                  <circle cx="280" cy="14" fill="#f59e0b" r="5"></circle>
+                </svg>
+
+                <div class="mood-days-row">
+                  <span data-i18n="chartDayMon">Lunes</span>
+                  <span data-i18n="chartDayWed">Miércoles</span>
+                  <span data-i18n="chartDayFri">Viernes</span>
+                  <span data-i18n="chartDaySun">Domingo</span>
                 </div>
-                <div class="chart-col">
-                  <div class="chart-bar" style="height: 85%;"></div>
-                  <span class="chart-day">Jue</span>
-                </div>
-                <div class="chart-col">
-                  <div class="chart-bar highlight" style="height: 95%;"></div>
-                  <span class="chart-day">Vie</span>
-                </div>
-                <div class="chart-col">
-                  <div class="chart-bar highlight" style="height: 90%;"></div>
-                  <span class="chart-day">Sáb</span>
-                </div>
-                <div class="chart-col">
-                  <div class="chart-bar highlight" style="height: 80%;"></div>
-                  <span class="chart-day">Dom</span>
-                </div>
+              </div>
+
+              <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                <span class="bento-card__badge bento-card__badge--emerald" data-i18n="moodPill1">Tardes de lectura: +Grounded</span>
+                <span class="bento-card__badge bento-card__badge--amber" data-i18n="moodPill2">Menos sobrepensar</span>
               </div>
             </div>
           </div>
 
-          <!-- Mindful Insights Card -->
-          <div class="card" style="background: linear-gradient(135deg, #f0fdfa 0%, #ffffff 100%);">
-            <h3 class="card__title">
-              <span class="material-symbols-outlined" style="color: var(--color-primary);">psychology_alt</span>
-              <span data-i18n="statsCardTitle">Espacio de autorreflexión</span>
-            </h3>
-            <p class="card__subtitle" data-i18n="statsCardDesc">
-              Escribir con regularidad reduce los niveles de cortisol, despeja la mente y fortalece tu equilibrio emocional.
-            </p>
+          <!-- Bento Row 2: Breathing & Friendly Summary -->
+          <div class="bento-row bento-row--5-7">
+            <!-- 4-7-8 Breathing Pacer (5 cols) -->
+            <div class="bento-card breathing-bento-card">
+              <div>
+                <span class="bento-card__badge bento-card__badge--emerald" data-i18n="breathTag">Ritmo y paz interior</span>
+                <h3 class="bento-card__title" style="margin-top: 0.75rem;" data-i18n="breathTitle">Respira hondo y suelta la carga</h3>
+                <p class="bento-card__desc" data-i18n="breathDesc">
+                  Tómate un descanso consciente con el método 4-7-8. Un ciclo amable para calmar el ritmo cardíaco cuando el día aprieta.
+                </p>
+              </div>
 
-            <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem;">
-              <span class="badge-tag" style="width: fit-content; background: white;" data-i18n="streakPill1">🌿 3 días consecutivos</span>
-              <span class="badge-tag" style="width: fit-content; background: white;" data-i18n="streakPill2">📖 12 reflexiones este mes</span>
+              <!-- Cozy Breathing Orb -->
+              <div class="breathing-orb-box">
+                <div class="breathing-orb-outer" id="breathingOrb">
+                  <div class="breathing-orb-inner">
+                    <span class="material-symbols-outlined" style="font-size: 26px;">air</span>
+                  </div>
+                </div>
+                <span style="margin-top: 0.875rem; font-size: 0.875rem; font-weight: 700; color: #1c1917;" id="breathingStateText" data-i18n="breathStateReady">Listo para comenzar</span>
+                <span style="font-size: 0.75rem; color: #78716c;" id="breathingSubText" data-i18n="breathSubInhale">Siente cómo el pecho se ensancha</span>
+              </div>
+
+              <button type="button" class="btn btn--primary" id="breathingToggleBtn" style="width: 100%;">
+                <span class="material-symbols-outlined" style="font-size: 18px;">favorite</span>
+                <span class="btn-label" data-i18n="btnStartExercise">Iniciar ejercicio de respiración</span>
+              </button>
             </div>
 
-            <blockquote style="margin-top: auto; padding: 1.25rem; border-radius: var(--radius-lg); background: white; border: 1px solid var(--color-border); font-style: italic; color: var(--color-text-main); font-size: 0.9375rem; line-height: 1.6;" data-i18n="wellnessQuote">
-              “No se trata de estar siempre bien, sino de darte permiso de sentir y respirar.”
-            </blockquote>
+            <!-- Empathetic Note Sharing (7 cols) -->
+            <div class="bento-card">
+              <div>
+                <div class="bento-card__badge-row">
+                  <span class="bento-card__badge bento-card__badge--amber" data-i18n="shareTag">Apoyo y compañía</span>
+                  <span style="font-size: 0.75rem; color: #78716c; font-weight: 500;" data-i18n="shareSession">Exportación segura</span>
+                </div>
+                <h3 class="bento-card__title" data-i18n="shareTitle">Comparte tus avances con quien te cuida</h3>
+                <p class="bento-card__desc" data-i18n="shareDesc">
+                  Si visitas a un terapeuta o compartes tus reflexiones con un ser querido, genera un resumen ordenado y limpio, protegiendo siempre tus secretos más íntimos.
+                </p>
+              </div>
+
+              <!-- Sharing Preview Box -->
+              <div class="sharing-preview-box">
+                <div class="sharing-preview-header">
+                  <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <span class="material-symbols-outlined" style="color: var(--color-primary); font-size: 20px;">mark_email_read</span>
+                    <span style="font-size: 0.875rem; font-weight: 700; color: #1c1917;" data-i18n="shareFileName">Resumen_Para_Mi_Sesion.pdf</span>
+                  </div>
+                  <span class="bento-card__badge bento-card__badge--emerald" style="font-size: 0.6875rem;" data-i18n="shareStatus">Listo</span>
+                </div>
+
+                <div class="sharing-metrics-grid">
+                  <div class="sharing-metric-card">
+                    <div style="font-size: 0.625rem; font-weight: 700; text-transform: uppercase; color: #78716c;" data-i18n="shareBox1Title">Tema central</div>
+                    <div style="font-size: 0.8125rem; font-weight: 700; color: #1c1917; margin-top: 0.2rem;" data-i18n="shareBox1Value">Autoexigencia</div>
+                  </div>
+                  <div class="sharing-metric-card">
+                    <div style="font-size: 0.625rem; font-weight: 700; text-transform: uppercase; color: #78716c;" data-i18n="shareBox2Title">Progreso</div>
+                    <div style="font-size: 0.8125rem; font-weight: 700; color: #00685f; margin-top: 0.2rem;" data-i18n="shareBox2Value">Más compasión</div>
+                  </div>
+                  <div class="sharing-metric-card">
+                    <div style="font-size: 0.625rem; font-weight: 700; text-transform: uppercase; color: #78716c;" data-i18n="shareBox3Title">Días de paz</div>
+                    <div style="font-size: 0.8125rem; font-weight: 700; color: #1c1917; margin-top: 0.2rem;" data-i18n="shareBox3Value">5 de 7 días</div>
+                  </div>
+                </div>
+              </div>
+
+              <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem;">
+                  <span style="font-size: 0.75rem; color: #78716c;" data-i18n="shareFootnote">Tú decides qué párrafos incluir y qué omitir.</span>
+                  <button type="button" class="btn btn--outline" style="background: #1c1917; color: white; border: none;" data-i18n="btnCreateConsultation">
+                    Crear cuaderno de consulta
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ====================================================================
-         PRIVACY SECTION (PRIVACIDAD SAGRADA - STITCH EMBRACING COMPARISON)
-         ==================================================================== -->
+    <!-- Comparativa de privacidad -->
     <section class="section section--white" id="privacidad">
       <div class="container">
         <div class="section-header">
@@ -305,7 +386,7 @@
         </div>
 
         <div class="privacy-compare-grid">
-          <!-- Tarjeta 1: Apps tradicionales en la nube -->
+          <!-- Apps tradicionales en la nube -->
           <div class="privacy-compare-card--cloud">
             <div class="privacy-card__header-row">
               <span class="privacy-card__header-title" data-i18n="privacyOtherTitle">Otras notas y diarios en la nube</span>
@@ -327,7 +408,7 @@
             </ul>
           </div>
 
-          <!-- Tarjeta 2: SafeDiary Destacada -->
+          <!-- SafeDiary Destacada -->
           <div class="privacy-compare-card--safediary">
             <div class="privacy-card__header-row">
               <div class="safediary-brand-pill">
@@ -355,76 +436,163 @@
       </div>
     </section>
 
-    <!-- ====================================================================
-         TEAM SECTION (PLACEHOLDERS REQUERIDOS POR EL USUARIO)
-         ==================================================================== -->
-    <section class="section" id="equipo">
+    <!-- Vista previa de la experiencia de diario -->
+    <section class="section section--alt">
       <div class="container">
-        <div class="section-header">
-          <div class="badge-tag">
-            <span class="material-symbols-outlined" style="font-size: 1rem;">group</span>
-            <span data-i18n="teamBadge">Equipo MindCluster</span>
-          </div>
-          <h2 class="section-title" data-i18n="teamTitle">Las personas detrás de SafeDiary</h2>
-          <p class="section-subtitle" data-i18n="teamSubtitle">
-            Un equipo multidisciplinario comprometido con construir herramientas tecnológicas empáticas, accesibles y cálidas.
-          </p>
-        </div>
-
-        <div class="team-carousel-wrapper">
-          <div class="team-card" id="teamCard">
-            <div class="team-card__image-container">
-              <img
-                src="assets/images/placeholders/member-1.svg"
-                alt="Integrante 01"
-                class="team-card__image"
-                id="teamMemberImg">
-            </div>
-
-            <div class="team-card__content">
-              <div class="team-card__badge" data-i18n="teamBadgeRole">
-                <span class="material-symbols-outlined" style="font-size: 0.875rem;">workspace_premium</span>
-                <span>MindCluster • Integrante</span>
+        <div class="story-grid">
+          <!-- Sample Entry Notebook -->
+          <div>
+            <div class="sample-notebook-card">
+              <div class="sample-notebook-header">
+                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                  <div style="width: 2.5rem; height: 2.5rem; border-radius: 1rem; background: rgba(254, 243, 199, 0.7); display: flex; align-items: center; justify-content: center; color: #92400e;">
+                    <span class="material-symbols-outlined" style="font-size: 20px;">nightlight</span>
+                  </div>
+                  <div>
+                    <h4 style="font-size: 0.9375rem; font-weight: 700; color: #1c1917;" data-i18n="storyNoteTitle">Momento de descompresión</h4>
+                    <p style="font-size: 0.75rem; color: #78716c;" data-i18n="storyNoteMeta">Ayer a las 22:45 • Una taza de manzanilla</p>
+                  </div>
+                </div>
+                <span class="bento-card__badge bento-card__badge--emerald" data-i18n="storyNoteSerene">Sereno</span>
               </div>
-              <div class="team-card__counter" id="teamMemberCounter">01 / 05</div>
-              <h3 class="team-card__name" id="teamMemberName">Integrante 01</h3>
-              <p class="team-card__role" id="teamMemberRole">Líder de Proyecto & Arquitectura Frontend</p>
-              <p class="team-card__quote" id="teamMemberQuote">
-                “Construir tecnología debe ser un acto de empatía y cuidado hacia quien la utiliza cada día.”
-              </p>
-              <p class="team-card__bio" id="teamMemberBio">
-                Responsable de la dirección conceptual del proyecto, asegurando la cohesión visual del sistema Safe Diary Warmth y la integración fluida de cada componente.
-              </p>
 
-              <div class="team-card__controls">
-                <span style="font-size: 0.8125rem; color: var(--color-text-light); font-weight: 500;">SafeDiary Core Team</span>
-                <div class="team-nav-buttons">
-                  <button type="button" class="team-nav-btn" id="teamPrevBtn" aria-label="Integrante anterior">
-                    <span class="material-symbols-outlined">arrow_back</span>
-                  </button>
-                  <button type="button" class="team-nav-btn team-nav-btn--primary" id="teamNextBtn" aria-label="Siguiente integrante">
-                    <span class="material-symbols-outlined">arrow_forward</span>
-                  </button>
+              <div class="sample-notebook-body" data-i18n="storyNoteBody">
+                “El día fue ajetreado y sentía que no llegaba a todo. Pero sentarme estos cinco minutos en el sofá con la luz tenue me recordó que no tengo que solucionar el mundo en un solo día. Mañana será otro día y merezco descansar.”
+              </div>
+
+              <!-- Encouragement note -->
+              <div class="compassion-box">
+                <span class="material-symbols-outlined" style="color: #b45309; font-size: 20px; flex-shrink: 0; margin-top: 0.15rem;">favorite</span>
+                <div>
+                  <div style="font-size: 0.75rem; font-weight: 700; color: #78350f;" data-i18n="storyCompassionTag">Nota de compasión</div>
+                  <div style="font-size: 0.75rem; color: #57534e; margin-top: 0.15rem;" data-i18n="storyCompassionText">Recuerda cómo cambia tu perspectiva cuando te concedes el permiso de soltar las riendas.</div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="team-tabs" id="teamTabsContainer" role="tablist" aria-label="Seleccionar integrante del equipo">
-            <!-- Inyectado dinámicamente por team.js -->
+          <!-- Narrative Copy & Key Stats -->
+          <div style="display: flex; flex-direction: column; gap: 1rem;">
+            <span class="section-category" data-i18n="storyTag">Tu tiempo vale oro</span>
+            <h2 class="section-title" data-i18n="storyTitle">Tus pensamientos más sinceros, sin algoritmos que te juzguen.</h2>
+            <p class="section-subtitle" data-i18n="storySubtitle">
+              SafeDiary no fue creado para mantenerte enganchado a una pantalla ni para coleccionar ‘likes’. Nació para brindarte un rincón acogedor donde soltar la armadura y reconectar con lo que verdaderamente importa.
+            </p>
+
+            <div class="story-metrics-row">
+              <div>
+                <div class="story-metric-num" style="color: #00685f;" data-i18n="stat1Num">100%</div>
+                <div class="story-metric-label" data-i18n="stat1Label">Privado y tuyo</div>
+              </div>
+              <div class="story-divider"></div>
+              <div>
+                <div class="story-metric-num" style="color: #b45309;" data-i18n="stat2Num">0</div>
+                <div class="story-metric-label" data-i18n="stat2Label">Anuncios o distracciones</div>
+              </div>
+              <div class="story-divider"></div>
+              <div>
+                <div class="story-metric-num" style="color: #1c1917;" data-i18n="stat3Num">Paz</div>
+                <div class="story-metric-label" data-i18n="stat3Label">A cualquier hora</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ====================================================================
-         FAQ SECTION (STITCH THEMED ACCORDION)
-         ==================================================================== -->
+    <!-- Equipo de desarrollo -->
+    <section class="section section--white" id="equipo">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge-tag">
+            <span class="material-symbols-outlined" style="font-size: 16px;">diversity_1</span>
+            <span data-i18n="teamBadge">Las personas detrás del refugio</span>
+          </div>
+          <h2 class="section-title" data-i18n="teamTitle">Un equipo comprometido con tu calma y privacidad.</h2>
+          <p class="section-subtitle" data-i18n="teamSubtitle">
+            Psicólogas, ingenieros de privacidad y diseñadores que creemos firmemente en la tecnología que abraza y no juzga.
+          </p>
+        </div>
+
+        <div class="team-showcase-card">
+          <div class="team-grid-inner">
+            <!-- 35% Image Container with Floating Badge -->
+            <div class="team-portrait-box">
+              <img
+                src="assets/images/placeholders/member-1.svg"
+                alt="Miembro del equipo"
+                class="team-portrait-img"
+                id="teamMemberImg">
+              <div class="team-portrait-floating-badge">
+                <span style="font-size: 0.6875rem; font-weight: 700; color: #00685f; display: flex; align-items: center; gap: 0.35rem;">
+                  <span style="width: 8px; height: 8px; border-radius: 50%; background: #10b981;"></span>
+                  <span id="teamBadgeFooter" data-i18n="teamBadgeRole">SafeDiary Co-fundadora</span>
+                </span>
+                <span class="material-symbols-outlined" style="font-size: 16px; color: var(--color-primary);">verified_user</span>
+              </div>
+            </div>
+
+            <!-- 65% Descriptive Details Container -->
+            <div style="display: flex; flex-direction: column; justify-content: space-between; height: 100%; gap: 1rem;">
+              <div>
+                <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.75rem;">
+                  <span class="bento-card__badge bento-card__badge--emerald" id="teamMemberPill">Terapia Humanista & Bienestar</span>
+                  <span style="font-size: 0.75rem; font-weight: 600; color: #78716c; letter-spacing: 0.05em;" id="teamMemberCounter">01 / 05</span>
+                </div>
+
+                <h3 style="font-size: 1.625rem; font-weight: 800; color: #1c1917; letter-spacing: -0.02em;" id="teamMemberName">Dra. Elena Valenzuela</h3>
+                <p style="font-size: 0.9375rem; font-weight: 600; color: var(--color-primary); margin-top: 0.25rem;" id="teamMemberRole">Co-fundadora & Directora de Psicología y Bienestar</p>
+
+                <!-- Quote Box with Watermark -->
+                <div class="team-quote-box">
+                  <span class="material-symbols-outlined team-quote-watermark">format_quote</span>
+                  <p style="font-size: 0.9375rem; font-style: italic; line-height: 1.6; color: #1c1917; padding-right: 2rem;" id="teamMemberQuote">
+                    “SafeDiary nació para devolvernos un rincón sin prisas donde desahogarnos sin sentirnos observados.”
+                  </p>
+                </div>
+
+                <p style="font-size: 0.875rem; color: #57534e; line-height: 1.65; margin-top: 0.75rem;" id="teamMemberBio">
+                  Especialista en terapia cognitivo-conductual y psicología humanista con más de 10 años acompañando procesos de introspección y autocuidado.
+                </p>
+              </div>
+
+              <!-- Quick Nav Inside Card -->
+              <div class="team-quick-nav-row">
+                <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.75rem; color: #78716c;">
+                  <span class="material-symbols-outlined" style="font-size: 16px; color: var(--color-primary);">favorite</span>
+                  <span data-i18n="teamFooterPledge">Compromiso de trato humano, sereno y ético</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                  <button type="button" class="team-nav-btn" id="prevMemberBtn" aria-label="Miembro anterior">
+                    <span class="material-symbols-outlined">chevron_left</span>
+                  </button>
+                  <button type="button" class="team-nav-btn team-nav-btn--primary" id="nextMemberBtn" aria-label="Siguiente miembro">
+                    <span class="material-symbols-outlined">chevron_right</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carousel Member Tabs (5 tabs with mini avatars) -->
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 0.75rem; margin-top: 1rem;">
+          <div class="team-tab-pills-row" id="teamCarouselTabs" role="tablist" aria-label="Seleccionar perfil del equipo">
+            <!-- Inyectado dinámicamente por team.js -->
+          </div>
+          <span style="font-size: 0.6875rem; color: #78716c; font-weight: 500;" data-i18n="teamTabsHelper">
+            Pulsa en cada perfil para conocer su rol en tu santuario digital
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Preguntas frecuentes -->
     <section class="section section--alt" id="faq">
       <div class="container">
         <div class="section-header">
           <div class="badge-tag">
-            <span class="material-symbols-outlined" style="font-size: 1rem;">help</span>
+            <span class="material-symbols-outlined" style="font-size: 16px;">help</span>
             <span data-i18n="faqBadge">Dudas frecuentes resueltas con claridad</span>
           </div>
           <h2 class="section-title" data-i18n="faqTitle">Preguntas Frecuentes</h2>
@@ -434,63 +602,81 @@
         </div>
 
         <div class="faq-container" id="faqContainer">
-          <!-- Inyectado dinámicamente por faq.js con soporte i18n y cajas temáticas -->
+          <!-- Inyectado dinamicamente con las preguntas frecuentes -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Llamado a la accion y descarga movil -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-banner">
+          <div class="cta-aura--teal"></div>
+          <div class="cta-aura--amber"></div>
+
+          <div class="cta-grid">
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+              <div style="display: flex; align-items: center; gap: 0.5rem;">
+                <span class="material-symbols-outlined" style="color: #fde047; font-size: 20px;">wb_sunny</span>
+                <span style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: #99f6e4;" data-i18n="ctaTag">
+                  Tu momento de calma empieza hoy
+                </span>
+              </div>
+
+              <h2 style="font-size: 2.25rem; font-weight: 800; line-height: 1.2; letter-spacing: -0.02em;" data-i18n="ctaTitle">
+                Lleva tu refugio contigo, allá donde vayas.
+              </h2>
+
+              <p style="font-size: 1rem; color: #ccfbf1; line-height: 1.7; max-width: 540px;" data-i18n="ctaSubtitle">
+                Descarga SafeDiary para iPhone y Android. Tu santuario personal listo para acompañarte al despertar o antes de dormir.
+              </p>
+
+              <div style="display: flex; flex-wrap: wrap; gap: 1rem; padding-top: 1rem;">
+                <a href="#" class="cta-app-btn cta-app-btn--apple">
+                  <span class="material-symbols-outlined" style="font-size: 24px;">phone_iphone</span>
+                  <div style="display: flex; flex-direction: column; text-align: left;">
+                    <span style="font-size: 0.625rem; text-transform: uppercase; color: #78716c; line-height: 1;" data-i18n="ctaBtnAvailableOn">Disponible en</span>
+                    <span style="font-size: 0.875rem; font-weight: 700; line-height: 1.2;" data-i18n="ctaBtnApple">Apple App Store</span>
+                  </div>
+                </a>
+
+                <a href="#" class="cta-app-btn cta-app-btn--google">
+                  <span class="material-symbols-outlined" style="font-size: 24px;">android</span>
+                  <div style="display: flex; flex-direction: column; text-align: left;">
+                    <span style="font-size: 0.625rem; text-transform: uppercase; color: #5eead4; line-height: 1;" data-i18n="ctaBtnDownloadOn">Descárgalo en</span>
+                    <span style="font-size: 0.875rem; font-weight: 700; line-height: 1.2;" data-i18n="ctaBtnGoogle">Google Play</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- Warm QR Card -->
+            <div class="qr-card">
+              <div class="qr-box">
+                <svg class="w-full h-full" style="color: #1c1917;" fill="currentColor" viewBox="0 0 100 100">
+                  <path d="M0,0 h30 v30 h-30 z M5,5 v20 h20 v-20 z M10,10 h10 v10 h-10 z"></path>
+                  <path d="M70,0 h30 v30 h-30 z M75,5 v20 h20 v-20 z M80,10 h10 v10 h-10 z"></path>
+                  <path d="M0,70 h30 v30 h-30 z M5,75 v20 h20 v-20 z M10,80 h10 v10 h-10 z"></path>
+                  <rect height="10" width="10" x="40" y="10"></rect>
+                  <rect height="15" width="10" x="55" y="10"></rect>
+                  <rect height="10" width="20" x="40" y="35"></rect>
+                  <rect height="10" width="25" x="70" y="45"></rect>
+                  <rect height="15" width="15" x="40" y="60"></rect>
+                  <rect height="25" width="25" x="65" y="70"></rect>
+                  <rect height="10" width="10" x="45" y="85"></rect>
+                </svg>
+              </div>
+              <span style="font-size: 0.875rem; font-weight: 700; color: white; margin-top: 0.75rem;" data-i18n="ctaQrTitle">Escanea con tu móvil</span>
+              <span style="font-size: 0.75rem; color: #99f6e4; margin-top: 0.2rem;" data-i18n="ctaQrSubtitle">Acceso directo e instantáneo</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- ======================================================================
-       FOOTER
-       ====================================================================== -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__grid">
-        <div>
-          <a href="#" class="brand" aria-label="SafeDiary Inicio">
-            <div class="brand__logo">
-              <span class="material-symbols-outlined">spa</span>
-            </div>
-            <div class="brand__text">
-              <span class="brand__name" data-i18n="brandName">SafeDiary</span>
-              <span class="brand__tagline" data-i18n="brandTagline">por MindCluster • Tu rincón de paz</span>
-            </div>
-          </a>
-          <p class="footer__brand-p" data-i18n="footerDesc">
-            Un refugio digital cálido para registrar tus vivencias, reflexiones y emociones con absoluta privacidad y serenidad.
-          </p>
-        </div>
-
-        <div>
-          <h4 class="footer__col-title" data-i18n="footerNavTitle">Explorar</h4>
-          <ul class="footer__links">
-            <li><a href="#espacio" data-i18n="navSpace">Tu Espacio</a></li>
-            <li><a href="#respirar" data-i18n="navBreathing">Paz Interior</a></li>
-            <li><a href="#bienestar" data-i18n="navWellness">Momentos de Calma</a></li>
-            <li><a href="#privacidad" data-i18n="navPrivacy">Privacidad Sagrada</a></li>
-            <li><a href="#equipo" data-i18n="navTeam">Equipo</a></li>
-            <li><a href="#faq" data-i18n="navFaq">Preguntas</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="footer__col-title" data-i18n="footerLegalTitle">Legal y Ética</h4>
-          <ul class="footer__links">
-            <li><a href="terms.html" data-i18n="footerTermsLink">Términos y Condiciones</a></li>
-            <li><a href="terms.html#privacidad-datos" data-i18n="footerPrivacyLink">Política de Privacidad</a></li>
-            <li><a href="#privacidad" data-i18n="footerSecurityLink">Seguridad y Cifrado</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer__bottom">
-        <p data-i18n="footerCopyright">© 2026 MindCluster. Todos los derechos reservados. SafeDiary es una marca orientada al bienestar personal.</p>
-        <div style="display: flex; gap: 1rem; align-items: center;">
-          <a href="#" style="color: var(--color-primary); font-weight: 600;">MindCluster UPC</a>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <!-- Pie de pagina compartido -->
+  <div id="footer-placeholder"></div>
 
   <!-- Main JavaScript App Entry (ES Module) -->
   <script type="module" src="assets/js/app.js"></script>

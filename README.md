@@ -38,7 +38,7 @@ SafeDiary nace como una respuesta acogedora frente a las aplicaciones clínicas 
 - **Preguntas Frecuentes (FAQ):**
   - Acordeones colapsables accesibles con apertura suave.
 - **Página de Términos y Condiciones:**
-  - Documento legal completo en `terms.html`, totalmente integrado al diseño y con soporte bilingüe.
+  - Documento legal completo y editorial en `pages/terms.html`, totalmente integrado al diseño y con soporte bilingüe.
 
 ---
 
@@ -46,23 +46,29 @@ SafeDiary nace como una respuesta acogedora frente a las aplicaciones clínicas 
 
 ```text
 SafeDiary_Landing_Page/
-├── .gitignore                      # Exclusión de archivos de trabajo y diseño original
+├── .gitignore                      # Exclusión de archivos locales y temporales
 ├── LICENSE                         # Licencia MIT
 ├── README.md                       # Documentación del proyecto
-├── index.html                      # Landing page principal
-├── terms.html                      # Página de Términos y Condiciones
+├── index.html                      # Landing page principal (único HTML en raíz)
+├── components/                     # Componentes compartidos reutilizables
+│   ├── header.html                 # Barra de navegación principal y menú móvil
+│   └── footer.html                 # Pie de página y promesa de privacidad
+├── pages/
+│   └── terms.html                  # Términos y condiciones editorial
 └── assets/
     ├── css/
     │   ├── variables.css           # Tokens de diseño (colores, fuentes, sombras, radios)
-    │   └── main.css                # Estilos globales, componentes y adaptaciones responsivas
+    │   └── main.css                # Estilos globales, componentes y diseño editorial
     ├── js/
     │   ├── app.js                  # Inicializador principal y manejo de eventos
-    │   ├── terms.js                # Lógica para la página de términos
     │   ├── i18n/
     │   │   ├── es.js               # Diccionario en español
     │   │   ├── en.js               # Diccionario en inglés
+    │   │   ├── terms-es.js         # Textos de términos en español
+    │   │   ├── terms-en.js         # Textos de términos en inglés
     │   │   └── i18n.js             # Motor reactivo de internacionalización
     │   └── components/
+    │       ├── include.js          # Inyector de componentes compartidos
     │       ├── breathing.js        # Ejercicio de respiración 4-7-8
     │       ├── journal.js          # Interacciones del cuaderno y nota de voz
     │       ├── team.js             # Carrusel de integrantes con placeholders
