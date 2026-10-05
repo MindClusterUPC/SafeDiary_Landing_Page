@@ -1,6 +1,6 @@
 /**
  * SafeDiary - English Texts (EN)
- * MindCluster
+ * MindCluster - Safe Diary Warmth
  */
 export const en = {
   // Brand & Header
@@ -64,16 +64,21 @@ export const en = {
   streakPill2: "📖 12 entries this month",
   wellnessQuote: "“It's not about feeling okay every single second, but giving yourself permission to feel and breathe.”",
 
-  // Sacred Privacy
-  privacyBadge: "Security & Ethics",
-  privacyTitle: "Your thoughts belong solely to you",
-  privacySubtitle: "SafeDiary was designed from the very first stroke with absolute reverence for your intimate personal boundaries.",
-  privacyCard1Title: "On-Device Encryption",
-  privacyCard1Text: "Your reflections and voice notes remain securely encrypted directly on your smartphone or browser. We never hold your key.",
-  privacyCard2Title: "Zero Ads & Zero Tracking",
-  privacyCard2Text: "We never monetize your emotions or process your private stories to serve invasive targeted advertisements.",
-  privacyCard3Title: "Total Freedom to Export",
-  privacyCard3Text: "Export your complete diary anytime in open formats or permanently wipe every trace in a single effortless tap.",
+  // Sacred Privacy (Stitch design matching)
+  privacyTag: "Privacy that embraces you",
+  privacyTitle: "Your privacy is sacred and 100% yours.",
+  privacySubtitle: "Conventional applications store your notes on remote servers where staff or algorithms can inspect them. At SafeDiary, your intimacy is protected under seven locks that only you hold.",
+  privacyOtherTitle: "Other cloud notes & diaries",
+  privacyOtherPoint1: "Your texts are sent to remote databases with master corporate keys.",
+  privacyOtherPoint2: "Keywords are mined to segment ads and track your emotional states.",
+  privacyOtherPoint3: "If they suffer a data breach or change ownership, your diaries may be exposed.",
+  privacySafeTitle: "SafeDiary",
+  privacySafePoint1Title: "Zero-Knowledge:",
+  privacySafePoint1Text: "Only your smartphone holds the mathematical key to decrypt your words.",
+  privacySafePoint2Title: "On-Device Intelligence:",
+  privacySafePoint2Text: "Summaries run entirely on your phone chip without sending text to the cloud.",
+  privacySafePoint3Title: "Absolute Freedom:",
+  privacySafePoint3Text: "You can erase, export, or print a physical backup at any given second.",
 
   // Team Section (Placeholders)
   teamBadge: "MindCluster Team",
@@ -123,26 +128,46 @@ export const en = {
     }
   ],
 
-  // FAQ Section
-  faqBadge: "Questions & Answers",
-  faqTitle: "Everything you need to know",
-  faqSubtitle: "Clear and honest answers so you can enjoy your haven with total peace of mind.",
+  // FAQ Section (Stitch 6 items with theme icons)
+  faqBadge: "Frequent questions answered with clarity",
+  faqTitle: "Frequently Asked Questions",
+  faqSubtitle: "We want you to feel complete tranquility and transparency. If you have questions, reach out anytime.",
   faqItems: [
     {
-      question: "Do my journal entries get uploaded to cloud servers?",
-      answer: "No. At SafeDiary, your peace of mind comes first. All your writings and voice reflections remain encrypted strictly on your local device. We cannot access your thoughts."
+      icon: "lock",
+      theme: "emerald",
+      question: "Can SafeDiary read my reflections or use them to train AI models?",
+      answer: "Absolutely not. SafeDiary employs Zero-Knowledge military-grade encryption (AES-256). Your entries and voice notes are encrypted locally before saving. We never train AI models or access your thoughts."
     },
     {
-      question: "Is there any subscription or hidden fee?",
-      answer: "SafeDiary is an open academic and mindful project by MindCluster. All core journaling, breathing, and serenity features are freely available without paywalls."
+      icon: "mic",
+      theme: "amber",
+      question: "How does voice journaling and mood detection work?",
+      answer: "Both voice transcription and serenity insights are computed locally on your device hardware chip. Audio is never transmitted online or stored in the cloud."
     },
     {
-      question: "How does the 4-7-8 breathing exercise work?",
-      answer: "It is a scientifically validated nervous system regulation technique: inhale quietly through the nose for 4 seconds, hold for 7, and exhale completely for 8. It eases tension rapidly."
+      icon: "favorite",
+      theme: "rose",
+      question: "Is it an alternative to professional therapy?",
+      answer: "No. SafeDiary is a supportive self-care and journaling companion. If you face an emotional crisis, we strongly encourage consulting a licensed mental health professional."
     },
     {
-      question: "Can I export or backup my reflections whenever I want?",
-      answer: "Yes, at any moment you can export your records in open readable formats to save them on your computer or share only with people you trust."
+      icon: "ios_share",
+      theme: "sky",
+      question: "Can I export or share entries with my therapist?",
+      answer: "Yes. You can generate password-protected PDF summaries or open Markdown/JSON files whenever you wish to share insights during sessions."
+    },
+    {
+      icon: "key",
+      theme: "purple",
+      question: "What happens if I lose or change my phone?",
+      answer: "Upon setup, you generate a confidential 12-word seed phrase. With Zero-Knowledge cryptography, this phrase is your sole key to recover your haven on any new device."
+    },
+    {
+      icon: "verified",
+      theme: "teal",
+      question: "Does SafeDiary have ads or sell data to third parties?",
+      answer: "Never. There are no tracking pixels, behavioral monitors, or data broker sales. SafeDiary is sustained by MindCluster and mindful patronage."
     }
   ],
 

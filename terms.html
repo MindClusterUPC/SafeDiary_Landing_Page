@@ -23,13 +23,14 @@
 <body>
 
   <!-- ======================================================================
-       HEADER / NAVBAR
+       HEADER / NAVBAR (Identical layout to index.html - Stitch Warmth)
        ====================================================================== -->
-  <header class="header">
+  <header class="header" id="mainHeader">
     <div class="container header__content">
+      <!-- Brand Logo & Identity -->
       <a href="index.html" class="brand" aria-label="SafeDiary Inicio">
         <div class="brand__logo">
-          <span class="material-symbols-outlined">spa</span>
+          <span class="material-symbols-outlined" style="font-size: 22px;">spa</span>
         </div>
         <div class="brand__text">
           <span class="brand__name" data-i18n="brandName">SafeDiary</span>
@@ -37,13 +38,17 @@
         </div>
       </a>
 
-      <nav class="nav-menu" aria-label="Navegación secundaria">
+      <!-- Desktop Warm Pill Navigation (Links back to index anchors) -->
+      <nav class="nav-menu" aria-label="Navegación principal">
         <a href="index.html#espacio" class="nav-link" data-i18n="navSpace">Tu Espacio</a>
+        <a href="index.html#respirar" class="nav-link" data-i18n="navBreathing">Paz Interior</a>
+        <a href="index.html#bienestar" class="nav-link" data-i18n="navWellness">Momentos de Calma</a>
         <a href="index.html#privacidad" class="nav-link" data-i18n="navPrivacy">Privacidad Sagrada</a>
         <a href="index.html#equipo" class="nav-link" data-i18n="navTeam">Equipo</a>
         <a href="index.html#faq" class="nav-link" data-i18n="navFaq">Preguntas</a>
       </nav>
 
+      <!-- Header Actions: i18n Language Toggle & Primary CTA -->
       <div class="header__actions">
         <!-- Language Switcher Toggle -->
         <div class="lang-toggle" role="group" aria-label="Selector de idioma">
@@ -51,13 +56,29 @@
           <button type="button" class="lang-btn" data-lang="en" aria-label="Switch to English">EN</button>
         </div>
 
-        <a href="index.html" class="btn btn--outline" id="termsBackNavBtn">
-          <span class="material-symbols-outlined" style="font-size: 1.125rem;">arrow_back</span>
-          <span data-i18n="termsBackToHome">← Volver a la Landing</span>
+        <!-- Primary CTA Button (Consistent with index.html) -->
+        <a href="index.html#espacio" class="btn btn--primary" id="headerCtaBtn">
+          <span data-i18n="btnStartJournal">Comenzar mi diario</span>
+          <span class="material-symbols-outlined" style="font-size: 18px;">favorite</span>
         </a>
+
+        <!-- Mobile Hamburger Button -->
+        <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menú" aria-expanded="false">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
       </div>
     </div>
   </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html#espacio" class="nav-link" data-i18n="navSpace">Tu Espacio</a>
+    <a href="index.html#respirar" class="nav-link" data-i18n="navBreathing">Paz Interior</a>
+    <a href="index.html#bienestar" class="nav-link" data-i18n="navWellness">Momentos de Calma</a>
+    <a href="index.html#privacidad" class="nav-link" data-i18n="navPrivacy">Privacidad Sagrada</a>
+    <a href="index.html#equipo" class="nav-link" data-i18n="navTeam">Equipo</a>
+    <a href="index.html#faq" class="nav-link" data-i18n="navFaq">Preguntas</a>
+  </div>
 
   <main>
     <!-- Header Hero Banner for Terms -->

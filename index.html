@@ -23,14 +23,14 @@
 <body>
 
   <!-- ======================================================================
-       HEADER / NAVBAR
+       HEADER / NAVBAR (Safe Diary Warmth - Stitch Matching)
        ====================================================================== -->
   <header class="header" id="mainHeader">
     <div class="container header__content">
       <!-- Brand Logo & Identity -->
       <a href="#" class="brand" aria-label="SafeDiary Inicio">
         <div class="brand__logo">
-          <span class="material-symbols-outlined">spa</span>
+          <span class="material-symbols-outlined" style="font-size: 22px;">spa</span>
         </div>
         <div class="brand__text">
           <span class="brand__name" data-i18n="brandName">SafeDiary</span>
@@ -38,7 +38,7 @@
         </div>
       </a>
 
-      <!-- Desktop Navigation Menu -->
+      <!-- Desktop Warm Pill Navigation -->
       <nav class="nav-menu" aria-label="Navegación principal">
         <a href="#espacio" class="nav-link active" data-i18n="navSpace">Tu Espacio</a>
         <a href="#respirar" class="nav-link" data-i18n="navBreathing">Paz Interior</a>
@@ -59,7 +59,7 @@
         <!-- Primary CTA Button -->
         <a href="#espacio" class="btn btn--primary" id="headerCtaBtn">
           <span data-i18n="btnStartJournal">Comenzar mi diario</span>
-          <span class="material-symbols-outlined" style="font-size: 1.125rem;">favorite</span>
+          <span class="material-symbols-outlined" style="font-size: 18px;">favorite</span>
         </a>
 
         <!-- Mobile Hamburger Button -->
@@ -103,7 +103,6 @@
 
         <!-- The Journal Notebook Card -->
         <div class="journal-card" id="journalCard">
-          <!-- Journal Card Header -->
           <div class="journal-card__header">
             <div class="journal-card__meta">
               <span class="material-symbols-outlined">light_mode</span>
@@ -115,7 +114,6 @@
             </div>
           </div>
 
-          <!-- Textarea for reflections -->
           <textarea
             class="journal-card__textarea"
             id="journalPromptArea"
@@ -123,31 +121,26 @@
             data-i18n-placeholder="journalPlaceholder"
             placeholder="Hoy he sentido que el día se me escapaba de las manos, pero quiero agradecer este momento de calma..."></textarea>
 
-          <!-- Micro-actions Toolbar -->
           <div class="journal-card__footer">
             <div class="journal-card__actions">
-              <!-- Audio Note Button -->
               <button type="button" class="action-pill-btn" id="recordVoiceBtn">
                 <span class="material-symbols-outlined" id="recordIcon" style="color: var(--color-primary); font-size: 1.125rem;">mic</span>
                 <span id="recordLabel" data-i18n="btnRecordVoice">Grabar nota de voz</span>
                 <span class="recording-indicator" id="recordingBadge" data-i18n="btnVoiceRecording">GRABANDO</span>
               </button>
 
-              <!-- Inspiration Prompt Button -->
               <button type="button" class="action-pill-btn action-pill-btn--amber" id="inspirationBtn">
                 <span class="material-symbols-outlined" style="font-size: 1.125rem;">auto_stories</span>
                 <span data-i18n="btnInspiration">Inspiración para escribir</span>
               </button>
             </div>
 
-            <!-- Submit Button -->
             <button type="button" class="btn btn--primary" id="saveReflectionBtn">
               <span data-i18n="btnSaveReflection">Guardar reflexión</span>
               <span class="material-symbols-outlined" style="font-size: 1.125rem;">check_circle</span>
             </button>
           </div>
 
-          <!-- Dynamic Feedback Drawer -->
           <div class="journal-card__feedback" id="journalFeedback">
             <span class="feedback-text" data-i18n="reflectionSavedFeedback">✨ Tu reflexión ha sido resguardada y cifrada en tu dispositivo con éxito.</span>
             <span class="material-symbols-outlined" style="font-size: 1.25rem;">lock_open_right</span>
@@ -173,7 +166,6 @@
         </div>
 
         <div class="breathing-box">
-          <!-- Guided Breathing Visualizer -->
           <div class="breathing-visual">
             <div class="breathing-circle-outer"></div>
             <div class="breathing-circle-inner" id="breathingCircleInner">
@@ -182,7 +174,6 @@
             </div>
           </div>
 
-          <!-- Breathing Controls -->
           <div class="breathing-controls">
             <button type="button" class="btn btn--primary" id="breathingToggleBtn">
               <span class="material-symbols-outlined">play_circle</span>
@@ -220,7 +211,6 @@
               Evolución de calma registrada en tus reflexiones recientes
             </p>
 
-            <!-- Mood Filter Chips -->
             <div class="mood-chips-container">
               <button type="button" class="mood-chip active">
                 <span>🍃</span>
@@ -244,7 +234,6 @@
               </button>
             </div>
 
-            <!-- Serenity Bar Visualization -->
             <div class="chart-container">
               <div class="chart-bars">
                 <div class="chart-col">
@@ -303,53 +292,64 @@
     </section>
 
     <!-- ====================================================================
-         PRIVACY SECTION (PRIVACIDAD SAGRADA)
+         PRIVACY SECTION (PRIVACIDAD SAGRADA - STITCH EMBRACING COMPARISON)
          ==================================================================== -->
-    <section class="section section--alt" id="privacidad">
+    <section class="section section--white" id="privacidad">
       <div class="container">
         <div class="section-header">
-          <div class="badge-tag">
-            <span class="material-symbols-outlined" style="font-size: 1rem;">verified_user</span>
-            <span data-i18n="privacyBadge">Seguridad y Ética</span>
-          </div>
-          <h2 class="section-title" data-i18n="privacyTitle">Tus pensamientos pertenecen únicamente a ti</h2>
+          <span class="section-category" data-i18n="privacyTag">Privacidad que te abraza</span>
+          <h2 class="section-title" data-i18n="privacyTitle">Tu privacidad es sagrada y 100% tuya.</h2>
           <p class="section-subtitle" data-i18n="privacySubtitle">
-            SafeDiary fue diseñado desde el primer trazo bajo el principio de reverencia absoluta por tu privacidad íntima.
+            Las aplicaciones convencionales guardan tus notas en servidores donde empleados o algoritmos pueden leerlas. En SafeDiary, tu intimidad está protegida bajo siete llaves que solo tú tienes.
           </p>
         </div>
 
-        <div class="privacy-grid">
-          <!-- Privacy Pillar 1 -->
-          <div class="privacy-card">
-            <div class="privacy-card__icon">
-              <span class="material-symbols-outlined" style="font-size: 1.75rem;">vpn_key</span>
+        <div class="privacy-compare-grid">
+          <!-- Tarjeta 1: Apps tradicionales en la nube -->
+          <div class="privacy-compare-card--cloud">
+            <div class="privacy-card__header-row">
+              <span class="privacy-card__header-title" data-i18n="privacyOtherTitle">Otras notas y diarios en la nube</span>
+              <span class="material-symbols-outlined privacy-card__header-icon--rose">cancel</span>
             </div>
-            <h3 class="privacy-card__title" data-i18n="privacyCard1Title">Cifrado en tu Dispositivo</h3>
-            <p class="privacy-card__text" data-i18n="privacyCard1Text">
-              Tus textos y notas de voz se resguardan de forma segura en tu teléfono o navegador. Nosotros nunca poseemos la llave de acceso.
-            </p>
+            <ul class="privacy-points-list">
+              <li class="privacy-point-item">
+                <span class="material-symbols-outlined privacy-point-icon--rose">close</span>
+                <span data-i18n="privacyOtherPoint1">Tus textos se transmiten a bases de datos lejanas con contraseñas maestras de empresa.</span>
+              </li>
+              <li class="privacy-point-item">
+                <span class="material-symbols-outlined privacy-point-icon--rose">close</span>
+                <span data-i18n="privacyOtherPoint2">Se analizan palabras clave para segmentar anuncios y rastrear tu estado emocional.</span>
+              </li>
+              <li class="privacy-point-item">
+                <span class="material-symbols-outlined privacy-point-icon--rose">close</span>
+                <span data-i18n="privacyOtherPoint3">Si sufren una filtración o cambio de dueño, tus diarios pueden quedar expuestos.</span>
+              </li>
+            </ul>
           </div>
 
-          <!-- Privacy Pillar 2 -->
-          <div class="privacy-card">
-            <div class="privacy-card__icon">
-              <span class="material-symbols-outlined" style="font-size: 1.75rem;">visibility_off</span>
+          <!-- Tarjeta 2: SafeDiary Destacada -->
+          <div class="privacy-compare-card--safediary">
+            <div class="privacy-card__header-row">
+              <div class="safediary-brand-pill">
+                <span data-i18n="privacySafeTitle">SafeDiary</span>
+                <span class="safediary-brand-dot"></span>
+              </div>
+              <span class="material-symbols-outlined privacy-card__header-icon--teal">verified</span>
             </div>
-            <h3 class="privacy-card__title" data-i18n="privacyCard2Title">Cero Publicidad ni Rastreo</h3>
-            <p class="privacy-card__text" data-i18n="privacyCard2Text">
-              No vendemos tus emociones a terceros ni procesamos tus vivencias personales para mostrarte anuncios comerciales invasivos.
-            </p>
-          </div>
-
-          <!-- Privacy Pillar 3 -->
-          <div class="privacy-card">
-            <div class="privacy-card__icon">
-              <span class="material-symbols-outlined" style="font-size: 1.75rem;">download_for_offline</span>
-            </div>
-            <h3 class="privacy-card__title" data-i18n="privacyCard3Title">Exportación Libre y Total</h3>
-            <p class="privacy-card__text" data-i18n="privacyCard3Text">
-              Descarga todas tus memorias cuando desees en formatos universales o elimina todo rastro permanentemente con un solo clic.
-            </p>
+            <ul class="privacy-points-list">
+              <li class="privacy-point-item">
+                <span class="material-symbols-outlined privacy-point-icon--teal">check_circle</span>
+                <span><strong data-i18n="privacySafePoint1Title">Cero conocimiento:</strong> <span data-i18n="privacySafePoint1Text">Solo tu teléfono tiene la llave matemática para descifrar tus palabras.</span></span>
+              </li>
+              <li class="privacy-point-item">
+                <span class="material-symbols-outlined privacy-point-icon--teal">check_circle</span>
+                <span><strong data-i18n="privacySafePoint2Title">Inteligencia local:</strong> <span data-i18n="privacySafePoint2Text">Si usas resúmenes, se ejecutan en el chip de tu móvil sin enviar texto a Internet.</span></span>
+              </li>
+              <li class="privacy-point-item">
+                <span class="material-symbols-outlined privacy-point-icon--teal">check_circle</span>
+                <span><strong data-i18n="privacySafePoint3Title">Libertad absoluta:</strong> <span data-i18n="privacySafePoint3Text">Puedes borrar, exportar o guardar una copia física en cualquier instante.</span></span>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -373,7 +373,6 @@
 
         <div class="team-carousel-wrapper">
           <div class="team-card" id="teamCard">
-            <!-- Member Photo Placeholder Container -->
             <div class="team-card__image-container">
               <img
                 src="assets/images/placeholders/member-1.svg"
@@ -382,7 +381,6 @@
                 id="teamMemberImg">
             </div>
 
-            <!-- Member Information Content -->
             <div class="team-card__content">
               <div class="team-card__badge" data-i18n="teamBadgeRole">
                 <span class="material-symbols-outlined" style="font-size: 0.875rem;">workspace_premium</span>
@@ -398,7 +396,6 @@
                 Responsable de la dirección conceptual del proyecto, asegurando la cohesión visual del sistema Safe Diary Warmth y la integración fluida de cada componente.
               </p>
 
-              <!-- Carousel Navigation Buttons -->
               <div class="team-card__controls">
                 <span style="font-size: 0.8125rem; color: var(--color-text-light); font-weight: 500;">SafeDiary Core Team</span>
                 <div class="team-nav-buttons">
@@ -413,7 +410,6 @@
             </div>
           </div>
 
-          <!-- Direct Tab Indicators for Team Members -->
           <div class="team-tabs" id="teamTabsContainer" role="tablist" aria-label="Seleccionar integrante del equipo">
             <!-- Inyectado dinámicamente por team.js -->
           </div>
@@ -422,23 +418,23 @@
     </section>
 
     <!-- ====================================================================
-         FAQ SECTION
+         FAQ SECTION (STITCH THEMED ACCORDION)
          ==================================================================== -->
     <section class="section section--alt" id="faq">
       <div class="container">
         <div class="section-header">
           <div class="badge-tag">
-            <span class="material-symbols-outlined" style="font-size: 1rem;">help_outline</span>
-            <span data-i18n="faqBadge">Dudas Frecuentes</span>
+            <span class="material-symbols-outlined" style="font-size: 1rem;">help</span>
+            <span data-i18n="faqBadge">Dudas frecuentes resueltas con claridad</span>
           </div>
-          <h2 class="section-title" data-i18n="faqTitle">Todo lo que necesitas saber</h2>
+          <h2 class="section-title" data-i18n="faqTitle">Preguntas Frecuentes</h2>
           <p class="section-subtitle" data-i18n="faqSubtitle">
-            Respuestas claras para que disfrutes de tu refugio con total tranquilidad.
+            Queremos que te sientas con total tranquilidad y transparencia. Si no encuentras tu respuesta, siempre puedes escribirnos con confianza.
           </p>
         </div>
 
         <div class="faq-container" id="faqContainer">
-          <!-- Inyectado dinámicamente por faq.js con soporte i18n reactivo -->
+          <!-- Inyectado dinámicamente por faq.js con soporte i18n y cajas temáticas -->
         </div>
       </div>
     </section>
@@ -450,7 +446,6 @@
   <footer class="footer">
     <div class="container">
       <div class="footer__grid">
-        <!-- Brand & Description -->
         <div>
           <a href="#" class="brand" aria-label="SafeDiary Inicio">
             <div class="brand__logo">
@@ -466,7 +461,6 @@
           </p>
         </div>
 
-        <!-- Navigation Links Column -->
         <div>
           <h4 class="footer__col-title" data-i18n="footerNavTitle">Explorar</h4>
           <ul class="footer__links">
@@ -479,7 +473,6 @@
           </ul>
         </div>
 
-        <!-- Legal Column -->
         <div>
           <h4 class="footer__col-title" data-i18n="footerLegalTitle">Legal y Ética</h4>
           <ul class="footer__links">
@@ -490,7 +483,6 @@
         </div>
       </div>
 
-      <!-- Footer Bottom Bar -->
       <div class="footer__bottom">
         <p data-i18n="footerCopyright">© 2026 MindCluster. Todos los derechos reservados. SafeDiary es una marca orientada al bienestar personal.</p>
         <div style="display: flex; gap: 1rem; align-items: center;">

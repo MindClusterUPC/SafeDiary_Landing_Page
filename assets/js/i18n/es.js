@@ -1,6 +1,6 @@
 /**
  * SafeDiary - Textos en Español (ES)
- * MindCluster
+ * MindCluster - Safe Diary Warmth
  */
 export const es = {
   // Brand & Header
@@ -64,18 +64,23 @@ export const es = {
   streakPill2: "📖 12 reflexiones este mes",
   wellnessQuote: "“No se trata de estar siempre bien, sino de darte permiso de sentir y respirar.”",
 
-  // Sacred Privacy
-  privacyBadge: "Seguridad y Ética",
-  privacyTitle: "Tus pensamientos pertenecen únicamente a ti",
-  privacySubtitle: "SafeDiary fue diseñado desde el primer trazo bajo el principio de reverencia absoluta por tu privacidad íntima.",
-  privacyCard1Title: "Cifrado en tu Dispositivo",
-  privacyCard1Text: "Tus textos y notas de voz se resguardan de forma segura en tu teléfono o navegador. Nosotros nunca poseemos la llave de acceso.",
-  privacyCard2Title: "Cero Publicidad ni Rastreo",
-  privacyCard2Text: "No vendemos tus emociones a terceros ni procesamos tus vivencias personales para mostrarte anuncios comerciales invasivos.",
-  privacyCard3Title: "Exportación Libre y Total",
-  privacyCard3Text: "Descarga todas tus memorias cuando desees en formatos universales o elimina todo rastro permanentemente con un solo clic.",
+  // Sacred Privacy (Fiel al diseño Stitch)
+  privacyTag: "Privacidad que te abraza",
+  privacyTitle: "Tu privacidad es sagrada y 100% tuya.",
+  privacySubtitle: "Las aplicaciones convencionales guardan tus notas en servidores donde empleados o algoritmos pueden leerlas. En SafeDiary, tu intimidad está protegida bajo siete llaves que solo tú tienes.",
+  privacyOtherTitle: "Otras notas y diarios en la nube",
+  privacyOtherPoint1: "Tus textos se transmiten a bases de datos lejanas con contraseñas maestras de empresa.",
+  privacyOtherPoint2: "Se analizan palabras clave para segmentar anuncios y rastrear tu estado emocional.",
+  privacyOtherPoint3: "Si sufren una filtración o cambio de dueño, tus diarios pueden quedar expuestos.",
+  privacySafeTitle: "SafeDiary",
+  privacySafePoint1Title: "Cero conocimiento:",
+  privacySafePoint1Text: "Solo tu teléfono tiene la llave matemática para descifrar tus palabras.",
+  privacySafePoint2Title: "Inteligencia local:",
+  privacySafePoint2Text: "Si usas resúmenes, se ejecutan en el chip de tu móvil sin enviar texto a Internet.",
+  privacySafePoint3Title: "Libertad absoluta:",
+  privacySafePoint3Text: "Puedes borrar, exportar o guardar una copia física en cualquier instante.",
 
-  // Team Section (Placeholders)
+  // Team Section (Placeholders solicitados)
   teamBadge: "Equipo MindCluster",
   teamTitle: "Las personas detrás de SafeDiary",
   teamSubtitle: "Un equipo multidisciplinario comprometido con construir herramientas tecnológicas empáticas, accesibles y cálidas.",
@@ -123,26 +128,46 @@ export const es = {
     }
   ],
 
-  // FAQ Section
-  faqBadge: "Dudas Frecuentes",
-  faqTitle: "Todo lo que necesitas saber",
-  faqSubtitle: "Respuestas claras para que disfrutes de tu refugio con total tranquilidad.",
+  // FAQ Section (Las 6 preguntas con iconos Stitch)
+  faqBadge: "Dudas frecuentes resueltas con claridad",
+  faqTitle: "Preguntas Frecuentes",
+  faqSubtitle: "Queremos que te sientas con total tranquilidad y transparencia. Si no encuentras tu respuesta, siempre puedes escribirnos con confianza.",
   faqItems: [
     {
-      question: "¿Mis notas de diario se suben a la nube o a servidores externos?",
-      answer: "No. En SafeDiary priorizamos tu tranquilidad. Todos tus escritos y grabaciones permanecen almacenados localmente en tu dispositivo con cifrado. No tenemos acceso a tus notas."
+      icon: "lock",
+      theme: "emerald",
+      question: "¿SafeDiary puede leer mis reflexiones o utilizarlas para entrenar IA?",
+      answer: "Absolutamente no. SafeDiary utiliza cifrado de cero conocimiento (Zero-Knowledge) de grado militar (AES-256). Tus notas y audios se encriptan directamente en tu teléfono antes de guardarse. Jamás entrenamos inteligencias artificiales ni tenemos acceso a tus palabras."
     },
     {
-      question: "¿Tiene algún costo o suscripción oculta?",
-      answer: "SafeDiary es un proyecto desarrollado con espíritu abierto por MindCluster. Todas las funciones esenciales de reflexión, respiración y registro emocional están disponibles sin pagos ocultos."
+      icon: "mic",
+      theme: "amber",
+      question: "¿Cómo funciona el análisis de emociones y el diario de voz?",
+      answer: "Tanto el reconocimiento de voz como las transcripciones y métricas de serenidad se procesan en el procesador local (en el chip de tu smartphone). El audio nunca se transmite por internet ni se almacena en la nube."
     },
     {
-      question: "¿Cómo funciona la función de respiración guiada 4-7-8?",
-      answer: "Se basa en una técnica probada de regulación del sistema nervioso: inhalas en 4 segundos, retienes durante 7 y exhalas suavemente en 8. Puedes realizarlo en cualquier momento del día para bajar el ritmo cardíaco y calmar la mente."
+      icon: "favorite",
+      theme: "rose",
+      question: "¿Es una alternativa a la terapia psicológica profesional?",
+      answer: "No. SafeDiary es una herramienta complementaria de autocuidado, introspección y desahogo diario. Si atraviesas un momento difícil o de crisis, siempre te recomendamos acudir a un profesional de la salud mental colegiado."
     },
     {
-      question: "¿Puedo exportar o respaldar mis reflexiones cuando lo necesite?",
-      answer: "Sí, en todo momento podrás exportar tus entradas en formatos abiertos para guardarlas en tu computadora o compartirlas únicamente con quien tú decidas."
+      icon: "ios_share",
+      theme: "sky",
+      question: "¿Puedo exportar o compartir mis notas con mi terapeuta?",
+      answer: "Sí. Puedes generar resúmenes en formato PDF protegido por contraseña o en archivos estándar Markdown/JSON cuando desees compartirlos en consulta, decidiendo exactamente qué reflexiones incluir."
+    },
+    {
+      icon: "key",
+      theme: "purple",
+      question: "¿Qué sucede si pierdo o cambio de teléfono?",
+      answer: "Al configurar tu cuenta recibes una Frase de Rescate de 12 palabras. Al ser cifrado sin conocimiento de servidor, esa frase es tu única llave para restaurar tu santuario en un nuevo dispositivo."
+    },
+    {
+      icon: "verified",
+      theme: "teal",
+      question: "¿SafeDiary tiene anuncios o vende mis datos a terceros?",
+      answer: "Jamás. No existen rastreadores de publicidad, píxeles de terceros ni venta de información estadística. SafeDiary se sostiene gracias a donaciones conscientes y apoyo institucional de MindCluster."
     }
   ],
 

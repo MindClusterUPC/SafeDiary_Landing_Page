@@ -1,6 +1,6 @@
 /**
- * SafeDiary - FAQ Accordion Component
- * MindCluster
+ * SafeDiary - FAQ Accordion Component with Themed Icons
+ * MindCluster - Safe Diary Warmth
  */
 
 import { getCurrentDict } from '../i18n/i18n.js';
@@ -18,10 +18,18 @@ export function initFaq() {
       const faqItem = document.createElement('div');
       faqItem.className = `faq-item ${index === 0 ? 'active' : ''}`;
 
+      const iconTheme = item.theme || 'emerald';
+      const iconName = item.icon || 'help';
+
       faqItem.innerHTML = `
         <button class="faq-header" type="button" aria-expanded="${index === 0 ? 'true' : 'false'}">
-          <span>${item.question}</span>
-          <span class="material-symbols-outlined">expand_more</span>
+          <div class="faq-title-wrap">
+            <div class="faq-icon-box faq-icon-box--${iconTheme}">
+              <span class="material-symbols-outlined">${iconName}</span>
+            </div>
+            <span class="faq-question-text">${item.question}</span>
+          </div>
+          <span class="faq-chevron material-symbols-outlined">expand_more</span>
         </button>
         <div class="faq-content">
           <p class="faq-text">${item.answer}</p>
@@ -31,7 +39,7 @@ export function initFaq() {
       const header = faqItem.querySelector('.faq-header');
       header.addEventListener('click', () => {
         const isActive = faqItem.classList.contains('active');
-        // Cerrar otros acordeones si se desea comportamiento exclusivo
+        // Comportamiento de acordeón exclusivo
         container.querySelectorAll('.faq-item').forEach((el) => {
           el.classList.remove('active');
           const btn = el.querySelector('.faq-header');
@@ -50,7 +58,7 @@ export function initFaq() {
 
   renderFaq();
 
-  // Reaccionar al cambio de idioma
+  // Reaccionar reactivamente a cambios de idioma
   document.addEventListener('languageChange', () => {
     renderFaq();
   });
