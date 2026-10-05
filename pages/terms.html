@@ -81,7 +81,7 @@
 
     <!-- Editorial Main Split: Interactive Index + Content Cards -->
     <section class="container" style="padding-bottom: 6rem;">
-      <div style="display: grid; grid-template-columns: 1fr; gap: 2rem; align-items: start;" class="terms-editorial-grid">
+      <div class="terms-editorial-grid">
         
         <!-- Barra lateral de navegacion -->
         <aside class="terms-sidebar">
@@ -111,8 +111,8 @@
                 <span class="terms-nav-num">3</span>
                 <span data-i18n="termsNav3">Cero venta & cifrado local</span>
               </a>
-              <a href="#aviso-salud-mental" class="terms-nav-item" style="color: #b45309;">
-                <span class="terms-nav-num" style="background: #fef3c7; color: #b45309;">4</span>
+              <a href="#aviso-salud-mental" class="terms-nav-item">
+                <span class="terms-nav-num">4</span>
                 <span data-i18n="termsNav4">Aviso de salud mental</span>
               </a>
               <a href="#uso-responsable" class="terms-nav-item">
@@ -154,7 +154,7 @@
         </aside>
 
         <!-- Columna de clausulas -->
-        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+        <div class="terms-content-col">
           
           <!-- Tarjeta de bienvenida con imagen serena -->
           <div class="terms-anchor-card">
@@ -418,11 +418,36 @@
   <!-- Reusable Shared Footer Container -->
   <div id="footer-placeholder"></div>
 
-  <!-- Page Logic (Loads shared components & initializes i18n) -->
+  <!-- Logica de la pagina -->
   <script type="module">
     import { loadSharedComponents } from '../assets/js/components/include.js';
     document.addEventListener('DOMContentLoaded', () => {
       loadSharedComponents({ isSubfolder: true });
+
+      const clauses = document.querySelectorAll('.terms-card-clause');
+      const navLinks = document.querySelectorAll('.terms-nav-item');
+
+      function updateActiveClause() {
+        const scrollY = window.pageYOffset + 140;
+        clauses.forEach((clause) => {
+          const top = clause.offsetTop;
+          const height = clause.offsetHeight;
+          const id = clause.getAttribute('id');
+
+          if (scrollY >= top && scrollY < top + height) {
+            navLinks.forEach((link) => {
+              if (link.getAttribute('href') === `#${id}`) {
+                link.classList.add('active');
+              } else {
+                link.classList.remove('active');
+              }
+            });
+          }
+        });
+      }
+
+      window.addEventListener('scroll', updateActiveClause, { passive: true });
+      updateActiveClause();
     });
   </script>
 </body>

@@ -45,6 +45,9 @@ export function initTeam() {
     if (memberQuote) memberQuote.textContent = member.quote;
     if (memberBio) memberBio.textContent = member.bio;
 
+    const badgeFooter = document.getElementById('teamBadgeFooter');
+    if (badgeFooter) badgeFooter.textContent = member.badgeRole || member.name;
+
     // Actualizar botones tabs inferiores
     tabsContainer.querySelectorAll('.team-member-pill-btn').forEach((btn, i) => {
       if (i === currentIndex) {

@@ -19,7 +19,7 @@ body {
   background-color: var(--color-bg);
   color: var(--color-text-main);
   line-height: 1.6;
-  overflow-x: hidden;
+  overflow-x: clip;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -1753,8 +1753,9 @@ img, svg {
 
 @media (min-width: 992px) {
   .terms-editorial-grid {
-    grid-template-columns: 340px 1fr;
+    grid-template-columns: 360px 1fr;
     gap: 2.5rem;
+    align-items: start;
   }
 }
 
@@ -1766,9 +1767,19 @@ img, svg {
 
 @media (min-width: 992px) {
   .terms-sidebar {
+    position: -webkit-sticky;
     position: sticky;
-    top: 6.5rem;
+    top: 6rem;
+    align-self: start;
+    z-index: 10;
   }
+}
+
+.terms-content-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  min-width: 0;
 }
 
 .terms-sidebar-box {
@@ -1785,20 +1796,20 @@ img, svg {
   gap: 0.75rem;
   padding: 0.625rem 0.875rem;
   border-radius: var(--radius-full);
-  color: var(--color-text-main);
+  color: #1c1917;
   font-size: 0.8125rem;
   font-weight: 500;
   transition: all var(--transition-fast);
 }
 
 .terms-nav-item:hover {
-  background: rgba(230, 247, 244, 0.6);
+  background: rgba(230, 247, 244, 0.7);
   color: var(--color-primary);
 }
 
 .terms-nav-item.active {
-  background: rgba(230, 247, 244, 0.9);
-  color: var(--color-primary);
+  background: var(--color-primary);
+  color: #ffffff;
   font-weight: 700;
 }
 
@@ -1806,7 +1817,7 @@ img, svg {
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 50%;
-  background: rgba(230, 247, 244, 0.8);
+  background: rgba(230, 247, 244, 0.9);
   color: var(--color-primary);
   display: flex;
   align-items: center;
@@ -1814,6 +1825,12 @@ img, svg {
   font-size: 0.75rem;
   font-weight: 700;
   flex-shrink: 0;
+  transition: all var(--transition-fast);
+}
+
+.terms-nav-item.active .terms-nav-num {
+  background: #ffffff;
+  color: var(--color-primary);
 }
 
 .terms-philo-card {

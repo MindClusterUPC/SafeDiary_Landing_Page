@@ -141,59 +141,64 @@ export const es = {
   teamBadge: "Las personas detrás del refugio",
   teamTitle: "Un equipo comprometido con tu calma y privacidad.",
   teamSubtitle: "Psicólogas, ingenieros de privacidad y diseñadores que creemos firmemente en la tecnología que abraza y no juzga.",
-  teamBadgeRole: "SafeDiary Co-fundadora",
+  teamBadgeRole: "Integrante 1",
   teamFooterPledge: "Compromiso de trato humano, sereno y ético",
   teamTabsHelper: "Pulsa en cada perfil para conocer su rol en tu santuario digital",
   teamMembers: [
     {
       id: 1,
-      name: "Dra. Elena Valenzuela",
-      role: "Co-fundadora & Directora de Psicología y Bienestar",
-      specialty: "Terapia Humanista & Bienestar",
+      name: "Integrante 1",
+      role: "Lorem ipsum dolor sit amet",
+      specialty: "Lorem Ipsum",
       image: "assets/images/placeholders/member-1.svg",
-      shortName: "Dra. Elena V.",
-      quote: "“SafeDiary nació para devolvernos un rincón sin prisas donde desahogarnos sin sentirnos observados.”",
-      bio: "Especialista en terapia cognitivo-conductual y psicología humanista con más de 10 años acompañando procesos de introspección y autocuidado."
+      shortName: "Integrante 1",
+      badgeRole: "Integrante 1",
+      quote: "“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”",
+      bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     },
     {
       id: 2,
-      name: "Mateo Rinaldi",
-      role: "Líder de Arquitectura Criptográfica & Local Storage",
-      specialty: "Criptografía & Cero Conocimiento",
+      name: "Integrante 2",
+      role: "Lorem ipsum dolor sit amet",
+      specialty: "Lorem Ipsum",
       image: "assets/images/placeholders/member-2.svg",
-      shortName: "Mateo Rinaldi",
-      quote: "“La privacidad absoluta no es una función adicional; es el cimiento de la confianza humana.”",
-      bio: "Ingeniero de seguridad de sistemas con trayectoria en protocolos descentralizados, cifrado on-device AES-256 y privacidad matemática."
+      shortName: "Integrante 2",
+      badgeRole: "Integrante 2",
+      quote: "“Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint.”",
+      bio: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     },
     {
       id: 3,
-      name: "Sofía Benítez",
-      role: "Diseñadora Principal de Experiencia Emocional & UI",
-      specialty: "Diseño Emocional & Accesibilidad",
+      name: "Integrante 3",
+      role: "Lorem ipsum dolor sit amet",
+      specialty: "Lorem Ipsum",
       image: "assets/images/placeholders/member-3.svg",
-      shortName: "Sofía Benítez",
-      quote: "“Cada curva, tono y espacio en blanco está concebido para inspirar paz y desvanecer la ansiedad.”",
-      bio: "Diseñadora de interacción enfocada en sistemas visuales restaurativos, paletas cromáticas calmantes y microinteracciones gentiles."
+      shortName: "Integrante 3",
+      badgeRole: "Integrante 3",
+      quote: "“Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.”",
+      bio: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
     },
     {
       id: 4,
-      name: "Lucas Morales",
-      role: "Ingeniero de Inteligencia Local & Procesamiento en Chip",
-      specialty: "Machine Learning On-Device",
+      name: "Integrante 4",
+      role: "Lorem ipsum dolor sit amet",
+      specialty: "Lorem Ipsum",
       image: "assets/images/placeholders/member-4.svg",
-      shortName: "Lucas Morales",
-      quote: "“La verdadera inteligencia tecnológica es la que respeta tu intimidad ejecutándose 100% en tu teléfono.”",
-      bio: "Especialista en redes neuronales compactas para transcripción de audio local y análisis de bienestar sin necesidad de internet."
+      shortName: "Integrante 4",
+      badgeRole: "Integrante 4",
+      quote: "“Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos.”",
+      bio: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet."
     },
     {
       id: 5,
-      name: "Nuria Santillana",
-      role: "Coordinadora de Ética Digital & Bienestar Comunitario",
-      specialty: "Ética Digital & Inclusión",
+      name: "Integrante 5",
+      role: "Lorem ipsum dolor sit amet",
+      specialty: "Lorem Ipsum",
       image: "assets/images/placeholders/member-5.svg",
-      shortName: "Nuria Santillana",
-      quote: "“Un santuario digital debe cuidar a sus usuarios y tratarlos siempre como personas, nunca como datos.”",
-      bio: "Investigadora en sociología del bienestar y mediación tecnológica, dedicada a garantizar que SafeDiary sea un refugio inclusivo y humano."
+      shortName: "Integrante 5",
+      badgeRole: "Integrante 5",
+      quote: "“At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti.”",
+      bio: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa."
     }
   ],
 
