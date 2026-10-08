@@ -1,6 +1,6 @@
 # SafeDiary • Landing Page
 
-> **SafeDiary** es una plataforma y refugio digital para el registro emocional, journaling íntimo y bienestar personal, diseñada por el equipo **MindCluster**.
+> **SafeDiary** es una aplicación de diario emocional, rutinas y acceso a atención psicológica profesional, diseñada por **MindCluster**.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-teal.svg)](LICENSE)
 [![Status: Active](https://img.shields.io/badge/Status-Completed-success.svg)](#)
@@ -10,38 +10,23 @@
 
 ## 🌿 Descripción del Proyecto
 
-SafeDiary nace como una respuesta acogedora frente a las aplicaciones clínicas frías de salud. Su diseño busca transmitir una sensación hogareña, orgánica y libre de juicios: un rincón seguro para ordenar pensamientos al final de la jornada, realizar pausas conscientes de respiración y hacer seguimiento a tu bienestar sin presiones.
+La landing presenta el recorrido desde la reflexión personal hasta la atención profesional. Usa la marca original y pantallas de referencia del producto; explica que el diario permanece privado y que compartir contexto con un especialista es una decisión del paciente.
 
 ---
 
-## ✨ Características Principales
+## Características de la landing
 
-- **Internacionalización Completa (i18n):**
-  - Soporte reactivo e instantáneo para **Español (ES)** e **Inglés (EN)** mediante toggle en el navbar.
-  - Persistencia del idioma preferido en `localStorage`.
-- **Diseño *Safe Diary Warmth*:**
-  - Paleta botánica de teales y mentas (`#00685f`, `#2dd4bf`), lienzos pergamino/piedra suave (`#fcfbf9`) y sombras difusas cálidas.
-  - Tipografía moderna con *Plus Jakarta Sans* e iconografía *Material Symbols*.
-- **Microinteracciones en el Hero:**
-  - Cuaderno íntimo con generador de sugerencias de inspiración para escribir.
-  - Simulación interactiva de notas de voz con temporizador/indicador pulsante.
-  - Guardado de reflexión con confirmación visual de cifrado local.
-- **Paz Interior & Respiración Guiada (4-7-8):**
-  - Ejercicio interactivo de regulación nerviosa con visualizador circular animado y cuenta regresiva.
-- **Bienestar & Momentos de Calma:**
-  - Visualización de tendencias semanales y selector de estados de ánimo (Sereno, Agradecido, Reflexivo, etc.).
-- **Privacidad Sagrada:**
-  - Sección que expone las garantías de almacenamiento local en el dispositivo, sin anuncios ni venta de datos.
-- **Sección Equipo MindCluster:**
-  - Estructurada con **placeholders** vectoriales SVG limpios y textos modulares personalizables para los 5 integrantes.
-  - Navegación por carrusel con botones Anterior/Siguiente y pestañas de acceso directo.
-- **Preguntas Frecuentes (FAQ):**
-  - Acordeones colapsables accesibles con apertura suave.
-- **Página de Términos y Condiciones:**
-  - Documento legal completo y editorial en `pages/terms.html`, totalmente integrado al diseño y con soporte bilingüe.
+- Presenta el producto con textos concretos y un diseño basado en la guía visual de SafeDiary.
+- Usa el logo original del proyecto en la cabecera, el pie y el favicon.
+- Muestra cinco capturas del prototipo actual (Inicio, Diarito, Rutinas, Psicólogos y Mis citas). Al pasar el cursor sobre el carrusel, cambia de pantalla y sigue avanzando cada 3 segundos; también admite flechas, teclado y desplazamiento táctil.
+- Acompaña las funciones con fotografías de referencia que no representan a usuarios ni profesionales de SafeDiary.
+- Explica diario, resúmenes, rutinas, atención profesional y consentimiento sin simular funcionalidades ya disponibles.
+- Conserva la selección de idioma español/inglés, el equipo y las preguntas frecuentes.
+- Identifica planes y precios como referencias de un producto en desarrollo; no incluye enlaces de descarga ficticios.
+
+Las fotografías de funciones proceden de Pexels: [diario](https://www.pexels.com/photo/relaxed-journaling-by-the-window-in-natural-light-33359325/), [reflexión](https://www.pexels.com/photo/woman-checking-text-in-notebook-in-daylight-7256740/), [rutinas](https://www.pexels.com/photo/flexible-woman-doing-yoga-at-home-6193554/) y [atención](https://www.pexels.com/photo/psychologist-talking-to-a-patient-9065249/). Se usan como imágenes ilustrativas bajo la [licencia de Pexels](https://www.pexels.com/license/).
 
 ---
-
 ## 📁 Estructura del Proyecto
 
 ```text
@@ -57,8 +42,9 @@ SafeDiary_Landing_Page/
 │   └── terms.html                  # Términos y condiciones editorial
 └── assets/
     ├── css/
-    │   ├── variables.css           # Tokens de diseño (colores, fuentes, sombras, radios)
-    │   └── main.css                # Estilos globales, componentes y diseño editorial
+    │   ├── variables.css           # Tokens heredados
+    │   ├── main.css                # Estilos base y componentes existentes
+    │   └── landing-refresh.css     # Marca y secciones actualizadas
     ├── js/
     │   ├── app.js                  # Inicializador principal y manejo de eventos
     │   ├── i18n/
@@ -69,12 +55,12 @@ SafeDiary_Landing_Page/
     │   │   └── i18n.js             # Motor reactivo de internacionalización
     │   └── components/
     │       ├── include.js          # Inyector de componentes compartidos
-    │       ├── breathing.js        # Ejercicio de respiración 4-7-8
-    │       ├── journal.js          # Interacciones del cuaderno y nota de voz
+    │       ├── mockups.js          # Carrusel de pantallas de la aplicación
     │       ├── team.js             # Carrusel de integrantes con placeholders
     │       └── faq.js              # Acordeón de preguntas frecuentes
     └── images/
-        ├── logo.svg                # Isotipo vectorial de SafeDiary
+        ├── safediary-logo.jpeg     # Logo original de SafeDiary
+        ├── mockups/               # Capturas de referencia de la aplicación
         └── placeholders/           # Avatares vectoriales para los integrantes
             ├── member-1.svg
             ├── member-2.svg
