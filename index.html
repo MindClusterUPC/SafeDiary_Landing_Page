@@ -3,22 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SafeDiary • Tu refugio personal y cálido de reflexión</title>
-  <meta name="description" content="SafeDiary es tu diario personal íntimo, privado y seguro desarrollado por MindCluster. Reflexiona, respira con calma y cuida tu bienestar emocional sin juicios.">
-  <meta name="theme-color" content="#00685f">
+  <title>SafeDiary — Diario emocional y atención profesional</title>
+  <meta name="description" content="Registra emociones, explora tus cambios y conoce psicólogos verificados. En SafeDiary tú decides qué información compartir.">
+  <meta name="theme-color" content="#01284B">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+  <link rel="icon" type="image/jpeg" href="assets/images/safediary-logo.jpeg">
 
-  <!-- Google Fonts: Plus Jakarta Sans & Material Symbols -->
+  <!-- Tipografía de SafeDiary e iconos de la interfaz -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="assets/css/variables.css">
   <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/landing-refresh.css">
 </head>
 <body>
 
@@ -28,486 +29,131 @@
   <main>
     <!-- Seccion principal -->
     <section class="hero" id="espacio">
-      <div class="hero__aura"></div>
       <div class="container hero__content">
-        <!-- Reassurance Badge -->
-        <div class="badge-tag badge-tag--pulse-dot">
-          <span data-i18n="heroBadge">Tu rincón seguro • Libre de juicios • 100% privado</span>
-        </div>
-
+        <span class="hero__eyebrow" data-i18n="heroBadge">DIARIO EMOCIONAL · ATENCIÓN PROFESIONAL</span>
         <h1 class="hero__title">
-          <span data-i18n="heroTitlePrefix">¿Cómo te sientes hoy?</span>
-          <span class="hero__title-accent" data-i18n="heroTitleAccent">Tómate un momento para ti.</span>
+          <span data-i18n="heroTitlePrefix">Entiende cómo te sientes.</span>
+          <span class="hero__title-accent" data-i18n="heroTitleAccent">Decide qué hacer después.</span>
         </h1>
-
         <p class="hero__desc" data-i18n="heroSubtitle">
-          Un espacio íntimo donde ser tú mismo, ordenar tus pensamientos al final del día y encontrar paz con una taza de té.
+          Registra tus emociones por texto o voz, observa tus cambios y, cuando lo necesites, conecta con un psicólogo verificado. Tú eliges qué compartir.
         </p>
-
-        <!-- The Journal Notebook Card -->
-        <div class="journal-card" id="journalCard">
-          <div class="journal-card__header">
-            <div class="journal-card__meta">
-              <span class="material-symbols-outlined">light_mode</span>
-              <span data-i18n="journalHeaderMeta">Reflexión de hoy • Solo para tus ojos</span>
-            </div>
-            <div class="journal-card__security-pill">
-              <span class="material-symbols-outlined" style="font-size: 0.95rem;">lock</span>
-              <span data-i18n="journalEncryptionPill">Cifrado en tu dispositivo</span>
-            </div>
-          </div>
-
-          <textarea
-            class="journal-card__textarea"
-            id="journalPromptArea"
-            rows="3"
-            data-i18n-placeholder="journalPlaceholder"
-            placeholder="Hoy he sentido que el día se me escapaba de las manos, pero quiero agradecer este momento de calma..."></textarea>
-
-          <div class="journal-card__footer">
-            <div class="journal-card__actions">
-              <button type="button" class="action-pill-btn" id="recordVoiceBtn">
-                <span class="material-symbols-outlined" id="recordIcon" style="color: var(--color-primary); font-size: 1.125rem;">mic</span>
-                <span id="recordLabel" data-i18n="btnRecordVoice">Grabar nota de voz</span>
-                <span class="recording-indicator" id="recordingBadge" data-i18n="btnVoiceRecording">GRABANDO</span>
-              </button>
-
-              <button type="button" class="action-pill-btn action-pill-btn--amber" id="inspirationBtn">
-                <span class="material-symbols-outlined" style="font-size: 1.125rem;">auto_stories</span>
-                <span data-i18n="btnInspiration">Inspiración para escribir</span>
-              </button>
-            </div>
-
-            <button type="button" class="btn btn--primary" id="saveReflectionBtn">
-              <span data-i18n="btnSaveReflection">Guardar reflexión</span>
-              <span class="material-symbols-outlined" style="font-size: 1.125rem;">check_circle</span>
-            </button>
-          </div>
-
-          <!-- Modal de confirmacion -->
-          <div class="reflection-drawer" id="reflectionDrawer">
-            <span class="flex items-center gap-2 font-medium">
-              <span class="material-symbols-outlined" style="font-size: 1.125rem; color: #059669;">verified</span>
-              <span class="drawer-message" data-i18n="reflectionSavedFeedback">Guardado con cariño en la memoria de tu dispositivo. Nadie más tiene acceso.</span>
-            </span>
-            <span style="font-size: 0.6875rem; color: #78716c;" data-i18n="reflectionSavedSub">Tu refugio intacto</span>
-          </div>
+        <div class="hero__actions">
+          <a href="#app" class="btn btn--primary" data-i18n="btnSeeApp">Ver la app</a>
+          <a href="#respirar" class="hero__text-link" data-i18n="heroSecondaryAction">Conocer las funciones</a>
         </div>
-
-        <!-- Supportive Pill Suggestions -->
-        <div class="supportive-pills-wrap">
-          <button type="button" class="supportive-pill-btn">
-            <span class="material-symbols-outlined" style="color: var(--color-primary); font-size: 1.125rem;">sentiment_satisfied</span>
-            <span data-i18n="pillPrompt1">Hablar con calma</span>
-          </button>
-          <button type="button" class="supportive-pill-btn">
-            <span class="material-symbols-outlined" style="color: #d97706; font-size: 1.125rem;">coffee</span>
-            <span data-i18n="pillPrompt2">Reflexión matutina</span>
-          </button>
-          <button type="button" class="supportive-pill-btn">
-            <span class="material-symbols-outlined" style="color: #f43f5e; font-size: 1.125rem;">favorite</span>
-            <span data-i18n="pillPrompt3">Soltar la sobrecarga</span>
-          </button>
-        </div>
-
-        <!-- Trust assurances -->
-        <div class="trust-assurances-row">
-          <span class="trust-item">
-            <span class="material-symbols-outlined">lock_reset</span>
-            <span data-i18n="trustPillar1">Sin servidores leyendo tus cartas</span>
-          </span>
-          <span style="color: #d6d3d1;">•</span>
-          <span class="trust-item">
-            <span class="material-symbols-outlined">shield</span>
-            <span data-i18n="trustPillar2">Claves en tu móvil</span>
-          </span>
-          <span style="color: #d6d3d1;">•</span>
-          <span class="trust-item">
-            <span class="material-symbols-outlined">volunteer_activism</span>
-            <span data-i18n="trustPillar3">Diseñado para sanar</span>
-          </span>
-        </div>
+        <p class="hero__note" data-i18n="heroPrototypeNote">Una vista del producto que estamos construyendo.</p>
       </div>
     </section>
 
-    <!-- Tarjetas de tranquilidad -->
-    <section class="reassurance-section">
+    <section class="app-preview" id="app" aria-labelledby="appPreviewTitle">
       <div class="container">
-        <div class="reassurance-bar">
-          <div class="reassurance-grid">
-            <div class="reassurance-item">
-              <div class="reassurance-icon-box reassurance-icon-box--emerald">
-                <span class="material-symbols-outlined" style="font-size: 22px;">lock_clock</span>
-              </div>
-              <div>
-                <div class="reassurance-item__title" data-i18n="reassurance1Title">Tu candado personal</div>
-                <p class="reassurance-item__desc" data-i18n="reassurance1Desc">Cifrado de grado bancario que vive única y exclusivamente en tu móvil.</p>
-              </div>
-            </div>
-
-            <div class="reassurance-item">
-              <div class="reassurance-icon-box reassurance-icon-box--amber">
-                <span class="material-symbols-outlined" style="font-size: 22px;">spa</span>
-              </div>
-              <div>
-                <div class="reassurance-item__title" data-i18n="reassurance2Title">Ejercicios amables</div>
-                <p class="reassurance-item__desc" data-i18n="reassurance2Desc">Preguntas guiadas para desenredar el nudo en el pecho paso a paso.</p>
-              </div>
-            </div>
-
-            <div class="reassurance-item">
-              <div class="reassurance-icon-box reassurance-icon-box--sky">
-                <span class="material-symbols-outlined" style="font-size: 22px;">heart_broken</span>
-              </div>
-              <div>
-                <div class="reassurance-item__title" data-i18n="reassurance3Title">Cero publicidad</div>
-                <p class="reassurance-item__desc" data-i18n="reassurance3Desc">Tus vivencias no se venden ni se usan para entrenar algoritmos comerciales.</p>
-              </div>
-            </div>
-
-            <div class="reassurance-item">
-              <div class="reassurance-icon-box reassurance-icon-box--rose">
-                <span class="material-symbols-outlined" style="font-size: 22px;">fingerprint</span>
-              </div>
-              <div>
-                <div class="reassurance-item__title" data-i18n="reassurance4Title">Huella y FaceID</div>
-                <p class="reassurance-item__desc" data-i18n="reassurance4Desc">Se bloquea al instante cuando sales de la app. Máxima tranquilidad.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Caracteristicas de paz interior y bienestar -->
-    <section class="section" id="respirar">
-      <div class="container">
-        <!-- Section Header -->
-        <div class="section-header--left">
-          <div style="max-width: 620px;">
-            <span class="section-category" data-i18n="bentoTag">Un espacio pensado para ti</span>
-            <h2 class="section-title" data-i18n="bentoTitle">Tu refugio personal para ordenar tus pensamientos.</h2>
-          </div>
-          <p class="section-subtitle" style="max-width: 440px;" data-i18n="bentoSubtitle">
-            Cada rincón de SafeDiary está creado para brindarte serenidad, un ritmo sin prisas y la sensación hogareña de estar a salvo.
-          </p>
-        </div>
-
-        <div class="bento-grid-wrap">
-          <!-- Bento Row 1: Voice & Gentle Patterns -->
-          <div class="bento-row bento-row--7-5">
-            <!-- Voice Reflection Card (7 cols) -->
-            <div class="bento-card">
-              <div>
-                <div class="bento-card__badge-row">
-                  <span class="bento-card__badge bento-card__badge--emerald" data-i18n="voiceTag">Voz acogedora</span>
-                  <span style="font-size: 0.75rem; color: #78716c; font-weight: 500;" data-i18n="voiceSession">Sesión de 4 minutos</span>
-                </div>
-                <h3 class="bento-card__title" data-i18n="voiceTitle">Un diario que te escucha con ternura</h3>
-                <p class="bento-card__desc" data-i18n="voiceDesc">
-                  Habla en voz alta cuando las manos estén cansadas. Tu voz se transcribe en tu propio teléfono y el audio se desvanece de inmediato, como un suspiro en una tarde de lluvia.
-                </p>
-              </div>
-
-              <!-- Soft waveform preview -->
-              <div class="waveform-box">
-                <div class="waveform-meta">
-                  <span style="display: flex; align-items: center; gap: 0.35rem; font-weight: 600; color: #1c1917;">
-                    <span style="width: 8px; height: 8px; border-radius: 50%; background: #00685f;"></span>
-                    <span data-i18n="voiceTone">Tono: Desahogo suave y reconfortante</span>
-                  </span>
-                  <span style="color: #00685f; font-weight: 700;" data-i18n="voiceLocalBadge">100% en tu teléfono</span>
-                </div>
-
-                <!-- Soft cozy bars -->
-                <div class="waveform-bars">
-                  <span class="waveform-bar" style="height: 1.5rem; background: #99f6e4;"></span>
-                  <span class="waveform-bar" style="height: 2.5rem; background: #5eead4;"></span>
-                  <span class="waveform-bar" style="height: 3rem; background: #008378;"></span>
-                  <span class="waveform-bar" style="height: 2rem; background: #fde68a;"></span>
-                  <span class="waveform-bar" style="height: 3.5rem; background: #00685f;"></span>
-                  <span class="waveform-bar" style="height: 2.5rem; background: #2dd4bf;"></span>
-                  <span class="waveform-bar" style="height: 1.5rem; background: #5eead4;"></span>
-                  <span class="waveform-bar" style="height: 3rem; background: #008378;"></span>
-                  <span class="waveform-bar" style="height: 2rem; background: #fbbf24;"></span>
-                  <span class="waveform-bar" style="height: 2.75rem; background: #00685f;"></span>
-                  <span class="waveform-bar" style="height: 1.25rem; background: #99f6e4;"></span>
-                </div>
-
-                <p class="waveform-quote" data-i18n="voiceQuote">
-                  “Al cerrar el portátil hoy, noté cómo caía el peso en los hombros... pero respiré hondo y puse música suave...”
-                </p>
-              </div>
-
-              <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.8125rem; font-weight: 600; color: #00685f;">
-                <span data-i18n="voiceFooter">Sin telemetría en la nube • Conversación pura</span>
-                <span class="material-symbols-outlined" style="font-size: 16px;">arrow_forward</span>
-              </div>
-            </div>
-
-            <!-- Gentle Mood Patterns Card (5 cols) -->
-            <div class="bento-card" id="bienestar">
-              <div>
-                <div class="bento-card__badge-row">
-                  <span class="bento-card__badge bento-card__badge--sky" data-i18n="moodTag">Bienestar diario</span>
-                </div>
-                <h3 class="bento-card__title" data-i18n="moodTitle">Descubre tus momentos de calma</h3>
-                <p class="bento-card__desc" data-i18n="moodDesc">
-                  Descubre qué días te sientes más sereno y qué hábitos te devuelven la sonrisa, con gráficos amables y sencillos.
-                </p>
-              </div>
-
-              <!-- Soft Chart -->
-              <div class="mood-chart-box">
-                <div class="mood-chart-meta">
-                  <span style="color: #292524;" data-i18n="moodLevelLabel">Nivel de serenidad</span>
-                  <span style="color: #00685f;" data-i18n="moodLevelValue">+22% de tranquilidad</span>
-                </div>
-
-                <svg class="w-full overflow-visible" style="height: 70px;" viewBox="0 0 280 70">
-                  <defs>
-                    <linearGradient id="warmGrad" x1="0" x2="0" y1="0" y2="1">
-                      <stop offset="0%" stop-color="#008378" stop-opacity="0.25"></stop>
-                      <stop offset="100%" stop-color="#008378" stop-opacity="0.0"></stop>
-                    </linearGradient>
-                  </defs>
-                  <path d="M0,52 Q40,48 70,36 T140,38 T210,22 T280,14 L280,70 L0,70 Z" fill="url(#warmGrad)"></path>
-                  <path d="M0,52 Q40,48 70,36 T140,38 T210,22 T280,14" fill="none" stroke="#008378" stroke-linecap="round" stroke-width="3"></path>
-                  <circle cx="210" cy="22" fill="#008378" r="4.5"></circle>
-                  <circle cx="280" cy="14" fill="#f59e0b" r="5"></circle>
-                </svg>
-
-                <div class="mood-days-row">
-                  <span data-i18n="chartDayMon">Lunes</span>
-                  <span data-i18n="chartDayWed">Miércoles</span>
-                  <span data-i18n="chartDayFri">Viernes</span>
-                  <span data-i18n="chartDaySun">Domingo</span>
-                </div>
-              </div>
-
-              <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
-                <span class="bento-card__badge bento-card__badge--emerald" data-i18n="moodPill1">Tardes de lectura: +Grounded</span>
-                <span class="bento-card__badge bento-card__badge--amber" data-i18n="moodPill2">Menos sobrepensar</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Bento Row 2: Breathing & Friendly Summary -->
-          <div class="bento-row bento-row--5-7">
-            <!-- 4-7-8 Breathing Pacer (5 cols) -->
-            <div class="bento-card breathing-bento-card">
-              <div>
-                <span class="bento-card__badge bento-card__badge--emerald" data-i18n="breathTag">Ritmo y paz interior</span>
-                <h3 class="bento-card__title" style="margin-top: 0.75rem;" data-i18n="breathTitle">Respira hondo y suelta la carga</h3>
-                <p class="bento-card__desc" data-i18n="breathDesc">
-                  Tómate un descanso consciente con el método 4-7-8. Un ciclo amable para calmar el ritmo cardíaco cuando el día aprieta.
-                </p>
-              </div>
-
-              <!-- Cozy Breathing Orb -->
-              <div class="breathing-orb-box">
-                <div class="breathing-orb-outer" id="breathingOrb">
-                  <div class="breathing-orb-inner">
-                    <span class="material-symbols-outlined" style="font-size: 26px;">air</span>
-                  </div>
-                </div>
-                <span style="margin-top: 0.875rem; font-size: 0.875rem; font-weight: 700; color: #1c1917;" id="breathingStateText" data-i18n="breathStateReady">Listo para comenzar</span>
-                <span style="font-size: 0.75rem; color: #78716c;" id="breathingSubText" data-i18n="breathSubInhale">Siente cómo el pecho se ensancha</span>
-              </div>
-
-              <button type="button" class="btn btn--primary" id="breathingToggleBtn" style="width: 100%;">
-                <span class="material-symbols-outlined" style="font-size: 18px;">favorite</span>
-                <span class="btn-label" data-i18n="btnStartExercise">Iniciar ejercicio de respiración</span>
-              </button>
-            </div>
-
-            <!-- Empathetic Note Sharing (7 cols) -->
-            <div class="bento-card">
-              <div>
-                <div class="bento-card__badge-row">
-                  <span class="bento-card__badge bento-card__badge--amber" data-i18n="shareTag">Apoyo y compañía</span>
-                  <span style="font-size: 0.75rem; color: #78716c; font-weight: 500;" data-i18n="shareSession">Exportación segura</span>
-                </div>
-                <h3 class="bento-card__title" data-i18n="shareTitle">Comparte tus avances con quien te cuida</h3>
-                <p class="bento-card__desc" data-i18n="shareDesc">
-                  Si visitas a un terapeuta o compartes tus reflexiones con un ser querido, genera un resumen ordenado y limpio, protegiendo siempre tus secretos más íntimos.
-                </p>
-              </div>
-
-              <!-- Sharing Preview Box -->
-              <div class="sharing-preview-box">
-                <div class="sharing-preview-header">
-                  <div style="display: flex; align-items: center; gap: 0.5rem;">
-                    <span class="material-symbols-outlined" style="color: var(--color-primary); font-size: 20px;">mark_email_read</span>
-                    <span style="font-size: 0.875rem; font-weight: 700; color: #1c1917;" data-i18n="shareFileName">Resumen_Para_Mi_Sesion.pdf</span>
-                  </div>
-                  <span class="bento-card__badge bento-card__badge--emerald" style="font-size: 0.6875rem;" data-i18n="shareStatus">Listo</span>
-                </div>
-
-                <div class="sharing-metrics-grid">
-                  <div class="sharing-metric-card">
-                    <div style="font-size: 0.625rem; font-weight: 700; text-transform: uppercase; color: #78716c;" data-i18n="shareBox1Title">Tema central</div>
-                    <div style="font-size: 0.8125rem; font-weight: 700; color: #1c1917; margin-top: 0.2rem;" data-i18n="shareBox1Value">Autoexigencia</div>
-                  </div>
-                  <div class="sharing-metric-card">
-                    <div style="font-size: 0.625rem; font-weight: 700; text-transform: uppercase; color: #78716c;" data-i18n="shareBox2Title">Progreso</div>
-                    <div style="font-size: 0.8125rem; font-weight: 700; color: #00685f; margin-top: 0.2rem;" data-i18n="shareBox2Value">Más compasión</div>
-                  </div>
-                  <div class="sharing-metric-card">
-                    <div style="font-size: 0.625rem; font-weight: 700; text-transform: uppercase; color: #78716c;" data-i18n="shareBox3Title">Días de paz</div>
-                    <div style="font-size: 0.8125rem; font-weight: 700; color: #1c1917; margin-top: 0.2rem;" data-i18n="shareBox3Value">5 de 7 días</div>
-                  </div>
-                </div>
-              </div>
-
-              <div style="display: flex; flex-direction: column; gap: 0.75rem;">
-                <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem;">
-                  <span style="font-size: 0.75rem; color: #78716c;" data-i18n="shareFootnote">Tú decides qué párrafos incluir y qué omitir.</span>
-                  <button type="button" class="btn btn--outline" style="background: #1c1917; color: white; border: none;" data-i18n="btnCreateConsultation">
-                    Crear cuaderno de consulta
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Comparativa de privacidad -->
-    <section class="section section--white" id="privacidad">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-category" data-i18n="privacyTag">Privacidad que te abraza</span>
-          <h2 class="section-title" data-i18n="privacyTitle">Tu privacidad es sagrada y 100% tuya.</h2>
-          <p class="section-subtitle" data-i18n="privacySubtitle">
-            Las aplicaciones convencionales guardan tus notas en servidores donde empleados o algoritmos pueden leerlas. En SafeDiary, tu intimidad está protegida bajo siete llaves que solo tú tienes.
-          </p>
-        </div>
-
-        <div class="privacy-compare-grid">
-          <!-- Apps tradicionales en la nube -->
-          <div class="privacy-compare-card--cloud">
-            <div class="privacy-card__header-row">
-              <span class="privacy-card__header-title" data-i18n="privacyOtherTitle">Otras notas y diarios en la nube</span>
-              <span class="material-symbols-outlined privacy-card__header-icon--rose">cancel</span>
-            </div>
-            <ul class="privacy-points-list">
-              <li class="privacy-point-item">
-                <span class="material-symbols-outlined privacy-point-icon--rose">close</span>
-                <span data-i18n="privacyOtherPoint1">Tus textos se transmiten a bases de datos lejanas con contraseñas maestras de empresa.</span>
-              </li>
-              <li class="privacy-point-item">
-                <span class="material-symbols-outlined privacy-point-icon--rose">close</span>
-                <span data-i18n="privacyOtherPoint2">Se analizan palabras clave para segmentar anuncios y rastrear tu estado emocional.</span>
-              </li>
-              <li class="privacy-point-item">
-                <span class="material-symbols-outlined privacy-point-icon--rose">close</span>
-                <span data-i18n="privacyOtherPoint3">Si sufren una filtración o cambio de dueño, tus diarios pueden quedar expuestos.</span>
-              </li>
-            </ul>
-          </div>
-
-          <!-- SafeDiary Destacada -->
-          <div class="privacy-compare-card--safediary">
-            <div class="privacy-card__header-row">
-              <div class="safediary-brand-pill">
-                <span data-i18n="privacySafeTitle">SafeDiary</span>
-                <span class="safediary-brand-dot"></span>
-              </div>
-              <span class="material-symbols-outlined privacy-card__header-icon--teal">verified</span>
-            </div>
-            <ul class="privacy-points-list">
-              <li class="privacy-point-item">
-                <span class="material-symbols-outlined privacy-point-icon--teal">check_circle</span>
-                <span><strong data-i18n="privacySafePoint1Title">Cero conocimiento:</strong> <span data-i18n="privacySafePoint1Text">Solo tu teléfono tiene la llave matemática para descifrar tus palabras.</span></span>
-              </li>
-              <li class="privacy-point-item">
-                <span class="material-symbols-outlined privacy-point-icon--teal">check_circle</span>
-                <span><strong data-i18n="privacySafePoint2Title">Inteligencia local:</strong> <span data-i18n="privacySafePoint2Text">Si usas resúmenes, se ejecutan en el chip de tu móvil sin enviar texto a Internet.</span></span>
-              </li>
-              <li class="privacy-point-item">
-                <span class="material-symbols-outlined privacy-point-icon--teal">check_circle</span>
-                <span><strong data-i18n="privacySafePoint3Title">Libertad absoluta:</strong> <span data-i18n="privacySafePoint3Text">Puedes borrar, exportar o guardar una copia física en cualquier instante.</span></span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Vista previa de la experiencia de diario -->
-    <section class="section section--alt">
-      <div class="container">
-        <div class="story-grid">
-          <!-- Sample Entry Notebook -->
+        <div class="app-preview__header">
           <div>
-            <div class="sample-notebook-card">
-              <div class="sample-notebook-header">
-                <div style="display: flex; align-items: center; gap: 0.75rem;">
-                  <div style="width: 2.5rem; height: 2.5rem; border-radius: 1rem; background: rgba(254, 243, 199, 0.7); display: flex; align-items: center; justify-content: center; color: #92400e;">
-                    <span class="material-symbols-outlined" style="font-size: 20px;">nightlight</span>
-                  </div>
-                  <div>
-                    <h4 style="font-size: 0.9375rem; font-weight: 700; color: #1c1917;" data-i18n="storyNoteTitle">Momento de descompresión</h4>
-                    <p style="font-size: 0.75rem; color: #78716c;" data-i18n="storyNoteMeta">Ayer a las 22:45 • Una taza de manzanilla</p>
-                  </div>
-                </div>
-                <span class="bento-card__badge bento-card__badge--emerald" data-i18n="storyNoteSerene">Sereno</span>
-              </div>
-
-              <div class="sample-notebook-body" data-i18n="storyNoteBody">
-                “El día fue ajetreado y sentía que no llegaba a todo. Pero sentarme estos cinco minutos en el sofá con la luz tenue me recordó que no tengo que solucionar el mundo en un solo día. Mañana será otro día y merezco descansar.”
-              </div>
-
-              <!-- Encouragement note -->
-              <div class="compassion-box">
-                <span class="material-symbols-outlined" style="color: #b45309; font-size: 20px; flex-shrink: 0; margin-top: 0.15rem;">favorite</span>
-                <div>
-                  <div style="font-size: 0.75rem; font-weight: 700; color: #78350f;" data-i18n="storyCompassionTag">Nota de compasión</div>
-                  <div style="font-size: 0.75rem; color: #57534e; margin-top: 0.15rem;" data-i18n="storyCompassionText">Recuerda cómo cambia tu perspectiva cuando te concedes el permiso de soltar las riendas.</div>
-                </div>
-              </div>
-            </div>
+            <span class="app-preview__eyebrow" data-i18n="previewEyebrow">DENTRO DE SAFEDIARY</span>
+            <h2 id="appPreviewTitle" data-i18n="previewTitle">Conoce las pantallas de SafeDiary</h2>
+            <p data-i18n="previewDescription">Explora Inicio, Diarito, Rutinas, Psicólogos y Mis citas.</p>
           </div>
-
-          <!-- Narrative Copy & Key Stats -->
-          <div style="display: flex; flex-direction: column; gap: 1rem;">
-            <span class="section-category" data-i18n="storyTag">Tu tiempo vale oro</span>
-            <h2 class="section-title" data-i18n="storyTitle">Tus pensamientos más sinceros, sin algoritmos que te juzguen.</h2>
-            <p class="section-subtitle" data-i18n="storySubtitle">
-              SafeDiary no fue creado para mantenerte enganchado a una pantalla ni para coleccionar ‘likes’. Nació para brindarte un rincón acogedor donde soltar la armadura y reconectar con lo que verdaderamente importa.
-            </p>
-
-            <div class="story-metrics-row">
-              <div>
-                <div class="story-metric-num" style="color: #00685f;" data-i18n="stat1Num">100%</div>
-                <div class="story-metric-label" data-i18n="stat1Label">Privado y tuyo</div>
-              </div>
-              <div class="story-divider"></div>
-              <div>
-                <div class="story-metric-num" style="color: #b45309;" data-i18n="stat2Num">0</div>
-                <div class="story-metric-label" data-i18n="stat2Label">Anuncios o distracciones</div>
-              </div>
-              <div class="story-divider"></div>
-              <div>
-                <div class="story-metric-num" style="color: #1c1917;" data-i18n="stat3Num">Paz</div>
-                <div class="story-metric-label" data-i18n="stat3Label">A cualquier hora</div>
-              </div>
-            </div>
+          <div class="app-preview__controls">
+            <button type="button" class="app-preview__arrow" id="previewPrev" aria-label="Pantalla anterior">←</button>
+            <span class="app-preview__count" id="previewCount" aria-live="polite">01 / 05</span>
+            <button type="button" class="app-preview__arrow" id="previewNext" aria-label="Pantalla siguiente">→</button>
           </div>
         </div>
+        <div class="app-preview__track" id="previewTrack" role="region" aria-roledescription="carrusel" aria-label="Pantallas de SafeDiary" tabindex="0">
+          <article class="app-preview__slide">
+            <div class="app-preview__phone"><img src="assets/images/mockups/inicio.png" alt="Inicio de SafeDiary con cuestionario de ánimo y acceso al diario" loading="lazy" decoding="async"></div>
+            <div class="app-preview__caption"><span>01 / 05</span><h3 data-i18n="previewHomeTitle">Inicio</h3><p data-i18n="previewHomeDesc">Registra tu estado de ánimo y accede al diario.</p></div>
+          </article>
+          <article class="app-preview__slide">
+            <div class="app-preview__phone"><img src="assets/images/mockups/diarito.png" alt="Chat de Diarito con sugerencias para iniciar una conversación" loading="lazy" decoding="async"></div>
+            <div class="app-preview__caption"><span>02 / 05</span><h3 data-i18n="previewDiaritoTitle">Diarito</h3><p data-i18n="previewDiaritoDesc">Inicia una conversación de apoyo reflexivo.</p></div>
+          </article>
+          <article class="app-preview__slide">
+            <div class="app-preview__phone"><img src="assets/images/mockups/rutinas.png" alt="Pantalla de Rutinas con ejercicios de alivio inmediato y hábitos diarios" loading="lazy" decoding="async"></div>
+            <div class="app-preview__caption"><span>03 / 05</span><h3 data-i18n="previewRoutinesTitle">Rutinas</h3><p data-i18n="previewRoutinesDesc">Organiza hábitos y ejercicios breves.</p></div>
+          </article>
+          <article class="app-preview__slide">
+            <div class="app-preview__phone"><img src="assets/images/mockups/psicologos.png" alt="Directorio de psicólogos con especialidad, disponibilidad y tarifa" loading="lazy" decoding="async"></div>
+            <div class="app-preview__caption"><span>04 / 05</span><h3 data-i18n="previewCareTitle">Psicólogos</h3><p data-i18n="previewCareDesc">Consulta perfiles, disponibilidad y tarifas.</p></div>
+          </article>
+          <article class="app-preview__slide">
+            <div class="app-preview__phone"><img src="assets/images/mockups/mis-citas.png" alt="Mis citas con próximas sesiones y conversaciones activas" loading="lazy" decoding="async"></div>
+            <div class="app-preview__caption"><span>05 / 05</span><h3 data-i18n="previewAppointmentsTitle">Mis citas</h3><p data-i18n="previewAppointmentsDesc">Revisa citas confirmadas y conversaciones activas.</p></div>
+          </article>
+        </div>
+        <p class="app-preview__disclaimer" data-i18n="previewDisclaimer">Pantallas del prototipo actual de SafeDiary.</p>
       </div>
     </section>
 
+    <!-- Funciones de la aplicación -->
+    <section class="feature-section" id="respirar">
+      <div class="container">
+        <div class="feature-section__intro">
+          <span class="app-preview__eyebrow" data-i18n="featuresEyebrow">QUÉ PUEDES HACER</span>
+          <h2 data-i18n="featuresTitle">Del registro personal al apoyo profesional.</h2>
+          <p data-i18n="featuresDescription">Cada función tiene un propósito claro y puedes avanzar a tu propio ritmo.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <img class="feature-card__image" src="assets/images/features/diario.jpg" alt="Persona escribiendo en un cuaderno junto a una ventana" data-i18n-alt="featureDiaryAlt" loading="lazy" decoding="async" width="1200" height="800">
+            <div class="feature-card__body">
+              <span class="feature-card__number">01</span>
+              <h3 data-i18n="featureDiaryTitle">Registra lo que sientes</h3>
+              <p data-i18n="featureDiaryDesc">Escribe una entrada o usa la voz. Tu diario es privado hasta que decidas compartir información.</p>
+            </div>
+          </article>
+          <article class="feature-card">
+            <img class="feature-card__image" src="assets/images/features/reflexion.jpg" alt="Manos sosteniendo un cuaderno abierto para revisar notas" data-i18n-alt="featureInsightsAlt" loading="lazy" decoding="async" width="1200" height="1800">
+            <div class="feature-card__body">
+              <span class="feature-card__number">02</span>
+              <h3 data-i18n="featureInsightsTitle">Reconoce cambios</h3>
+              <p data-i18n="featureInsightsDesc">Consulta tu historial y resúmenes para identificar patrones, sin tratarlos como diagnósticos.</p>
+            </div>
+          </article>
+          <article class="feature-card">
+            <img class="feature-card__image" src="assets/images/features/rutinas.jpg" alt="Persona haciendo estiramientos en casa con luz natural" data-i18n-alt="featureRoutinesAlt" loading="lazy" decoding="async" width="1200" height="800">
+            <div class="feature-card__body">
+              <span class="feature-card__number">03</span>
+              <h3 data-i18n="featureRoutinesTitle">Sostén tus rutinas</h3>
+              <p data-i18n="featureRoutinesDesc">Organiza pequeñas actividades de autocuidado y vuelve a ellas cuando te sirvan.</p>
+            </div>
+          </article>
+          <article class="feature-card">
+            <img class="feature-card__image" src="assets/images/features/atencion.jpg" alt="Dos personas conversando en un espacio de consulta" data-i18n-alt="featureCareAlt" loading="lazy" decoding="async" width="1200" height="800">
+            <div class="feature-card__body">
+              <span class="feature-card__number">04</span>
+              <h3 data-i18n="featureCareTitle">Busca atención</h3>
+              <p data-i18n="featureCareDesc">Revisa perfiles verificados, especialidades y tarifas antes de contactar a un psicólogo.</p>
+            </div>
+          </article>
+        </div>
+        <p class="feature-section__image-note" data-i18n="featureImageNote">Fotografías de referencia; no muestran usuarios ni profesionales de SafeDiary.</p>
+      </div>
+    </section>
+
+    <section class="privacy-section" id="privacidad">
+      <div class="container privacy-section__grid">
+        <div class="privacy-section__intro">
+          <span class="app-preview__eyebrow" data-i18n="privacyTag">PRIVACIDAD</span>
+          <h2 data-i18n="privacyTitle">Tu información, bajo tu control.</h2>
+          <p data-i18n="privacySubtitle">SafeDiary parte de una regla simple: tu diario es personal. Compartir contexto con un profesional requiere una decisión explícita.</p>
+        </div>
+        <div class="privacy-list">
+          <div><strong data-i18n="privacyPrinciple1Title">Diario privado</strong><p data-i18n="privacyPrinciple1Desc">Tus entradas y conversaciones no aparecen en perfiles públicos.</p></div>
+          <div><strong data-i18n="privacyPrinciple2Title">Compartir es opcional</strong><p data-i18n="privacyPrinciple2Desc">Elige qué datos puede consultar tu psicólogo y confirma el permiso antes de continuar.</p></div>
+          <div><strong data-i18n="privacyPrinciple3Title">Puedes revocar el acceso</strong><p data-i18n="privacyPrinciple3Desc">Los permisos de consulta pueden retirarse desde tu cuenta.</p></div>
+        </div>
+      </div>
+    </section>
     <!-- Seccion de planes y precios (US-020) -->
     <section class="section" id="planes">
       <div class="container">
         <div class="section-header">
-          <span class="section-category" data-i18n="pricingTag">Planes transparentes</span>
+          <span class="section-category" data-i18n="pricingTag">Planes previstos</span>
           <h2 class="section-title" data-i18n="pricingTitle">Planes</h2>
           <p class="section-subtitle" data-i18n="pricingSubtitle">
-            Elige el plan que mejor se adapte a tu camino hacia la serenidad. Comienza gratis o apoya tu bienestar con nuestros planes conscientes.
+            Conoce las opciones previstas para el producto. El pago de sesiones profesionales es independiente de la suscripción.
           </p>
         </div>
 
@@ -520,7 +166,7 @@
                 <span class="pricing-card__badge pricing-card__badge--free" data-i18n="planBasicBadge">Gratis</span>
               </div>
               <p class="pricing-card__desc" data-i18n="planBasicDesc">
-                Tu punto de partida para cuidar tus emociones y encontrar calma a diario.
+                Funciones iniciales de diario, rutinas y búsqueda de profesionales.
               </p>
               <div class="pricing-card__price-wrap">
                 <span class="pricing-card__price" data-i18n="planBasicPrice">Gratis</span>
@@ -555,8 +201,8 @@
             </div>
 
             <div class="pricing-card__footer">
-              <a href="#espacio?plan=basico" class="btn btn--outline pricing-cta-btn">
-                <span data-i18n="planBasicCta">Empezar gratis</span>
+              <a href="#faq" class="btn btn--outline pricing-cta-btn">
+                <span data-i18n="planBasicCta">Más información</span>
                 <span class="material-symbols-outlined" style="font-size: 18px;">arrow_forward</span>
               </a>
             </div>
@@ -566,7 +212,7 @@
           <div class="pricing-card pricing-card--popular">
             <div class="pricing-card__ribbon">
               <span class="material-symbols-outlined" style="font-size: 14px;">auto_awesome</span>
-              <span data-i18n="planTerraBadge">Más popular</span>
+              <span data-i18n="planTerraBadge">Opción mensual</span>
             </div>
 
             <div class="pricing-card__header">
@@ -575,7 +221,7 @@
                 <span class="pricing-card__badge pricing-card__badge--emerald" data-i18n="planTerraBilling">Mensual</span>
               </div>
               <p class="pricing-card__desc" data-i18n="planTerraDesc">
-                El refugio completo con apoyo ilimitado, memoria continua y compañía empática.
+                Funciones Premium con facturación mensual.
               </p>
               <div class="pricing-card__price-wrap">
                 <span class="pricing-card__price" data-i18n="planTerraPrice">US$19.99</span>
@@ -610,8 +256,8 @@
             </div>
 
             <div class="pricing-card__footer">
-              <a href="#espacio?plan=terra" class="btn btn--primary pricing-cta-btn">
-                <span data-i18n="planTerraCta">Elegir Terra</span>
+              <a href="#faq" class="btn btn--primary pricing-cta-btn">
+                <span data-i18n="planTerraCta">Más información</span>
                 <span class="material-symbols-outlined" style="font-size: 18px;">arrow_forward</span>
               </a>
             </div>
@@ -625,7 +271,7 @@
                 <span class="pricing-card__badge pricing-card__badge--amber" data-i18n="planAstrumBadge">Ahorra 58%</span>
               </div>
               <p class="pricing-card__desc" data-i18n="planAstrumDesc">
-                Todo el poder de Terra en una suscripción anual con la máxima tranquilidad.
+                Las mismas funciones Premium con facturación anual.
               </p>
               <div class="pricing-card__price-wrap">
                 <span class="pricing-card__price" data-i18n="planAstrumPrice">US$100</span>
@@ -664,8 +310,8 @@
             </div>
 
             <div class="pricing-card__footer">
-              <a href="#espacio?plan=astrum" class="btn btn--outline pricing-cta-btn">
-                <span data-i18n="planAstrumCta">Elegir Astrum</span>
+              <a href="#faq" class="btn btn--outline pricing-cta-btn">
+                <span data-i18n="planAstrumCta">Más información</span>
                 <span class="material-symbols-outlined" style="font-size: 18px;">arrow_forward</span>
               </a>
             </div>
@@ -676,7 +322,7 @@
         <div class="pricing-disclaimer">
           <span class="material-symbols-outlined pricing-disclaimer__icon">info</span>
           <p class="pricing-disclaimer__text" data-i18n="pricingDisclaimer">
-            Las sesiones con psicólogos se pagan aparte, por sesión. Puedes cancelar cuando quieras.
+            Planes y precios de referencia para el producto en desarrollo. Las sesiones con psicólogos se pagan por separado.
           </p>
         </div>
       </div>
@@ -688,11 +334,11 @@
         <div class="section-header">
           <div class="badge-tag">
             <span class="material-symbols-outlined" style="font-size: 16px;">diversity_1</span>
-            <span data-i18n="teamBadge">Las personas detrás del refugio</span>
+            <span data-i18n="teamBadge">EQUIPO</span>
           </div>
-          <h2 class="section-title" data-i18n="teamTitle">Un equipo comprometido con tu calma y privacidad.</h2>
+          <h2 class="section-title" data-i18n="teamTitle">El equipo detrás de SafeDiary.</h2>
           <p class="section-subtitle" data-i18n="teamSubtitle">
-            Psicólogas, ingenieros de privacidad y diseñadores que creemos firmemente en la tecnología que abraza y no juzga.
+            Estudiantes de Ingeniería de Software de la UPC que desarrollan SafeDiary con atención a la privacidad y la experiencia de uso.
           </p>
         </div>
 
@@ -763,7 +409,7 @@
             <!-- Inyectado dinámicamente por team.js -->
           </div>
           <span style="font-size: 0.6875rem; color: #78716c; font-weight: 500;" data-i18n="teamTabsHelper">
-            Pulsa en cada perfil para conocer su rol en tu santuario digital
+            Pulsa en cada perfil para conocer su rol en el proyecto.
           </span>
         </div>
       </div>
@@ -775,11 +421,11 @@
         <div class="section-header">
           <div class="badge-tag">
             <span class="material-symbols-outlined" style="font-size: 16px;">help</span>
-            <span data-i18n="faqBadge">Dudas frecuentes resueltas con claridad</span>
+            <span data-i18n="faqBadge">PREGUNTAS FRECUENTES</span>
           </div>
           <h2 class="section-title" data-i18n="faqTitle">Preguntas Frecuentes</h2>
           <p class="section-subtitle" data-i18n="faqSubtitle">
-            Queremos que te sientas con total tranquilidad y transparencia. Si no encuentras tu respuesta, siempre puedes escribirnos con confianza.
+            Respuestas breves sobre el diario, la privacidad y la atención profesional.
           </p>
         </div>
 
@@ -789,70 +435,13 @@
       </div>
     </section>
 
-    <!-- Llamado a la accion y descarga movil -->
-    <section class="cta-section">
-      <div class="container">
-        <div class="cta-banner">
-          <div class="cta-aura--teal"></div>
-          <div class="cta-aura--amber"></div>
-
-          <div class="cta-grid">
-            <div style="display: flex; flex-direction: column; gap: 1rem;">
-              <div style="display: flex; align-items: center; gap: 0.5rem;">
-                <span class="material-symbols-outlined" style="color: #fde047; font-size: 20px;">wb_sunny</span>
-                <span style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: #99f6e4;" data-i18n="ctaTag">
-                  Tu momento de calma empieza hoy
-                </span>
-              </div>
-
-              <h2 style="font-size: 2.25rem; font-weight: 800; line-height: 1.2; letter-spacing: -0.02em;" data-i18n="ctaTitle">
-                Lleva tu refugio contigo, allá donde vayas.
-              </h2>
-
-              <p style="font-size: 1rem; color: #ccfbf1; line-height: 1.7; max-width: 540px;" data-i18n="ctaSubtitle">
-                Descarga SafeDiary para iPhone y Android. Tu santuario personal listo para acompañarte al despertar o antes de dormir.
-              </p>
-
-              <div style="display: flex; flex-wrap: wrap; gap: 1rem; padding-top: 1rem;">
-                <a href="#" class="cta-app-btn cta-app-btn--apple">
-                  <span class="material-symbols-outlined" style="font-size: 24px;">phone_iphone</span>
-                  <div style="display: flex; flex-direction: column; text-align: left;">
-                    <span style="font-size: 0.625rem; text-transform: uppercase; color: #78716c; line-height: 1;" data-i18n="ctaBtnAvailableOn">Disponible en</span>
-                    <span style="font-size: 0.875rem; font-weight: 700; line-height: 1.2;" data-i18n="ctaBtnApple">Apple App Store</span>
-                  </div>
-                </a>
-
-                <a href="#" class="cta-app-btn cta-app-btn--google">
-                  <span class="material-symbols-outlined" style="font-size: 24px;">android</span>
-                  <div style="display: flex; flex-direction: column; text-align: left;">
-                    <span style="font-size: 0.625rem; text-transform: uppercase; color: #5eead4; line-height: 1;" data-i18n="ctaBtnDownloadOn">Descárgalo en</span>
-                    <span style="font-size: 0.875rem; font-weight: 700; line-height: 1.2;" data-i18n="ctaBtnGoogle">Google Play</span>
-                  </div>
-                </a>
-              </div>
-            </div>
-
-            <!-- Warm QR Card -->
-            <div class="qr-card">
-              <div class="qr-box">
-                <svg class="w-full h-full" style="color: #1c1917;" fill="currentColor" viewBox="0 0 100 100">
-                  <path d="M0,0 h30 v30 h-30 z M5,5 v20 h20 v-20 z M10,10 h10 v10 h-10 z"></path>
-                  <path d="M70,0 h30 v30 h-30 z M75,5 v20 h20 v-20 z M80,10 h10 v10 h-10 z"></path>
-                  <path d="M0,70 h30 v30 h-30 z M5,75 v20 h20 v-20 z M10,80 h10 v10 h-10 z"></path>
-                  <rect height="10" width="10" x="40" y="10"></rect>
-                  <rect height="15" width="10" x="55" y="10"></rect>
-                  <rect height="10" width="20" x="40" y="35"></rect>
-                  <rect height="10" width="25" x="70" y="45"></rect>
-                  <rect height="15" width="15" x="40" y="60"></rect>
-                  <rect height="25" width="25" x="65" y="70"></rect>
-                  <rect height="10" width="10" x="45" y="85"></rect>
-                </svg>
-              </div>
-              <span style="font-size: 0.875rem; font-weight: 700; color: white; margin-top: 0.75rem;" data-i18n="ctaQrTitle">Escanea con tu móvil</span>
-              <span style="font-size: 0.75rem; color: #99f6e4; margin-top: 0.2rem;" data-i18n="ctaQrSubtitle">Acceso directo e instantáneo</span>
-            </div>
-          </div>
+    <section class="closing-cta">
+      <div class="container closing-cta__inner">
+        <div>
+          <h2 data-i18n="closingTitle">Conoce SafeDiary por dentro.</h2>
+          <p data-i18n="closingDescription">Explora las pantallas y descubre cómo se conectan el diario, las rutinas y la atención profesional.</p>
         </div>
+        <a href="#app" data-i18n="closingAction">Ver mockups</a>
       </div>
     </section>
   </main>
@@ -860,6 +449,8 @@
   <!-- Pie de pagina compartido -->
   <div id="footer-placeholder"></div>
 
+  <!-- El carrusel también funciona al abrir este HTML como archivo local. -->
+  <script defer src="assets/js/components/mockups.js"></script>
   <!-- Main JavaScript App Entry (ES Module) -->
   <script type="module" src="assets/js/app.js"></script>
 </body>

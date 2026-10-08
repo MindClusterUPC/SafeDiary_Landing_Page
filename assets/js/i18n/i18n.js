@@ -75,6 +75,14 @@ export function setLanguage(lang) {
     }
   });
 
+  document.querySelectorAll('[data-i18n-alt]').forEach((element) => {
+    const key = element.getAttribute('data-i18n-alt');
+    const value = t(key);
+    if (typeof value === 'string') {
+      element.alt = value;
+    }
+  });
+
   // Actualizar botones de toggle
   document.querySelectorAll('.lang-btn').forEach((btn) => {
     const btnLang = btn.getAttribute('data-lang');

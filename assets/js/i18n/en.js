@@ -4,21 +4,64 @@ export const en = {
   ...enTerms,
   // Brand & Header
   brandName: "SafeDiary",
-  brandTagline: "by MindCluster • Your peaceful haven",
-  navSpace: "Your Space",
+  brandTagline: "by MindCluster",
+  navSpace: "Home",
+  navApp: "The app",
   navBreathing: "Inner Peace",
-  navWellness: "Moments of Calm",
-  navPrivacy: "Sacred Privacy",
+  navWellness: "Features",
+  navPrivacy: "Privacy",
   navPlans: "Plans",
   navTeam: "Team",
   navFaq: "FAQ",
   btnStartJournal: "Start my journal",
+  btnSeeApp: "See the app",
 
   // Hero Section
-  heroBadge: "Your safe haven • Judgment-free • 100% private",
-  heroTitlePrefix: "How are you feeling today?",
-  heroTitleAccent: "Take a moment for yourself.",
-  heroSubtitle: "An intimate sanctuary to be yourself, unwind your thoughts at the end of the day, and find peace with a warm cup of tea.",
+  heroBadge: "EMOTIONAL JOURNAL · PROFESSIONAL CARE",
+  heroTitlePrefix: "Understand how you feel.",
+  heroTitleAccent: "Decide what comes next.",
+  heroSubtitle: "Record your emotions in text or voice, notice patterns and, when you need to, connect with a verified psychologist. You choose what to share.",
+  heroSecondaryAction: "Explore the features",
+  heroPrototypeNote: "A preview of the product we're building.",
+  previewEyebrow: "INSIDE SAFEDIARY",
+  previewTitle: "Explore the SafeDiary screens",
+  previewDescription: "Explore Home, Diarito, Routines, Psychologists and Appointments.",
+  previewHomeTitle: "Home",
+  previewHomeDesc: "Record your mood and open your journal.",
+  previewDiaritoTitle: "Diarito",
+  previewDiaritoDesc: "Start a reflective support conversation.",
+  previewRoutinesTitle: "Routines",
+  previewRoutinesDesc: "Plan habits and short exercises.",
+  previewCareTitle: "Psychologists",
+  previewCareDesc: "Browse profiles, availability and fees.",
+  previewAppointmentsTitle: "Appointments",
+  previewAppointmentsDesc: "Review confirmed sessions and active conversations.",
+  previewDisclaimer: "Screens from the current SafeDiary prototype.",
+  featuresEyebrow: "WHAT YOU CAN DO",
+  featuresTitle: "From personal reflection to professional support.",
+  featuresDescription: "Each feature has a clear purpose, and you can move at your own pace.",
+  featureDiaryTitle: "Record how you feel",
+  featureDiaryDesc: "Write an entry or use your voice. Your journal stays private unless you decide to share information.",
+  featureDiaryAlt: "Person writing in a notebook beside a window",
+  featureInsightsTitle: "Notice changes",
+  featureInsightsDesc: "Review your history and summaries to spot patterns without treating them as diagnoses.",
+  featureInsightsAlt: "Hands holding an open notebook to review notes",
+  featureRoutinesTitle: "Build routines",
+  featureRoutinesDesc: "Organize small self-care activities and return to them when they help.",
+  featureRoutinesAlt: "Person stretching at home in natural light",
+  featureCareTitle: "Find care",
+  featureCareDesc: "Review verified profiles, specialties and fees before contacting a psychologist.",
+  featureCareAlt: "Two people talking in a consultation room",
+  featureImageNote: "Reference photographs; they do not show SafeDiary users or professionals.",
+  privacyPrinciple1Title: "Private journal",
+  privacyPrinciple1Desc: "Your entries and conversations do not appear on public profiles.",
+  privacyPrinciple2Title: "Sharing is optional",
+  privacyPrinciple2Desc: "Choose what your psychologist can view and confirm permission before continuing.",
+  privacyPrinciple3Title: "Revoke access",
+  privacyPrinciple3Desc: "You can withdraw viewing permissions from your account.",
+  closingTitle: "Take a closer look at SafeDiary.",
+  closingDescription: "Explore the screens and see how the journal, routines and professional care connect.",
+  closingAction: "View mockups",
   journalHeaderMeta: "Today's reflection • For your eyes only",
   journalEncryptionPill: "Encrypted on your device",
   journalPlaceholder: "Today felt overwhelming at times, yet I want to appreciate this quiet moment of peace...",
@@ -106,9 +149,9 @@ export const en = {
   btnCreateConsultation: "Create consultation notebook",
 
   // Privacy Section
-  privacyTag: "Privacy that embraces you",
-  privacyTitle: "Your privacy is sacred and 100% yours.",
-  privacySubtitle: "Conventional applications store your notes on remote servers where staff or algorithms can inspect them. At SafeDiary, your intimacy is protected under seven locks that only you hold.",
+  privacyTag: "PRIVACY",
+  privacyTitle: "Your information, under your control.",
+  privacySubtitle: "SafeDiary begins with a simple rule: your journal is personal. Sharing context with a professional requires an explicit choice.",
   privacyOtherTitle: "Other cloud notes & diaries",
   privacyOtherPoint1: "Your texts are sent to remote databases with master corporate keys.",
   privacyOtherPoint2: "Keywords are mined to segment ads and track your emotional states.",
@@ -139,14 +182,14 @@ export const en = {
   stat3Label: "At any hour",
 
   // Pricing Section (US-020)
-  pricingTag: "Transparent plans",
+  pricingTag: "Planned options",
   pricingTitle: "Plans",
-  pricingSubtitle: "Choose the plan that best fits your path to serenity. Start for free or support your wellbeing with our mindful plans.",
-  pricingDisclaimer: "Therapy sessions with psychologists are paid separately, per session. You can cancel anytime.",
+  pricingSubtitle: "Explore the planned options for the product. Professional sessions are paid separately from subscriptions.",
+  pricingDisclaimer: "Plans and prices are references for a product in development. Psychologist sessions are paid separately.",
 
   planBasicName: "Basic",
   planBasicBadge: "Free",
-  planBasicDesc: "Your starting point to nurture your emotions and find daily calm at no cost.",
+  planBasicDesc: "Core journal, routine and professional search features.",
   planBasicPrice: "Free",
   planBasicPeriod: "forever",
   planBasicIncludes: "Includes:",
@@ -155,12 +198,12 @@ export const en = {
   planBasicFeat3: "Basic routines and SOS breathing exercises",
   planBasicFeat4: "Directory of verified psychologists",
   planBasicFeat5: "Line 113 helpline always visible",
-  planBasicCta: "Start for free",
+  planBasicCta: "Learn more",
 
-  planTerraBadge: "Most popular",
+  planTerraBadge: "Monthly option",
   planTerraBilling: "Monthly",
   planTerraName: "Terra",
-  planTerraDesc: "The complete haven with unlimited support, continuous memory, and empathetic guidance.",
+  planTerraDesc: "Premium features with monthly billing.",
   planTerraPrice: "US$19.99",
   planTerraPeriod: "/ month",
   planTerraIncludes: "Everything in Basic, plus:",
@@ -169,11 +212,11 @@ export const en = {
   planTerraFeat3: "All guided routines and reminders",
   planTerraFeat4: "Weekly emotional summary",
   planTerraFeat5: "Private vault and PDF export",
-  planTerraCta: "Choose Terra",
+  planTerraCta: "Learn more",
 
   planAstrumBadge: "Save 58%",
   planAstrumName: "Astrum",
-  planAstrumDesc: "All the power of Terra in an annual subscription for maximum peace of mind.",
+  planAstrumDesc: "The same Premium features with annual billing.",
   planAstrumPrice: "US$100",
   planAstrumPeriod: "/ year",
   planAstrumNote: "equivalent to US$8.33/mo · save 58% vs Terra",
@@ -183,15 +226,15 @@ export const en = {
   planAstrumFeat3: "All guided routines and reminders",
   planAstrumFeat4: "Weekly emotional summary",
   planAstrumFeat5: "Private vault and PDF export",
-  planAstrumCta: "Choose Astrum",
+  planAstrumCta: "Learn more",
 
   // Team Section (Placeholders)
-  teamBadge: "The people behind the haven",
-  teamTitle: "A team devoted to your calm and privacy.",
-  teamSubtitle: "Software Engineering students from UPC committed to privacy, mental wellbeing, and ethical technology development.",
+  teamBadge: "TEAM",
+  teamTitle: "The team behind SafeDiary.",
+  teamSubtitle: "Software Engineering students at UPC building SafeDiary with attention to privacy and user experience.",
   teamBadgeRole: "CEO & Creator",
   teamFooterPledge: "Human, serene, and ethical care commitment",
-  teamTabsHelper: "Click on each profile to discover their role in your digital haven",
+  teamTabsHelper: "Select a profile to see their role in the project.",
   teamMembers: [
     {
       id: 1,
@@ -251,48 +294,41 @@ export const en = {
   ],
 
   // Frequently asked questions
-  faqBadge: "Frequent questions answered with clarity",
+  faqBadge: "FREQUENT QUESTIONS",
   faqTitle: "Frequently Asked Questions",
-  faqSubtitle: "We want you to feel complete tranquility and transparency. If you have questions, reach out anytime.",
+  faqSubtitle: "Short answers about the journal, privacy and professional care.",
   faqItems: [
     {
       icon: "lock",
       theme: "emerald",
-      question: "Can SafeDiary read my reflections or use them to train AI models?",
-      answer: "Absolutely not. SafeDiary employs Zero-Knowledge military-grade encryption (AES-256). Your entries and voice notes are encrypted locally before saving. We never train AI models or access your thoughts."
+      question: "Who can see my journal entries?",
+      answer: "Your journal is personal. A psychologist can view only the information you choose to share through an explicit, active permission."
     },
     {
       icon: "mic",
-      theme: "amber",
-      question: "How does voice journaling and mood detection work?",
-      answer: "Both voice transcription and serenity insights are computed locally on your device hardware chip. Audio is never transmitted online or stored in the cloud."
+      theme: "sky",
+      question: "Can I record an entry with my voice?",
+      answer: "The product design includes voice notes and transcription. Before you use it, the app should explain how audio is processed and stored."
     },
     {
       icon: "favorite",
       theme: "rose",
-      question: "Is it an alternative to professional therapy?",
-      answer: "No. SafeDiary is a supportive self-care and journaling companion. If you face an emotional crisis, we strongly encourage consulting a licensed mental health professional."
+      question: "Does SafeDiary replace therapy?",
+      answer: "No. It is a reflection and self-care tool that also helps you find verified professionals when you want care."
     },
     {
       icon: "ios_share",
-      theme: "sky",
-      question: "Can I export or share entries with my therapist?",
-      answer: "Yes. You can generate password-protected PDF summaries or open Markdown/JSON files whenever you wish to share insights during sessions."
-    },
-    {
-      icon: "key",
-      theme: "purple",
-      question: "What happens if I lose or change my phone?",
-      answer: "Upon setup, you generate a confidential 12-word seed phrase. With Zero-Knowledge cryptography, this phrase is your sole key to recover your haven on any new device."
-    },
-    {
-      icon: "verified",
       theme: "teal",
-      question: "Does SafeDiary have ads or sell data to third parties?",
-      answer: "Zero advertising, zero trackers, and zero data sales. Our model is supported purely through mindful patronage subscriptions from people who wish to sustain the project."
+      question: "Do I need to share my journal to book a session?",
+      answer: "No. You can book and attend without sharing your history. If you choose to share, you decide the scope and can revoke permission."
+    },
+    {
+      icon: "payments",
+      theme: "amber",
+      question: "Does a subscription include sessions?",
+      answer: "No. Sessions with psychologists are paid separately from Basic or Premium plans."
     }
   ],
-
   // Call to Action (Mobile Download & QR)
   ctaTag: "Your moment of calm begins today",
   ctaTitle: "Carry your haven with you, wherever life takes you.",
@@ -305,12 +341,12 @@ export const en = {
   ctaQrSubtitle: "Direct & instant access",
 
   // Footer
-  footerDesc: "An intimate and serene haven, crafted for honest reflection, caring for mental wellbeing, and embracing emotions in complete privacy.",
-  footerEncryptionActive: "End-to-end local encryption active",
+  footerDesc: "An emotional journal that connects personal reflection with professional care, under the user's control.",
+  footerEncryptionActive: "Privacy by design",
   footerPromiseTitle: "Our pledge to you",
-  footerPromiseText: "We believe your thoughts are sacred. No employee, remote server, or automated algorithm has access to your words. You are the sole custodian of your story.",
-  footerBadgeGdpr: "GDPR Compliant",
-  footerBadgePrivacy: "Total Privacy",
+  footerPromiseText: "Your journal is personal. If you choose to share context with a professional, you decide the scope of permission and can revoke it.",
+  footerBadgeGdpr: "Private journal",
+  footerBadgePrivacy: "Revocable consent",
   footerCopyright: "© 2026 MindCluster Technologies Inc.",
   footerMadeWithLove: "Crafted with warmth for mindful hearts.",
   footerTermsLink: "Terms & Conditions",

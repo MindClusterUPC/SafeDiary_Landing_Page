@@ -2,8 +2,6 @@
 
 import { initI18n } from './i18n/i18n.js';
 import { loadSharedComponents } from './components/include.js';
-import { initBreathing } from './components/breathing.js';
-import { initJournal } from './components/journal.js';
 import { initTeam } from './components/team.js';
 import { initFaq } from './components/faq.js';
 
@@ -13,29 +11,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // Inicializar traducciones e interactividad
   initI18n();
-  initBreathing();
-  initJournal();
   initTeam();
   initFaq();
-
-  // Interaccion en chips de estado emocional
-  const moodChips = document.querySelectorAll('.mood-chip');
-  moodChips.forEach((chip) => {
-    chip.addEventListener('click', () => {
-      moodChips.forEach((c) => c.classList.remove('active'));
-      chip.classList.add('active');
-
-      const bars = document.querySelectorAll('.chart-bar');
-      bars.forEach((bar) => {
-        bar.style.opacity = '0.7';
-      });
-      setTimeout(() => {
-        bars.forEach((bar) => {
-          bar.style.opacity = '1';
-        });
-      }, 200);
-    });
-  });
 
   // Resaltado de seccion activa en la navegacion
   const sections = document.querySelectorAll('section[id]');
@@ -58,19 +35,6 @@ document.addEventListener('DOMContentLoaded', async () => {
       }
     });
   }
-
-  // Navegación fluida para los botones de planes hacia el flujo principal
-  document.querySelectorAll('a[href^="#espacio?plan="]').forEach((cta) => {
-    cta.addEventListener('click', (e) => {
-      e.preventDefault();
-      const targetHash = cta.getAttribute('href');
-      window.history.pushState(null, '', targetHash);
-      const espacio = document.getElementById('espacio');
-      if (espacio) {
-        espacio.scrollIntoView({ behavior: 'smooth' });
-      }
-    });
-  });
 
   window.addEventListener('scroll', updateActiveNavLink, { passive: true });
 });
