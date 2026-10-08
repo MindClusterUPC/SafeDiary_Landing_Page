@@ -16,6 +16,8 @@ export async function loadSharedComponents(options = {}) {
       // Ajustar rutas según ubicación de la página
       const homeLink = headerContainer.querySelector('.nav-home-link');
       if (homeLink) homeLink.href = `${prefix}index.html`;
+      const headerLogo = headerContainer.querySelector('.brand__logo img');
+      if (headerLogo) headerLogo.src = `${prefix}assets/images/safediary-logo.jpeg`;
 
       headerContainer.querySelectorAll('.nav-section-link').forEach((link) => {
         const section = link.getAttribute('data-section');
@@ -51,6 +53,8 @@ export async function loadSharedComponents(options = {}) {
 
       const termsLink = footerContainer.querySelector('.footer-terms-link');
       if (termsLink) termsLink.href = isSubfolder ? 'terms.html' : 'pages/terms.html';
+      const footerLogo = footerContainer.querySelector('.footer-brand img');
+      if (footerLogo) footerLogo.src = `${prefix}assets/images/safediary-logo.jpeg`;
     }
 
     // Inicializar o refrescar traducciones de header y footer
