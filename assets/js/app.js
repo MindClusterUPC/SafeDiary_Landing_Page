@@ -59,5 +59,18 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
   }
 
+  // Navegación fluida para los botones de planes hacia el flujo principal
+  document.querySelectorAll('a[href^="#espacio?plan="]').forEach((cta) => {
+    cta.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetHash = cta.getAttribute('href');
+      window.history.pushState(null, '', targetHash);
+      const espacio = document.getElementById('espacio');
+      if (espacio) {
+        espacio.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
   window.addEventListener('scroll', updateActiveNavLink, { passive: true });
 });
