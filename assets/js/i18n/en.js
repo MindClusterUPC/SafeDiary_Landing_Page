@@ -228,6 +228,17 @@ export const en = {
   planAstrumFeat5: "Private vault and PDF export",
   planAstrumCta: "Learn more",
 
+  // Videos Section
+  navVideos: "Videos",
+  videosBadge: "VIDEOS",
+  videosTitle: "Get to know SafeDiary and its team.",
+  videosSubtitle: "Watch the product presentation and the experience of the team behind SafeDiary.",
+  videoProductTitle: "About the Product",
+  videoProductDesc: "The problem SafeDiary solves, its value proposition for patients and psychologists, and a demo of the app: sign-up, diary, Diarito, psychologist search, appointment booking and routines.",
+  videoTeamTitle: "About the Team",
+  videoTeamDesc: "The experience of the people behind SafeDiary, including lessons learned, reflections and opportunities for improvement.",
+  videoWatch: "Watch video →",
+
   // Team Section (Placeholders)
   teamBadge: "TEAM",
   teamTitle: "The team behind SafeDiary.",

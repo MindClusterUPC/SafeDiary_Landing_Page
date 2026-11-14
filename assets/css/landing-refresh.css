@@ -474,3 +474,52 @@ body {
     transition: none;
   }
 }
+
+/* Videos About-the-Product / About-the-Team */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.video-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #e7e5e4;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.video-card:hover,
+.video-card:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 104, 95, 0.12);
+}
+.video-card__play {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 16 / 9;
+  font-size: 64px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-container));
+}
+.video-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.25rem 1.5rem 1.5rem;
+}
+.video-card__meta {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--color-primary);
+  text-transform: uppercase;
+}
+.video-card__body h3 { font-size: 1.25rem; font-weight: 800; color: #1c1917; }
+.video-card__body p { font-size: 0.9375rem; line-height: 1.6; color: #57534e; }
+.video-card__cta { margin-top: 0.25rem; font-weight: 700; color: var(--color-primary); }
