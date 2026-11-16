@@ -228,16 +228,15 @@ export const es = {
   planAstrumFeat5: "Bóveda privada y exportación a PDF",
   planAstrumCta: "Más información",
 
-  // Videos Section
-  navVideos: "Videos",
-  videosBadge: "VIDEOS",
-  videosTitle: "Conoce SafeDiary y a su equipo.",
-  videosSubtitle: "Mira la presentación del producto y la experiencia del equipo detrás de SafeDiary.",
-  videoProductTitle: "About the Product",
-  videoProductDesc: "El problema que resuelve SafeDiary, la propuesta de valor para pacientes y psicólogos, y una demostración de la aplicación: registro, diario, Diarito, búsqueda de psicólogo, reserva de cita y rutinas.",
-  videoTeamTitle: "About the Team",
-  videoTeamDesc: "La experiencia de los involucrados detrás de SafeDiary, incluyendo aprendizajes, reflexiones y oportunidades de mejora.",
-  videoWatch: "Ver video →",
+  // About-the-Product / About-the-Team videos
+  navVideos: "Video",
+  aboutProductBadge: "ABOUT THE PRODUCT",
+  aboutProductTitle: "SafeDiary en 3 minutos.",
+  aboutProductDesc: "El problema que resuelve SafeDiary, la propuesta de valor para pacientes y psicólogos, y una demostración de la aplicación: registro, diario, Diarito, búsqueda de psicólogo, reserva de cita y rutinas.",
+  aboutTeamBadge: "ABOUT THE TEAM",
+  aboutTeamTitle: "Conoce al equipo en video.",
+  aboutTeamDesc: "La experiencia de los involucrados detrás de SafeDiary, incluyendo aprendizajes, reflexiones y oportunidades de mejora.",
+  videoWatch: "Ver video",
 
   // Team Section (Placeholders)
   teamBadge: "EQUIPO",
