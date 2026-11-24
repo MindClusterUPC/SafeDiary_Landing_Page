@@ -228,15 +228,16 @@ export const en = {
   planAstrumFeat5: "Private vault and PDF export",
   planAstrumCta: "Learn more",
 
-  // About-the-Product / About-the-Team videos
-  navVideos: "Video",
-  aboutProductBadge: "ABOUT THE PRODUCT",
-  aboutProductTitle: "SafeDiary in 3 minutes.",
-  aboutProductDesc: "The problem SafeDiary solves, its value proposition for patients and psychologists, and a demo of the app: sign-up, diary, Diarito, psychologist search, appointment booking and routines.",
-  aboutTeamBadge: "ABOUT THE TEAM",
-  aboutTeamTitle: "Meet the team on video.",
-  aboutTeamDesc: "The experience of the people behind SafeDiary, including lessons learned, reflections and opportunities for improvement.",
-  videoWatch: "Watch video",
+  // Video carousel
+  navVideos: "Videos",
+  videoCarouselTitle: "SafeDiary on video",
+  videoProductTab: "Product",
+  videoTeamTab: "Team",
+  videoPrevious: "Previous video",
+  videoNext: "Next video",
+  videoFallback: "Your browser cannot play this video.",
+  aboutProductDesc: "A walkthrough of the product and its features.",
+  aboutTeamDesc: "The MindCluster team shares what they learned while building SafeDiary.",
 
   // Team Section (Placeholders)
   teamBadge: "TEAM",

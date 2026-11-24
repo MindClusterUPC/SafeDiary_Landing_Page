@@ -86,28 +86,45 @@
       </div>
     </section>
 
-    <!-- Video About-the-Product -->
-    <section class="section section--white about-video" id="about-product">
+    <section class="section section--white video-carousel" id="about-product" aria-labelledby="videoCarouselTitle">
       <div class="container">
-        <div class="section-header">
-          <div class="badge-tag">
-            <span class="material-symbols-outlined" style="font-size: 16px;">play_circle</span>
-            <span data-i18n="aboutProductBadge">ABOUT THE PRODUCT</span>
-          </div>
-          <h2 class="section-title" data-i18n="aboutProductTitle">SafeDiary en 3 minutos.</h2>
-          <p class="section-subtitle" data-i18n="aboutProductDesc">El problema que resuelve SafeDiary, la propuesta de valor para pacientes y psicólogos, y una demostración de la aplicación: registro, diario, Diarito, búsqueda de psicólogo, reserva de cita y rutinas.</p>
-        </div>
+        <div class="video-carousel__inner" id="about-team">
+          <h2 class="section-title video-carousel__title" id="videoCarouselTitle" data-i18n="videoCarouselTitle">SafeDiary en video</h2>
 
-        <a class="video-preview video-preview--product" href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416706_upc_edu_pe/IQCPOYuPyTOlRaF7NKb_1XQ-ATV8uLyLPWzo1TkCDMhMzv4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&amp;e=3NuoWw" target="_blank" rel="noopener noreferrer" aria-label="Ver video About the Product">
-          <div class="video-preview__phones" aria-hidden="true">
-            <img src="assets/images/mockups/diarito.png" alt="">
-            <img src="assets/images/mockups/inicio.png" alt="">
-            <img src="assets/images/mockups/rutinas.png" alt="">
+          <div class="video-carousel__navigation" hidden>
+            <button type="button" class="app-preview__arrow video-carousel__arrow" data-video-step="-1" aria-labelledby="previousVideoLabel">
+              <span aria-hidden="true">←</span>
+              <span class="video-carousel__sr-only" id="previousVideoLabel" data-i18n="videoPrevious">Video anterior</span>
+            </button>
+            <div class="video-carousel__tabs" role="tablist" aria-labelledby="videoCarouselTitle">
+              <button type="button" role="tab" id="productVideoTab" aria-controls="productVideoPanel" aria-selected="true" data-i18n="videoProductTab">Producto</button>
+              <button type="button" role="tab" id="teamVideoTab" aria-controls="teamVideoPanel" aria-selected="false" tabindex="-1" data-i18n="videoTeamTab">Equipo</button>
+            </div>
+            <button type="button" class="app-preview__arrow video-carousel__arrow" data-video-step="1" aria-labelledby="nextVideoLabel">
+              <span aria-hidden="true">→</span>
+              <span class="video-carousel__sr-only" id="nextVideoLabel" data-i18n="videoNext">Video siguiente</span>
+            </button>
           </div>
-          <span class="video-preview__play material-symbols-outlined" aria-hidden="true">play_arrow</span>
-          <span class="video-preview__duration">3:03</span>
-          <span class="video-preview__label" data-i18n="videoWatch">Ver video</span>
-        </a>
+          <p class="video-carousel__sr-only" role="status" lang="en"></p>
+
+          <div class="video-carousel__slide" id="productVideoPanel" role="tabpanel" aria-labelledby="productVideoTab">
+            <video controls playsinline preload="none" width="1920" height="1080" poster="assets/videos/about-the-product.jpg" aria-labelledby="productVideoTitle">
+              <source src="assets/videos/about-the-product.mp4" type="video/mp4">
+              <p data-i18n="videoFallback">Tu navegador no admite la reproducción de este video.</p>
+            </video>
+            <h3 id="productVideoTitle" lang="en">About the Product</h3>
+            <p data-i18n="aboutProductDesc">Una demostración del producto y sus funciones.</p>
+          </div>
+
+          <div class="video-carousel__slide" id="teamVideoPanel" role="tabpanel" aria-labelledby="teamVideoTab">
+            <video controls playsinline preload="none" width="1280" height="720" poster="assets/videos/about-the-team.jpg" aria-labelledby="teamVideoTitle">
+              <source src="assets/videos/about-the-team.mp4" type="video/mp4">
+              <p data-i18n="videoFallback">Tu navegador no admite la reproducción de este video.</p>
+            </video>
+            <h3 id="teamVideoTitle" lang="en">About the Team</h3>
+            <p data-i18n="aboutTeamDesc">El equipo de MindCluster comparte sus aprendizajes durante el desarrollo de SafeDiary.</p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -437,27 +454,6 @@
             Pulsa en cada perfil para conocer su rol en el proyecto.
           </span>
         </div>
-
-        <!-- Video About-the-Team -->
-        <div class="about-team-video" id="about-team">
-          <a class="video-preview video-preview--team" href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416706_upc_edu_pe/IQCgiPAv72SeRbzI9Ugdqj9iAUHn_EXumDTcq7MNsRgqSLk?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&amp;e=LvZaTk" target="_blank" rel="noopener noreferrer" aria-label="Ver video About the Team">
-            <div class="video-preview__avatars" aria-hidden="true">
-            <img src="assets/images/TeamMembers/Alexther.jpeg" alt="">
-            <img src="assets/images/TeamMembers/Marcelo.png" alt="">
-            <img src="assets/images/TeamMembers/andres.jpeg" alt="">
-            <img src="assets/images/TeamMembers/juan.png" alt="">
-            <img src="assets/images/TeamMembers/santiago.png" alt="">
-            </div>
-            <span class="video-preview__play material-symbols-outlined" aria-hidden="true">play_arrow</span>
-            <span class="video-preview__duration">7:07</span>
-          </a>
-          <div class="about-team-video__text">
-            <span class="bento-card__badge bento-card__badge--emerald" data-i18n="aboutTeamBadge">ABOUT THE TEAM</span>
-            <h3 data-i18n="aboutTeamTitle">Conoce al equipo en video.</h3>
-            <p data-i18n="aboutTeamDesc">La experiencia de los involucrados detrás de SafeDiary, incluyendo aprendizajes, reflexiones y oportunidades de mejora.</p>
-            <a class="about-team-video__cta" href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416706_upc_edu_pe/IQCgiPAv72SeRbzI9Ugdqj9iAUHn_EXumDTcq7MNsRgqSLk?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&amp;e=LvZaTk" target="_blank" rel="noopener noreferrer" data-i18n="videoWatch">Ver video</a>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -497,6 +493,7 @@
 
   <!-- El carrusel también funciona al abrir este HTML como archivo local. -->
   <script defer src="assets/js/components/mockups.js"></script>
+  <script defer src="assets/js/components/videos.js"></script>
   <!-- Main JavaScript App Entry (ES Module) -->
   <script type="module" src="assets/js/app.js"></script>
 </body>

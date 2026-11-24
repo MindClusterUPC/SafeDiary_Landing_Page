@@ -305,7 +305,7 @@ img, svg {
   flex-shrink: 0;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1240px) {
   .nav-menu {
     display: flex;
   }
@@ -377,8 +377,23 @@ img, svg {
   color: var(--color-text-main);
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1240px) {
   .mobile-menu-btn {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .header__content,
+  .header__actions {
+    gap: 0.5rem;
+  }
+
+  .lang-btn {
+    padding-inline: 0.5rem;
+  }
+
+  #headerCtaBtn {
     display: none;
   }
 }
